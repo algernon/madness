@@ -20,17 +20,17 @@ available online yet.
  [debian]: http://www.debian.org/
  [ubuntu]: http://www.ubuntu.com/
 
- [1]: https://git.madhouse-project.org/debian/syslog-ng/plain/debian/changelog?h=packaging/debian/3.3
- [2]: https://git.madhouse-project.org/debian/syslog-ng/plain/debian/changelog?h=packaging/debian/3.4
- [3]: https://git.madhouse-project.org/debian/syslog-ng/plain/debian/changelog?h=packaging/debian/3.5
+ [1]: http://git.madhouse-project.org/debian/syslog-ng/plain/debian/changelog?h=packaging/debian/3.3
+ [2]: http://git.madhouse-project.org/debian/syslog-ng/plain/debian/changelog?h=packaging/debian/3.4
+ [3]: http://git.madhouse-project.org/debian/syslog-ng/plain/debian/changelog?h=packaging/debian/3.5
  [4]: https://github.com/balabit/syslog-ng-incubator/raw/debian/master/debian/changelog
 
 The repository is signed by the GPG key
 [6CE70C6E8B9E0644][archive-key], which one can add to apt with the following command:
 
-    curl https://packages.madhouse-project.org/debian/archive-key.txt | sudo apt-key add -
+    curl http://packages.madhouse-project.org/debian/archive-key.txt | sudo apt-key add -
 
- [archive-key]: https://packages.madhouse-project.org/debian/archive-key.txt
+ [archive-key]: http://packages.madhouse-project.org/debian/archive-key.txt
 
 Packages are available for the **i386** and **amd64** architectures on
 both Debian and Ubuntu, but in addition to those, the Debian
