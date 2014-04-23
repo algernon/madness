@@ -1,0 +1,47 @@
+---
+title: "GSoC2014: syslog-ng accepted projects"
+date: 2014-04-23 14:15
+tags: [Technology, syslog-ng, Debian, .planet.debian]
+---
+
+The [Google Summer of Code 2014][gsoc2014] programme reached another
+milestone recently: the accepted proposals were
+[published][gsoc2014:proposal-accept], and over a thousand students
+were selected by nearly two hundred mentoring organisations, among
+them the [syslog-ng project][sng]. We will be working with four
+students this year (twice we worked with last year), with more
+mentors, on a wider selection of projects. It was a tough decision to
+select the proposals, we received some very strong work this year.
+
+We would like to express our gratitude to both [Debian][debian], for
+giving us an extra slot (so we could accept four students instead of
+three), and Google and Carol Smith in particular, for allowing it, and
+putting up with our fumbling during the process.
+
+ [sng]: http://www.syslog-ng.org/
+ [gsoc2014]: http://www.google-melange.com/gsoc/homepage/google/gsoc2014
+ [gsoc2014:proposal-accept]: http://google-opensource.blogspot.co.uk/2014/04/students-announced-for-google-summer-of.html
+ [debian]: https://www.debian.org/
+
+<!-- more -->
+
+The accepted projects and students are:
+
+ * **Tibor Benke**: [Integration with configuration management systems][gsoc2014:cfgmgmt].
+
+   [gsoc2014:cfgmgmt]: https://github.com/balabit/syslog-ng/wiki/GSoC2014-Proposal:-Integration-with-configuration-management-systems-(ihrwein)
+
+ * **László Mészáros**: [ZMQ transport, source and destination][gsoc2014:zmq].
+
+   [gsoc2014:zmq]: https://github.com/balabit/syslog-ng/wiki/GSoC2014-Proposal:-ZMQ-transport,-source-and-destination-(lmesz)
+
+ * **György Demarcsek**: [TLS support for the MongoDB destination][gsoc2014:mongodb-tls].
+
+   [gsoc2014:mongodb-tls]: https://github.com/balabit/syslog-ng/wiki/GSoC2014-Proposal:-TLS-support-for-the-MongoDB-destination-(sirius)
+
+ * **MÓZES Ádám István**: [AMQP source driver][gsoc2014:amqp-source].
+
+   [gsoc2014:amqp-source]: https://github.com/balabit/syslog-ng/wiki/GSoC2014-Proposal:-AMQP-source-(sajtos)
+
+Good luck to all students, we're looking forward to working with you
+throughout the summer! Happy hacking!
