@@ -5,11 +5,11 @@ $(document).ready(
                      "syslog-ng", "syslog-ng-devel"],
             "precise": ["zorp", "syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
                        "syslog-ng", "syslog-ng-devel"],
-            "quantal": ["zorp", "syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
-                       "syslog-ng", "syslog-ng-devel"],
             "saucy": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
                      "syslog-ng", "syslog-ng-devel"],
             "trusty": ["syslog-ng-3.4", "syslog-ng-3.5",
+                      "syslog-ng", "syslog-ng-devel"],
+            "utopic": ["syslog-ng-3.4", "syslog-ng-3.5",
                       "syslog-ng", "syslog-ng-devel"],
 
             "squeeze": ["zorp", "syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
