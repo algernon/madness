@@ -96,6 +96,6 @@ lines to <code>/etc/apt/sources.list.d/syslog-ng.list</code>:
 
 <script src="/assets/asylum/js/sources.list.js" type="text/javascript"></script>
 
-<div id="alert-box" class="alert alert-block alert-error fade in"
+<div id="alert-box" class="alert alert-block alert-danger fade in"
      style="display: none">
 </div>
