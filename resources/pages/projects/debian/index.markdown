@@ -2,28 +2,26 @@
 title: Debian repository
 ---
 
-For some selected packages ([syslog-ng][sng] 3.3, 3.4 & 3.5,
-[syslog-ng incubator][sng-incubator] and [Zorp GPL][zorp]), I provide
-up-to-date packages for a number of [Debian][debian] and
-[Ubuntu][ubuntu] releases - see the <kbd>sources.list</kbd> assemby
-area just below. The packages will be kept up to date for all
-platforms, until at least after a month of the platforms end of life.
+For some selected packages ([syslog-ng][sng] 3.3, 3.4 & 3.5, and
+[syslog-ng incubator][sng-incubator]), I provide up-to-date packages
+for a number of [Debian][debian] and [Ubuntu][ubuntu] releases - see
+the <kbd>sources.list</kbd> assemby area just below. The packages will
+be kept up to date for all platforms, until at least after a month of
+the platforms end of life.
 
 To see what changed between versions, please see either of the
 [syslog-ng 3.3][1], [syslog-ng 3.4][2], [syslog-ng 3.5][3] or
-[syslog-ng incubator][4] changelogs. For Zorp, there is no changelog
-available online yet.
+[syslog-ng incubator][4] changelogs.
 
  [sng]: https://www.balabit.com/network-security/syslog-ng/opensource-logging-system/overview
  [sng-incubator]: https://github.com/balabit/syslog-ng-incubator
- [zorp]: https://www.balabit.com/network-security/zorp-gpl/overview
  [debian]: http://www.debian.org/
  [ubuntu]: http://www.ubuntu.com/
 
  [1]: http://git.madhouse-project.org/debian/syslog-ng/plain/debian/changelog?h=packaging/debian/3.3
  [2]: http://git.madhouse-project.org/debian/syslog-ng/plain/debian/changelog?h=packaging/debian/3.4
  [3]: http://git.madhouse-project.org/debian/syslog-ng/plain/debian/changelog?h=packaging/debian/3.5
- [4]: https://github.com/balabit/syslog-ng-incubator/raw/debian/master/debian/changelog
+ [4]: https://github.com/algernon/syslog-ng-incubator/raw/debian/master/debian/changelog
 
 The repository is signed by the GPG key
 [6CE70C6E8B9E0644][archive-key], which one can add to apt with the following command:
@@ -34,9 +32,9 @@ The repository is signed by the GPG key
 
 Packages are available for the **i386** and **amd64** architectures on
 both Debian and Ubuntu, but in addition to those, the Debian
-repositories also contain *syslog-ng* packages for the **powerpc**
-architecture. If there's enough interest, I can pull in more build
-machines, and compile for other platforms as well.
+repositories also contain packages for the **powerpc** architecture.
+If there's enough interest, I can pull in more build machines, and
+compile for other platforms as well.
 
 # Choose your components!
 
@@ -74,10 +72,6 @@ copy-paste the lines to <code>/etc/apt/sources.list</code>:
      <option value="syslog-ng-devel">Latest syslog-ng devel release (3.5)</option>
      <option value="syslog-ng-3.5">syslog-ng 3.5</option>
     </optgroup>
-  </select>
-  <select class="inline input-xlarge" id="zorp-select">
-    <option value="zorp-none">No zorp</option>
-    <option value="zorp">zorp</option>
   </select>
  </fieldset>
 </form>

@@ -1,9 +1,9 @@
 $(document).ready(
     function () {
         avails = {
-            "lucid": ["zorp", "syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
+            "lucid": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
                      "syslog-ng", "syslog-ng-devel"],
-            "precise": ["zorp", "syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
+            "precise": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
                        "syslog-ng", "syslog-ng-devel"],
             "saucy": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
                      "syslog-ng", "syslog-ng-devel"],
@@ -12,9 +12,9 @@ $(document).ready(
             "utopic": ["syslog-ng-3.4", "syslog-ng-3.5",
                       "syslog-ng", "syslog-ng-devel"],
 
-            "squeeze": ["zorp", "syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
+            "squeeze": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
                        "syslog-ng", "syslog-ng-devel"],
-            "wheezy": ["zorp", "syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
+            "wheezy": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
                       "syslog-ng", "syslog-ng-devel"],
             "jessie": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
                       "syslog-ng", "syslog-ng-devel"],
@@ -22,29 +22,21 @@ $(document).ready(
                         "syslog-ng", "syslog-ng-devel"]
         };
 
-        all_components = ["zorp", "syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5"];
+        all_components = ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5"];
 
         function get_data_from_distrib_form () {
             var distrel = $("#distro-select").val().split("-");
             var components = [];
-            var zorp_extra = false;
 
             var sng = $("#sng-select").val();
             if (sng != "syslog-ng-none") {
                 components.push(sng);
             }
 
-            var zorp = $("#zorp-select").val();
-            if (zorp != "zorp-none") {
-                components.push("zorp");
-                zorp_extra = true;
-            }
-
             return {
                 "dist": distrel[0],
                 "release": distrel[1],
                 "components": components,
-                "zorp_extra": zorp_extra,
             }
         }
 
@@ -52,11 +44,7 @@ $(document).ready(
             var new_text = 
                 "deb       http://packages.madhouse-project.org/" + data.dist + "   " + data.release + "   " + data.components.join(" ") + "\n" +
                 "deb-src   http://packages.madhouse-project.org/" + data.dist + "   " + data.release + "   " + data.components.join(" ") + "\n";
-            if (data.zorp_extra) {
-                new_text += "\ndeb       http://packages.madhouse-project.org/zorp-kernel   kernel   2.6 3.2";
-            } else {
-                new_text += "\n\n";
-            }
+            new_text += "\n\n";
             var box = $("pre code")[1];
             $(box).fadeOut(400, 
                                      function () {
@@ -74,10 +62,6 @@ $(document).ready(
                     rel_comps.indexOf (val) == -1) {
                     data.components.splice(data.components.indexOf (val), 1);
                     alert_components.push(val);
-
-                    if (val == "zorp") {
-                        data.zorp_extra = false;
-                    }
                 }
             });
 
@@ -94,16 +78,6 @@ $(document).ready(
                 .each(function (x) {
                     if (avails[data.release].indexOf (this.value) == -1 &&
                         this.value != "syslog-ng-none") {
-                        $(this).attr("disabled", true);
-                    } else {
-                        $(this).removeAttr("disabled");
-                    }
-                });
-
-            $("#zorp-select").find("option")
-                .each(function (x) {
-                    if (avails[data.release].indexOf (this.value) == -1 &&
-                        this.value != "zorp-none") {
                         $(this).attr("disabled", true);
                     } else {
                         $(this).removeAttr("disabled");
