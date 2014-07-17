@@ -54,7 +54,6 @@ $(document).ready(
             var new_text = 
                 "deb       http://packages.madhouse-project.org/" + data.dist + "   " + data.release + "   " + data.components.join(" ") + "\n" +
                 "deb-src   http://packages.madhouse-project.org/" + data.dist + "   " + data.release + "   " + data.components.join(" ") + "\n";
-            new_text += "\n\n";
             var box = $("pre code")[1];
             $(box).fadeOut(400, 
                                      function () {
