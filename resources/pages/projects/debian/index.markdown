@@ -54,7 +54,6 @@ copy-paste the lines to <code>/etc/apt/sources.list</code>:
     <optgroup label="Ubuntu">
      <option value="ubuntu-lucid">Ubuntu 10.04 LTS (Lucid Lynx)</option>
      <option value="ubuntu-precise">Ubuntu 12.04 LTS (Precise Pangolin)</option>
-     <option value="ubuntu-saucy">Ubuntu 13.10 (Saucy Salamander)</option>
      <option value="ubuntu-trusty">Ubuntu 14.04 LTS (Trusty Tahr)</option>
      <option value="ubuntu-utopic">Ubuntu 14.10 (Utopic Unicorn)</option>
     </optgroup>
