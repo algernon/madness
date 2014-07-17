@@ -4,23 +4,29 @@ $(document).ready(
             "lucid": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
                      "syslog-ng", "syslog-ng-devel"],
             "precise": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
+                       "syslog-ng-incubator-3.5",
                        "syslog-ng", "syslog-ng-devel"],
             "trusty": ["syslog-ng-3.4", "syslog-ng-3.5",
+                      "syslog-ng-incubator-3.5",
                       "syslog-ng", "syslog-ng-devel"],
             "utopic": ["syslog-ng-3.4", "syslog-ng-3.5",
+                      "syslog-ng-incubator-3.5",
                       "syslog-ng", "syslog-ng-devel"],
 
             "squeeze": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
                        "syslog-ng", "syslog-ng-devel"],
             "wheezy": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
+                      "syslog-ng-incubator-3.5",
                       "syslog-ng", "syslog-ng-devel"],
             "jessie": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
+                      "syslog-ng-incubator-3.5",
                       "syslog-ng", "syslog-ng-devel"],
             "unstable": ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5",
+                        "syslog-ng-incubator-3.5",
                         "syslog-ng", "syslog-ng-devel"]
         };
 
-        all_components = ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5"];
+        all_components = ["syslog-ng-3.3", "syslog-ng-3.4", "syslog-ng-3.5", "syslog-ng-incubator-3.5"];
 
         function get_data_from_distrib_form () {
             var distrel = $("#distro-select").val().split("-");
@@ -29,6 +35,12 @@ $(document).ready(
             var sng = $("#sng-select").val();
             if (sng != "syslog-ng-none") {
                 components.push(sng);
+            }
+
+            if (sng == "syslog-ng-3.5" ||
+                sng == "syslog-ng-devel") {
+                if (avails[distrel[1]].indexOf("syslog-ng-incubator-3.5") != -1)
+                    components.push("syslog-ng-incubator-3.5");
             }
 
             return {
