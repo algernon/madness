@@ -62,21 +62,24 @@ copy-paste the lines to <code>/etc/apt/sources.list</code>:
     <option value="syslog-ng-none">No syslog-ng</option>
     <optgroup label="syslog-ng old stable">
      <option value="syslog-ng-3.3">syslog-ng 3.3</option>
+     <option value="syslog-ng-3.4">syslog-ng 3.4</option>
     </optgroup>
     <optgroup label="syslog-ng stable">
-     <option value="syslog-ng">Latest syslog-ng stable release (3.4)</option>
-     <option value="syslog-ng-3.4" selected>syslog-ng 3.4</option>
+     <option value="syslog-ng">Latest syslog-ng stable release (3.5)</option>
+     <option value="syslog-ng-3.5" selected>syslog-ng 3.5</option>
     </optgroup>
+    <!-- 
     <optgroup label="syslog-ng devel">
-     <option value="syslog-ng-devel">Latest syslog-ng devel release (3.5)</option>
+     <option value="syslog-ng-devel">Latest syslog-ng devel release (3.6)</option>
      <option value="syslog-ng-3.5">syslog-ng 3.5</option>
     </optgroup>
+    -->
   </select>
  </fieldset>
 </form>
 
-    deb       http://packages.madhouse-project.org/debian   wheezy   syslog-ng-3.4
-    deb-src   http://packages.madhouse-project.org/debian   wheezy   syslog-ng-3.4
+    deb       http://packages.madhouse-project.org/debian   wheezy   syslog-ng-3.5 syslog-ng-incubator-3.5
+    deb-src   http://packages.madhouse-project.org/debian   wheezy   syslog-ng-3.5 syslog-ng-incubator-3.5
 
 
 The other option is to use a [hosted script][add-release] that figures

@@ -38,7 +38,7 @@ $(document).ready(
             }
 
             if (sng == "syslog-ng-3.5" ||
-                sng == "syslog-ng-devel") {
+                sng == "syslog-ng") {
                 if (avails[distrel[1]].indexOf("syslog-ng-incubator-3.5") != -1)
                     components.push("syslog-ng-incubator-3.5");
             }
