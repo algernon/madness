@@ -39,9 +39,7 @@ preferences below.
 Please note that all my conditions **and** all my preferences are
 satisfied by my current employer, with whom I am very happy with.
 
-* I prefer working on Free Software, and I am doing exactly that at my
-  current employer. I get paid to spend 100% of my time on free
-  software.
+* I prefer working on and with Free Software.
 * I don't like long commutes.
 * I like reasonably flexible work hours, though.
 * I like attending and speaking at conferences.
