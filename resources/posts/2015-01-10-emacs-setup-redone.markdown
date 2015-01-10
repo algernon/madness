@@ -1,6 +1,6 @@
 ---
 title: "Emacs setup redone"
-date: 2015-01-10 16:00
+date: 2015-01-10 16:15
 tags: [Technology, Emacs, Hacking]
 ---
 
