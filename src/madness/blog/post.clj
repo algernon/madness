@@ -203,10 +203,8 @@
   [:#madness-og-url] (h/set-attr :content (str (cfg/base-url) (:url post)))
 
   ; Navigation bar
-  [:#madness-recent-posts :li] (blog-nav/recent-posts all-posts)
-  [:#madness-recent-posts] (h/remove-attr :id)
-  [:#madness-tags :.madness-tag] (blog-nav/all-tags all-posts)
-  [:#madness-tags] (h/remove-attr :id)
+  [:#madness-recent-posts] nil
+  [:#madness-tags] nil
 
   ; Article
   [:#madness-article :h2] (h/substitute

@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,400italic|Open+Sans+Condensed:300,700|Pacifico);
+body {
+        font-family: 'Lato', sans-serif;
+        font-size: 200%;
+        margin-bottom: 5em;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #e6e6e6;
+}
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #cccccc;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4em;
+  font-size: 80%;
+}
+
+.footer .container {
+        padding-top: 1em;
+        border-top: 1px solid #999999;
+}
+
+@media (min-width: 768px) {
+  #scroll-shadow:before {
+    content: "";
+    display: block;
+    height: 16px;
+    width: 100%;
+    background: url("/assets/asylum/images/gradient.png");
+    position: fixed;
+    z-index: 2;
+  }
+  #scroll-shadow:after {
+    content: "";
+    display: block;
+    height: 16px;
+    width: 100%;
+    background: #f7f7f7;
+    position: relative;
+    z-index: 4;
+  }
+}
+
+/***/
+.madness-article-meta hr {
+        margin-top: 0;
+}
+
+.madness-article-meta {
+        font-size: 75%;
+}
+
+#brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  text-decoration: none;
+  
+  color: #999999;
+  text-shadow: 1px 1px #333333;      
+}
+
+#brand:hover {
+        color: #158cba;
+}
+
+.recent-gradient {
+        position:absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 75%;
+
+        background: linear-gradient(to bottom,
+                                    rgba(0, 0, 0, 0) 0%,
+                                    rgba(255, 255, 255, 0.75),
+                                    rgba(255, 255, 255, 1) 100%);
+        pointer-events: none;
+}
+
+.madness-recent-posts {
+        font-size: 80%;
+        margin-top: 2.5em;
+        opacity: 0.9;
+}
+
+.madness-recent-posts hr {
+        display: none;
+}

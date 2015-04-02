@@ -28,7 +28,9 @@ $(document).ready(function () {
   Mousetrap.bind('d', function () {
       load_page($("#madness-article-date"));
   });
+    /*
   $(".madness-article-frame").focus();
+     */
 
   $(window).touchwipe ({
       wipeLeft: function () { load_page ($(".next a")); },
