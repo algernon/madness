@@ -68,6 +68,10 @@ html {
         font-size: 75%;
 }
 
+.madness-article-title a, .madness-post-title a {
+        color: #333333;
+}
+
 #brand {
   font-family: 'Pacifico', cursive;
   font-size: 2em;
