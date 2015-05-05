@@ -31,10 +31,4 @@ $(document).ready(function () {
     /*
   $(".madness-article-frame").focus();
      */
-
-  $(window).touchwipe ({
-      wipeLeft: function () { load_page ($(".next a")); },
-      wipeRight: function () { load_page ($(".previous a")); },
-      preventDefaultEvents: false
-  });
 });
