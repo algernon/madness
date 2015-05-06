@@ -18,9 +18,9 @@ me, you'll just get pointed to this page.
 * I live in Hungary, and I am not willing to relocate. Periodic visits
   to HQ and remote work is, of course, acceptable. The reasons why I
   am unwilling to move are, in no particular order:
-    * My girlfriend lives and works here.
+    * My wife lives and works here.
     * My studies bind me to Hungary, I cannot get a degree in
-      Hungarian Grammar and Literature anywhere else.
+      Hungarian Human Arts anywhere else.
     * I like the country, and unless I have no other option,
       I'm not moving.
 * I run Debian on my computers, all of them (except phone and tablet,
