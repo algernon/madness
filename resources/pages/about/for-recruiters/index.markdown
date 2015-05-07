@@ -2,19 +2,19 @@
 title: List of conditions and preferences, for recruiters
 ---
 
-Since every once in a while - at an increasing frequency - recruiters
-find me with all kinds of offers and opportunities. Most of these make
-no sense, and with only a little bit of research, they wouldn't even
-been sent. Now, I know that research is hard, especially when there
-are so many places to look for information, so just below, I'll put
-together a list of conditions, for recruiters. If **all** of them are
-met, we can talk. If any of them is not, there is no point in mailing
-me, you'll just get pointed to this page.
+Every once in a while - at an increasing frequency - recruiters find
+me with all kinds of offers and opportunities. Most of these make no
+sense, and with only a little bit of research, they wouldn't even been
+sent. Now, I know that research is hard, especially when there are so
+many places to look for information. So just below, I'll put together
+a list of conditions, for recruiters. If **all** of them are met, we
+can talk. If any of them is not, there is no point in mailing me,
+you'll just get pointed to this page.
 
 * I have been a Debian Developer since 2001, I intend to continue
   doing that, keep all my current roles, and perhaps even find other
   ways I can volunteer my free time to Debian. I'm not willing to
-  sacrifice this
+  sacrifice this.
 * I live in Hungary, and I am not willing to relocate. Periodic visits
   to HQ and remote work is, of course, acceptable. The reasons why I
   am unwilling to move are, in no particular order:
