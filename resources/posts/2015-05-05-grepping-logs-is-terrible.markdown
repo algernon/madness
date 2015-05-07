@@ -27,6 +27,9 @@ but it is not a solution to my needs, and never will be.)
   [sng]: https://www.syslog-ng.org/
   [sng:maintainer]: https://bazsi.blogs.balabit.com/2014/05/handing-over-syslog-ng-maintenance/
 
+(As a side-note, in reply to some of the reactions I've seen, I wrote
+a [followup post](/blog/2015/05/07/grepping-logs-is-still-terrible/).)
+
 <!-- more -->
 
 Table of Contents
