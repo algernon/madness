@@ -26,7 +26,7 @@ make it possible for me to make my dream come true. I can only hope
 that through my work, and through my example, I can contribute back
 enough.
 
- [sng:ose]: http://localhost/blog/2013/07/04/onto-greener-open-pastures/
+ [sng:ose]: /blog/2013/07/04/onto-greener-open-pastures/
 
 <!-- more -->
 
