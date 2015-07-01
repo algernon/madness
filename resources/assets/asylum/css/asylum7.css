@@ -68,8 +68,30 @@ html {
         font-size: 75%;
 }
 
-.madness-article-title a, .madness-post-title a {
+.madness-post-title, .madness-article-title {
+        display: inline-block;
+}
+
+.madness-post-title a {
         color: #333333;
+}
+
+.madness-article-title a.madness-post-section-sign,
+.madness-post-title a.madness-post-section-sign {
+        color: #333333;
+        margin-left: -0.75em;
+        visibility: hidden;
+}
+
+.madness-article-title a:nth-child(2), .madness-post-title a:nth-child(2) {
+        color: #333333;
+}
+
+.madness-article-title:hover a.madness-post-section-sign,
+.madness-post-title:hover a.madness-post-section-sign {
+        visibility: visible;
+        color: #808080;
+        text-decoration: none;
 }
 
 #brand {

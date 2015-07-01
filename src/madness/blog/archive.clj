@@ -28,8 +28,11 @@
   [post]
 
   [:#madness-archive-recent-post] (h/remove-attr :id)
-  [:h3 :a] (utils/rewrite-link-with-title
+  [:h3 :a.madness-post-section-sign] nil
+  [:h3 :a] (h/do->
+            (utils/rewrite-link-with-title
              (:url post) (:title post))
+            (h/remove-attr :class))
   [:#madness-recent-article-meta] nil
   [:#madness-recent-article-summary] nil)
 

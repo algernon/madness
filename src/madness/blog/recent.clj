@@ -82,11 +82,15 @@
   [post]
 
   [:#madness-archive-recent-post] (h/remove-attr :id)
-  [:h3 :a] (utils/rewrite-link-with-title
-             (:url post)
-             (:title post))
-  [:#madness-recent-article-meta] (h/substitute (blog-recent-meta post))
+  [:h3 :a.madness-post-article-link] (h/do->
+                                      (utils/rewrite-link-with-title
+                                       (:url post)
+                                       (:title post))
+                                      (h/remove-attr :class))
+  [:h3 :a.madness-post-section-sign] (h/do->
+                                      (h/set-attr :href (:url post)))
 
+  [:#madness-recent-article-meta] (h/substitute (blog-recent-meta post))
   [:#madness-recent-article-summary] (h/substitute (:summary post)))
 
 ;; And finally, we are now able to assemble a whole row of recent
