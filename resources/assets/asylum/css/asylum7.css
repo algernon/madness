@@ -3,6 +3,7 @@ body {
         font-family: 'Lato', sans-serif;
         font-size: 200%;
         margin-bottom: 5em;
+        background-color: #ccc;
 }
 
 ::-webkit-scrollbar {
@@ -23,6 +24,18 @@ body {
 html {
   position: relative;
   min-height: 100%;
+}
+
+.row-brand {
+        background-color: #ccc !important;
+}
+
+.row {
+        background-color: #ffffff;
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
 }
 
 .footer {
