@@ -171,22 +171,18 @@ shortcomings.
 * Mechanical keys.
 * Open source hardware and firmware, thus programmable.
 * Thumb keys.
+* Available via ErgoDox EZ as an assembled product.
 
 ### Cons
 
-* Sold as a kit, I'd have to assemble it myself (possibly including soldering,
-  if reviews are up to date). I don't want to do that, so I'd be looking for a
-  pre-assembled version.
-* The home page is rather silent, not much info there, and I'm not going to dig
-  through forums to get the keyboard sold to me.
-* Not sure where I can order it from.
+* Primarily a kit, but assembled available.
+* Not sure when it'd ship (december shipments are sold out).
 
 ### Summary
 
-The keyboard looks interesting, primarily due to the thumb keys. But for a price
-of **$250** + shipping, I'd still have to assemble it. Since I'm not a hardware
-guy, I don't want to do that, so I'm looking at **$300+**. Not sure that's worth
-it.
+The keyboard looks interesting, primarily due to the thumb keys. From the
+ErgoDox EZ campaign, I'm looking at **$270**. That's friendly, and makes ErgoDox
+a viable option! (Thanks [@miffe](https://twitter.com/miffe)!)
 
 <a name="kinesis-advantage"></a>
 [Kinesis Advantage](http://www.kinesis-ergo.com/shop/advantage-for-pc-mac/)
@@ -346,29 +342,31 @@ The Preference List
 ========================
 
 After writing this all up, I think I prefer the [Model 01](#m01), but the
-[UHK](#uhk) comes close too: the UHK is cheaper, but not by a large margin. It
-lacks the thumb keys and the palm key the M01 has. It also looks rather dull
-(sorry). They'd both ship about the same time, but, the M01 is already funded,
-while the UHK is not (mind you, there's a pretty darn high chance it will be).
+[UHK](#uhk) and [ErgoDox](#ergodox) come close too!
+
+The UHK is cheaper, but not by a large margin. It lacks the thumb keys and the
+palm key the M01 has. It also looks rather dull (sorry). They'd both ship about
+the same time, but, the M01 is already funded, while the UHK is not (mind you,
+there's a pretty darn high chance it will be).
+
+The [ErgoDox](#ergodox) has thumb keys, split keyboard, and is open source.
+Compared to the UHK, we have the thumb keys, and less distraction, for a better
+price. But the case is not so nice. Compared to the Model 01: no leds, or center
+bar, and an inferior case. But, much better price, which is an important factor
+too.
 
 Then, there's the [Atreus](#atreus). While it's a DIY kit, it is much more
 affordable than the rest, and I could have it far sooner. Yet... it doesn't feel
 like a big enough switch from my current keyboard. I might as well continue
 using the TypeMatrix then, right?
 
-In a similar vein, I really wanted to consider the [ErgoDox](#ergodox), because
-it has a much better shape than the Atreus, and is a split keyboard. But if I
-have to assemble the keyboard myself, the price of the ErgoDox is far too high
-for me. Not to mention, that if I can avoid it, I don't want to put my keyboard
-together, and soldier stuff. I hate having to touch hardware.
-
 The rest, I ruled out earlier, while I was reviewing them anyway.
 
 So, the big question is: should I invest close to **$400** into a keyboard that
 looks stunning, and will likely grow old with me? Or should I give up some of
-the features, and settle for the **$300** one, that'll also grow old with me. Or
-is there an option I did not consider, that may match my needs and preferences
-better?
+the features, and settle for one of the **$300** ones, that'll also grow old
+with me. Or is there an option I did not consider, that may match my needs and
+preferences better?
 
 If you, my dear reader, got this far, and have a suggestion, please either
 [tweet at me](https://twitter.com/algernoone), or write an
