@@ -28,6 +28,10 @@ the options below.
 
  [clojure:typed]: https://www.youtube.com/watch?v=uk3A41U0iO4
 
+**Update**: There is a [follow up post], with a few more keyboards explored, and
+  a semi-final verdict. Thanks everyone for the feedback and help, much
+  appreciated!
+
 <!-- more -->
 
 Lets start with the current keyboard!
