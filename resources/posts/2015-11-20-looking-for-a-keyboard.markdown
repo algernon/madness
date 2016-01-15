@@ -28,9 +28,11 @@ the options below.
 
  [clojure:typed]: https://www.youtube.com/watch?v=uk3A41U0iO4
 
-**Update**: There is a [follow up post], with a few more keyboards explored, and
-  a semi-final verdict. Thanks everyone for the feedback and help, much
-  appreciated!
+**Update**: There is a [follow up post][blog:followup], with a few more
+  keyboards explored, and a semi-final verdict. Thanks everyone for the feedback
+  and help, much appreciated!
+
+ [blog:followup]: /blog/2015/11/23/keyboard-updates/
 
 <!-- more -->
 
