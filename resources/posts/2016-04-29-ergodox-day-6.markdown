@@ -1,6 +1,6 @@
---
+---
 title: "ErgoDox: Day 6"
-date: 2016-04-29 09:00
+date: 2016-04-29 9:00
 tags: [Hacking, ErgoDox]
 ---
 
