@@ -1,0 +1,130 @@
+---
+title: "ErgoDox: Day 22"
+date: 2016-05-14 15:00
+tags: [Hacking, ErgoDox, Video]
+---
+
+I am now using the ErgoDox EZ as my main keyboard at work, and am
+loving it. Sometimes, when really frustrated, I still switch back to
+my TypeMatrix, but that is happening less and less. As of day 22, I am
+consistenlty reaching 40+ WPM, with 95%+ accuracy. But I make a lot of
+mistakes, so it is time I slowed down, and work on accuracy for a
+while instead.
+
+ [ergodox-6]: /blog/2016/04/29/ergodox-day-6/
+
+I also started to record my typing sessions, the short bursts of
+practice I do on [keyhero.com](https://www.keyhero.com), to later
+analyze them, and compare them to other videos of people typing on the
+ErgoDox. Below, you will find a short guide for my layout, wherein I
+try to explain why it works like it does, and how I ended up setting
+it up so. (This also includes a video of me typing, likely badly.)
+
+Since the [last time][ergodox-6], the layout changed considerably:
+
+ [![Layout](/assets/asylum/images/posts/ergodox-day-22/base-layer.png)](http://www.keyboard-layout-editor.com/#/gists/28f7eb305fdbff943613e1dc7aa9e82b)
+
+The repository has also moved, instead of a fork of the QMK firmware,
+I now maintain my layout [separately][layout-repo]. This makes it
+easier to batch up changes, and squash them, once I am ready to submit
+the layout. I want to preserve my own history too, but don't want to
+include all the noise in the PR.
+
+ [layout-repo]: https://github.com/algernon/ergodox-layout
+
+<!-- more -->
+
+As one can see at a glance, this is not your ordinary QWERTY layout,
+and - as far as modifiers are concerned - is very different than my
+previous layout. There are no modifiers on the sides, my pinky didn't
+like hitting them at all! It was very, very inconvenient. On my former
+keyboard, the buttons are closer together, so reaching the sides with
+the pinky is easier. On the ErgoDox, not so much. So I moved the
+modifiers to a place where I can reach them easily, to a finger that
+is far stronger than my pinky: to the thumb cluster. Having all the
+modifiers and layer switches there has been very comfortable so far.
+
+Last time, I started an experiment, making the `Shift` key sticky, and
+this turned out to be amazingly comfortable: I no longer need to
+remember to hold it, and release it at the right time, I just tap it
+again. I loved this so much, that I turned `Alt` and `Control` sticky
+too. And since they are sticky, I really want to see some indication
+whether they're active or not, so the LEDs were repurposed: instead of
+showing the layer, they now show modifiers. Of course, I still would
+like to see layer indicators too - thankfully, by pure luck, while
+trying to figure out how to make the LEDs blink, I discovered that one
+can set their brightness. So layers are indicated by two dim LEDs, and
+modifiers by one bright one.
+
+The `ESC` key was also moved to the thumb cluster, because I use it
+fairly often, and the `Apps` (or `Menu`) button sees far less use, so
+that one was banished to the inner-top corner of each side of the
+keyboard.
+
+There's the dedicated `bracket` and `parens` keys, but I will likely
+change those: the parens will move up, and trigger on long-press, and
+`:` and `'' will take their former place, most likely. Reason is, I
+work a lot with Python nowadays, and these two are a bit awkward to
+reach on the normal Dvorak layout.
+
+I'm considering adding a dedicated [Programmer Dvorak][prg-dvorak]
+layer too, but that may take a while.
+
+ [prg-dvorak]: http://www.kaufmann.no/roland/dvorak/
+
+Besides of these symbols, the one thing I am not happy with are the
+bottom rows. I can't get used to it. I am training myself to use the
+*navigation* layer when I need to move the cursors, but then, I'll
+need to find a good use for the row... But this is a topic for another
+time!
+
+## Navigation layer
+
+[![Navigation layer](/assets/asylum/images/posts/ergodox-day-22/nav-layer.png)](http://www.keyboard-layout-editor.com/#/gists/e4556d8dc59736c26d51a58cb4c4d2f0)
+
+For all mouse-y, navigational and media needs!
+
+The coloring here follows the following pattern: blue are mouse keys,
+red is cursor navigation, light orange is media control, pink are
+copy/paste related functions, and the rest are as usual.
+
+The copy/paste stuff needs some explanation: there are three modes of operation:
+`Emacs`, `Terminal`, and `Other`. The keys work the following way:
+
+* The topmost pink button turns on `visual-mode` in the `Emacs` mode, by sending
+  a `v`. In all other modes, it does nothing.
+* The second one is the *copy* and *cut* key. Tapped, it copies, held longer, it
+  cuts. In `Emacs` mode, this sends `y` or `x`, respectively. In `Terminal`
+  mode, it sends `C-S-c` or `C-S-x`. In `Other` mode, `C-c` or `C-x`.
+* The third one, on the thumb cluster is the *paste* and *delete* button in one.
+  Tapped, it pastes, held longer, it deletes. In `Emacs` mode, this sends `p`
+  (or `]p` if `Shift` is also down) or `d`, respectively. In `Terminal` mode, it
+  sends `C-S-v` or `DEL`. In `Other` mode, `C-v` or `DEL`.
+
+Tapping the key that enabled this layer will bring us further, to the
+`Edit layer`, which adds a few keys to aid in returning to
+editing. This layer may end up being folded back to the navigation
+layer, though.
+
+## The other layers
+
+There are a few other layers: one for Hungarian symbols, one for all
+kinds of symbols, and a third, that activates for one keypress only,
+after tapping the `GUI` key (which sends `Gui+w` to the computer,
+popping up an application selector). This layer has shortcuts for
+switching to any of the five most used apps, and it deactivates after
+any key on the keyboard is tapped.
+
+The Hungarian and Symbol layers I do not use much, and the latter is
+likely to be replaced by a Programmer Dvorak layer, or just deleted,
+if I end up turning the base layer into programmer Dvorak.
+
+## Typing test
+
+As promised in the beginning, below you can see a video of me typing
+some shortish text on [keyhero](https://www.keyhero.com/). I believe I
+did 40-42WPM here, but I still need to set things up so that both my
+screen, and my keyboard gets recorded at the same time.
+
+<video src="/assets/asylum/images/posts/ergodox-day-22/2016-05-13-091634.webm"
+       controls width="800" height="450" preload="auto"></video>
