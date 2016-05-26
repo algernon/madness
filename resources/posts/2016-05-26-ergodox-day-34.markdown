@@ -1,6 +1,6 @@
 ---
-title: "ErgoDox: Day 33"
-date: 2016-05-25 16:00
+title: "ErgoDox: Day 34"
+date: 2016-05-26 16:00
 tags: [Hacking, ErgoDox]
 ---
 
@@ -118,7 +118,7 @@ one-shot layer too: when I type an accented character, it is very uncommon to
 type another following immediately. Thus, the layer is active only until a
 single Hungarian character is pressed.
 
- ![Hungarian layer](/assets/asylum/images/posts/ergodox-day-33/hun-layer.png)
+ ![Hungarian layer](/assets/asylum/images/posts/ergodox-day-34/hun-layer.png)
 
 On this layer, the accented characters are at the same position as their base
 variant. For some, which can have other diatribes, the long one is on top,
@@ -136,7 +136,7 @@ navigating for a while.
 
 This layer is pictured below:
 
- ![Emacs layer](/assets/asylum/images/posts/ergodox-day-33/emacs-layer.png)
+ ![Emacs layer](/assets/asylum/images/posts/ergodox-day-34/emacs-layer.png)
 
 This will need some explanation. I was in the middle of some heavy refactoring
 when I came up with this setup: I selected, cut, and then pasted large amounts
@@ -158,7 +158,7 @@ layer. The same is done for `a` and `r`.
 
 Another new thing I have not showcased is the one-handed layout:
 
- ![One-handed layout](/assets/asylum/images/posts/ergodox-day-33/one-handed-layout.png)
+ ![One-handed layout](/assets/asylum/images/posts/ergodox-day-34/one-handed-layout.png)
 
 This has seen little use so far. The purpose is to be able to use all parts of
 the layout, when the other hand is occupied, by mousing for example.
@@ -167,7 +167,7 @@ the layout, when the other hand is occupied, by mousing for example.
 
 And finally, the latest incarnation of the base layout:
 
- ![Base layout](/assets/asylum/images/posts/ergodox-day-33/base-layer.png)
+ ![Base layout](/assets/asylum/images/posts/ergodox-day-34/base-layer.png)
  
 Not many changes this time: the trigger key for the `Hungarian` layer moved to a
 better position, and I have a free key, which I will likely use as the leader
