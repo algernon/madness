@@ -1,0 +1,76 @@
+---
+title: "ErgoDox: Day 28"
+date: 2016-05-20 15:00
+tags: [Hacking, ErgoDox, Video]
+---
+
+Another week almost gone, and there are a lot of progress to report on the
+ErgoDox front. I tweaked my layout further, but there are less changes this
+time, and most of them under the hood: not how the keys are laid out, but how
+they behave. Mind you, there were still some minor changes here and there.
+
+Lets look at the current base layout!
+
+ [![Layout](/assets/asylum/images/posts/ergodox-day-28/base-layer.png)](http://www.keyboard-layout-editor.com/#/gists/28f7eb305fdbff943613e1dc7aa9e82b)
+
+<!-- more -->
+
+There are four major changes on the layout, some visible, some not:
+
+* The bottom row was rearranged, to have cursor movements split between the two
+  halves, and to have `:` and `-` in an easier to access position. Still not
+  perfect, but I think this is a step in the right direction.
+* The top row gained function keys, which trigger when the keys are pressed for
+  a longer period of time. The motivation behind this change is that I got rid
+  of the symbol layer, which was home to the function keys. I wanted access to
+  the function keys, for some OS shurtcuts, mostly. Since I use these rarely, a
+  long press is fine.
+* The modifiers are now non-sticky, but rather act as one-shot modifiers. That
+  is, the next key tapped within 3 seconds after releasing the modifier, will
+  have the modifier applied. Holding the key sends the modifier. Most of the
+  time, I found that I only type a single shifted key. Nevertheless, I still
+  don't want to hold modifiers, so one-shot behaviour is perfect. Doubly so,
+  because double-tapping toggles them into a sticky state! This way, I can type
+  many shifted keys, if I need to, or combine it with other modifiers, without
+  having to hold any of them. The only downside of the built-in functionality,
+  is that I can't cancel a one-shot modifier if I change my mind, or if I
+  accidentally pressed it. So I turned `ESC` into a cancel button: if a one-shot
+  modifier is active, it clears all of them, otherwise acts as a normal `ESC`
+  key.
+* The **SYMBOL** layer is gone, the **NAV** and **EDIT** layers have been merged
+  into an **EMACS** layer, and a new one-handed layer was introduced.
+  
+Thanks to the practice, and the tweaks above, I am now reaching 50+ WPM, with
+97% or better accuracy. I even crossed the 55 WPM mark, and am only about 4 WPM
+below my all-time Dvorak record, and am over half the speed of my old QWERTY
+speed!
+
+I also continued recording some of my typing sessions, but this time, with a
+better setup: both halves of the keyboard recorded, along with my screen. See
+below for a short typing video, and I'll continue with some observation about
+the keyboard after the video.
+
+<video src="/assets/asylum/images/posts/ergodox-day-28/typing-20160518-090550.webm"
+       controls width="840" height="205" preload="auto"></video>
+
+Over the course of the past four weeks, I learned to love the keyboard, despite
+all its flaws (of which, there aren't many). As many people before me noticed,
+the thumb cluster is far from perfect. There's basically two keys I can reach
+comfortably during a typing session, the other four are still useful, but only
+for things one does not do often. This makes them perfect candidates for
+one-shot modifiers.
+
+I also dislike the bottom row. Apart from the innermost key on it, it isn't easy
+to reach, and more often than not, I rather avoid the row alltogether.
+
+The key sizes on the sides of the main cluster are also something I'd change: on
+the inner sides, have the 1u key on the bottom, and the 1.5 ones on top of it;
+on the outside, tall keys, rather than wide, would feel better.
+
+The [keyboardio Model 01][km01] appears to fix all these issues, and I'm looking
+forward to being able to play with it. Regardless, the ErgoDox EZ is still a
+solid keyboard, one I plan to use for a looong time to come.
+
+ [km01]: https://shop.keyboard.io/
+
+To 60WPM and beyond!
