@@ -175,6 +175,8 @@ key for unicode input.
 
 # Keyboard observations
 
+## Hardware
+
 I like the hardware, a lot. Paying a hefty amount of cash for a split keyboard,
 when I have never tried any before, was a big risk, but fortunately, it turned
 out well. The increased comfort and the programmability made me more productive,
@@ -193,3 +195,13 @@ only non-clicky tactile ones. I hate linears, and clicky noises, so this was my
 only option. I like them, but I think I may want something a bit heavier in the
 long run. Not sure about that, though. For the next few years, browns will be
 fine.
+
+## Firmware
+
+The [QMK][qmk] firmware is a joy to work with. In the first few hours, I tried
+working with various GUI and web-based tools that can generate the `hex` files,
+but I had to discover quickly, that for what I want, I will need to dive deeper
+into the firmware anyway. Thus, I ended up writing some C, but that's ok, this
+gave me the ultimate flexibility.
+
+ [qmk]: https://github.com/jackhumbert/qmk_firmware
