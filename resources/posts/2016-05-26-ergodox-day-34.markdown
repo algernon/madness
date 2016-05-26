@@ -1,6 +1,6 @@
 ---
 title: "ErgoDox: Day 34"
-date: 2016-05-26 16:00
+date: 2016-05-26 11:45
 tags: [Hacking, ErgoDox]
 ---
 
@@ -158,7 +158,7 @@ layer. The same is done for `a` and `r`.
 
 Another new thing I have not showcased is the one-handed layout:
 
- ![One-handed layout](/assets/asylum/images/posts/ergodox-day-34/one-handed-layout.png)
+ ![One-handed layout](/assets/asylum/images/posts/ergodox-day-34/one-handed-layer.png)
 
 This has seen little use so far. The purpose is to be able to use all parts of
 the layout, when the other hand is occupied, by mousing for example.
@@ -170,8 +170,36 @@ And finally, the latest incarnation of the base layout:
  ![Base layout](/assets/asylum/images/posts/ergodox-day-34/base-layer.png)
  
 Not many changes this time: the trigger key for the `Hungarian` layer moved to a
-better position, and I have a free key, which I will likely use as the leader
-key for unicode input.
+better position, and I have a leader key. This starts to feel like the final
+form of the layer. For the past few days, I have not found any inconveniences,
+apart from those that come from the hardware itself (see below).
+
+To recap, this is how it works:
+
+* The keys on the number row double as function keys, when held for a bit longer
+  than an usual tap. This allows me to use the function keys without having to
+  switch layers.
+* The `Shift`, `Alt`, and `Control` modifiers are one-shot. When tapped, they
+  are considered active for the next key press only. When double tapped, they
+  toggle on, until a third, single tap sometime later. When held, they act as
+  expected. My usual pattern is that I use these for the next keypress only, so
+  this behaviour is perfect. If I need them held, I'll just double-tap.
+* The `GUI` key is special, because when I double-tap it, it sends `GUI + w`,
+  which pops up an application selector. It also switches to a one-shot layer,
+  where the number row on the left half turns into app selector macros, for the
+  most common things I usually want to switch to. Otherwise it behaves as on a
+  normal layout.
+* The `ESC` key also doubles as a one-shot cancel key: if tapped while any of
+  the one-shot modifiers are in-flight (as in, single-tapped, and not expired
+  yet), it cancels all one-shot modifiers. Otherwise it sends the usual keycode.
+* The **Emacs** and **Hun** layer keys are one-shot, the **1Hand** is a toggle.
+* The **Lead** key allows me to type in a sequence of keys, and trigger some
+  actions:
+    - `LEAD u` enters unicode input mode, by sending the GTK+ key sequence that
+      does this.
+    - `LEAD l` uses the unicode input method to enter a `λ`.
+    - `LEAD s` does a lot of magic to type in a shruggie: `¯\_(ツ)_/¯`
+    - `LEAD w m` maximises the currently focused window.
 
 # Keyboard observations
 
@@ -194,14 +222,29 @@ The switches I chose when ordering were Gateron Browns, because these were the
 only non-clicky tactile ones. I hate linears, and clicky noises, so this was my
 only option. I like them, but I think I may want something a bit heavier in the
 long run. Not sure about that, though. For the next few years, browns will be
-fine.
+fine. As of this writing, I bottom out most keys, except the ones I press with
+the pinky, and I mash them hard when I'm pushing for some higher typing speeds,
+or when I'm in the *zone*, and words just flow out like a sea. I suppose that as
+I use the keyboard more and more, I will bottom out less. I'm even trying to pay
+attention to press the keys lighter, but only when I can afford the extra mental
+capacity to do so.
 
 ## Firmware
 
 The [QMK][qmk] firmware is a joy to work with. In the first few hours, I tried
 working with various GUI and web-based tools that can generate the `hex` files,
 but I had to discover quickly, that for what I want, I will need to dive deeper
-into the firmware anyway. Thus, I ended up writing some C, but that's ok, this
-gave me the ultimate flexibility.
+into the firmware anyway. Thus, I ended up [writing some C][layout:firmware],
+but that's ok, this gave me the ultimate flexibility.
 
  [qmk]: https://github.com/jackhumbert/qmk_firmware
+ [layout:firmware]: https://github.com/algernon/ergodox-layout#readme
+ 
+The fun thing is, the firmware is evolving, and this allows me to play with some
+nifty new features like the leader key, which was introduced just recently.
+
+# In closing
+
+All in all, the first month was interesting and eventful, with lots of fiddling
+with the layout, and the behaviour of the keyboard. Here's hoping that the next
+month will be just as great, but with considerably less tweaking.
