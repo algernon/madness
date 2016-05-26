@@ -1,0 +1,195 @@
+---
+title: "ErgoDox: Day 33"
+date: 2016-05-25 16:00
+tags: [Hacking, ErgoDox]
+---
+
+It has been over a month of receiving the [ErgoDox EZ][ez], and it has been my
+daily driver at work for most of that time, after the first weekend, which I
+spent with it at home. In this time, I learned a lot about my typing habits, my
+preferences, and about the keyboard too. In this summary you read now, I will
+try to not only describe how I use the keyboard, but the whys too, the process
+that led to the setup I have right now.
+
+ [ez]: https://ergodox-ez.com/
+
+It all [started][blog:lfkb] with watching a Clojure/conj video about keyboards:
+it spiked my interest in ergonomic keyboards, and it is all "downhill" form
+there. Over the course of a day, I don't type much, but when I sit down to enter
+text, I do it in short, fast bursts, as thoughts flow from my brain, through my
+fingers, into the computer. This puts some bursty burden on my hands, and I
+started to feel the toll. But this is something I only notice now, after a month
+of paying closer attention to how I use the keyboard. Prior to that, it was just
+curiosity and intuition that drove me down this path.
+
+ [blog:lfkb]: /blog/2015/11/20/looking-for-a-keyboard/
+
+Of all the keyboards I wanted to try, I ordered a [keyboardio Model 01][m01]
+first, but that is yet to ship (which is fine, I expected that, and I love
+reading their updates - wish everyone who runs a crowdfunding campaign would do
+at least half as good a communication as they do). In the meantime, my desire
+for a better, programmable and ergonomic keyboard reached a threshold, where my
+daily outbursts about keyboards became so desperate, that my wife told me to
+just buy a keyboard for work too, one that ships sooner.
+
+ [m01]: https://shop.keyboard.io/
+
+That keyboard was the ErgoDox EZ, my second choice from the original list, and
+this is the story of a romance that's still all pink and happy after a month.
+
+<!-- more -->
+
+# The Beginning
+
+The first day was incredibly annoying, as one wold expect. I started with
+replacing the stock firmware, with something I thought to be closer to what I
+will enjoy: I took the [ordinary layout][ez:ordinary], and switched it from
+QWERTY to Dvorak, to look something like this:
+
+ ![Ordinary Dvorak](/assets/asylum/images/posts/ergodox-day-6/layout.png)
+ 
+ [ez:ordinary]: https://github.com/jackhumbert/qmk_firmware/tree/master/keyboard/ergodox_ez/keymaps/ordinary#readme
+
+At this point, I already started to deviate from the original in fundamental
+ways: I had no use for the `Meh` and `Hyper` keys, as I did not need any
+additional modifiers.
+
+As I do a lot of coding, the various brackets and parens are used often, and I
+wanted to have easy access to them, without having to switch to another layer,
+so they were given dedicated keys on the base layer, and are there to this day.
+I can hit them with minimal stretching of my index fingers.
+
+With this layout, typing most things was convenient - but the bottom row is
+something I had, and still have, trouble using properly, so I had to move the
+modifiers somewhere else. Not to mention the dissonance between `Alt` being on
+the bottom row, along with the `GUI` key, while `Control` is out on the side...
+The side is something I try to avoid too, my pinkies are not happy when they
+need to stretch, or reach sideways.
+
+# Thumbs & stickies
+
+Since `Shift` was already there, I figured, why not move the rest to the thumb
+cluster as well? I do not need two of the modifiers, I only ever used the ones
+on the left side, even on my previous keyboards. The only exception was the
+right `Alt`, because that is my compose key, but on the ErgoDox, I have a layer
+for all characters I was using compose for, so I do not need that key exposed.
+
+From the very beginning, I was experimenting with sticky modifiers, where you
+don't have to hold them, they stay on until toggled off. I have a massive
+distaste towards key chords, because they place additional load on my poor
+brain. I'm not a smart person, you see: my brain has very limited capacity for
+short-term, unimportant stuff, such as remembering when to release a held key.
+It turns out, I work much better if I only do a single thing at a time, and that
+includes tapping keys too (boy, Steno will be hard!).
+
+At first, at the time of the above layout, only `Shift` was sticky, but after
+moving the modifiers to the thumb cluster - pictured below -, I made the rest of
+them sticky too.
+
+ ![Day 22](/assets/asylum/images/posts/ergodox-day-22/base-layer.png)
+
+The `ESC` key was moved to the thumb cluster, while the `Menu` key was banished
+to the inner top corners of the keyboard halves. You see, I use `ESC` often, so
+having it at an easy to reach place is good.
+
+# The Long Tap
+
+At this time, I still had a layer for symbols, but I hardly ever used it. I
+spent most of the day on the base layer. As such, the unnecessary layers were
+removed, things got simplified. This meant that some keys gained new
+functionality: the number row started to act as function keys, when pressed for
+a longer period than normal tapping:
+
+ ![Day 28](/assets/asylum/images/posts/ergodox-day-28/base-layer.png)
+
+During daily use, I found the bottom row to be nigh useless. The only key I can
+conveniently reach is the innermost one. So I put two symbols that are normally
+under my pinky, to these places: `:` to the left, `-` to the right. This turned
+out to be very convenient, I used to have trouble reaching them before.
+
+Around this time, I discovered how one-shot modifiers are supposed to work, and
+tried it: incredible success! Improved speed, accuracy and comfort.
+
+# Hungarian layer
+
+Based on this experiment, I started to pay more attention to how I use my
+layers, and it turned out, that I can make the Hungarian layer a kind-of
+one-shot layer too: when I type an accented character, it is very uncommon to
+type another following immediately. Thus, the layer is active only until a
+single Hungarian character is pressed.
+
+ ![Hungarian layer](/assets/asylum/images/posts/ergodox-day-33/hun-layer.png)
+
+On this layer, the accented characters are at the same position as their base
+variant. For some, which can have other diatribes, the long one is on top,
+short's on bottom. Pretty simple, and it was easy to get used to.
+
+# The Emacs layer
+
+Similarly to the `Hungarian` layer, the `Emacs` layer - which includes cursor
+and mouse movements - was also turned into a one-shot layer. I navigate a lot,
+and the cursors on the base layer are only useful on occasional use, so I
+started to turn more and more to this layer, but switching back and forth when I
+wanted to do some editing was cumbersome. This is why the original navigation
+layer has some emacs-related keys, that help me escape back to edit mode after
+navigating for a while.
+
+This layer is pictured below:
+
+ ![Emacs layer](/assets/asylum/images/posts/ergodox-day-33/emacs-layer.png)
+
+This will need some explanation. I was in the middle of some heavy refactoring
+when I came up with this setup: I selected, cut, and then pasted large amounts
+of stuff around, before transforming them. This needed a lot of navigation,
+which is painful on the base layer, but also needed editor commands, that were
+on the base layer. So I made dedicated copy and paste buttons. By default, they
+use Spacemacs sequences, but the bottom row on the left side can set the mode:
+to Spacemacs, Terminal and traditonal. These change what sequences the copy &
+paste keys will send. These keys, by the way, are multi-purpose too. When
+tapped, the copy key copies, but when held longer, it will cut. Paste will paste
+on tap, but delete when held.
+
+There are also a few keys that allow me to delete stuff, or trigger a keypress,
+and escape back to the base layer. This allows me to navigate around, then press
+`i`, and both enter into **insert mode**, but also switches back to the base
+layer. The same is done for `a` and `r`.
+
+# One-handed
+
+Another new thing I have not showcased is the one-handed layout:
+
+ ![One-handed layout](/assets/asylum/images/posts/ergodox-day-33/one-handed-layout.png)
+
+This has seen little use so far. The purpose is to be able to use all parts of
+the layout, when the other hand is occupied, by mousing for example.
+
+# The newest base layer
+
+And finally, the latest incarnation of the base layout:
+
+ ![Base layout](/assets/asylum/images/posts/ergodox-day-33/base-layer.png)
+ 
+Not many changes this time: the trigger key for the `Hungarian` layer moved to a
+better position, and I have a free key, which I will likely use as the leader
+key for unicode input.
+
+# Keyboard observations
+
+I like the hardware, a lot. Paying a hefty amount of cash for a split keyboard,
+when I have never tried any before, was a big risk, but fortunately, it turned
+out well. The increased comfort and the programmability made me more productive,
+and happier too.
+
+The thumb cluster is amazing, even though it is far from perfect: I can easily
+hit the two big keys, and perhaps one or two of the small ones, but the rest
+needs movement. Nevertheless, the cluster is still incredible, and I miss it
+dearly whenever I have to type on my old keyboard at home.
+
+The tilting kit is something I am still experimenting with, to find the right
+angle, and the best split position.
+
+The switches I chose when ordering were Gateron Browns, because these were the
+only non-clicky tactile ones. I hate linears, and clicky noises, so this was my
+only option. I like them, but I think I may want something a bit heavier in the
+long run. Not sure about that, though. For the next few years, browns will be
+fine.
