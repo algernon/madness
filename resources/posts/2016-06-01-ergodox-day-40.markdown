@@ -1,0 +1,192 @@
+---
+title: "ErgoDox: Day 40"
+date: 2016-06-01 15:00
+tags: [Hacking, ErgoDox]
+---
+
+For the past week, I have only applied tiny tweaks and bugfixes to my
+[ErgoDox layout][layout], it appears that I have finally arrived to the part of
+the journey where the core remains the same. Because the changes - apart from a
+new, experimental layer - are all very small, this time, I will not only talk
+about the ErgoDox, but also compare it to my previous keyboard, the
+[TypeMatrix 2030][typematrix].
+
+ [layout]: https://github.com/algernon/ergodox-layout#algernons-layout
+ [typematrix]: http://www.typematrix.com/2030/features.php
+
+<!-- more -->
+
+Lets start with what changed in the layout, and why! I did some refactoring in
+the code, but these had no change in functionality - these were done to ease
+future maintenance, and development. Then, I added a [Plover][plover] layer,
+pictured below, and a bugfix grew out of that.
+
+ [plover]: http://www.openstenoproject.org/plover/
+
+ ![Plover layer](/assets/asylum/images/posts/ergodox-day-40/plover-layer.png)
+ 
+I have been interested in Steno for a long time - my Grandmother used to be a
+typist, and copy-writer, and she told me about the shortcuts she made to me able
+to write at the same speed my Grandfather was speaking. As a young boy, I found
+this fascinating, but pretty much forgot all about it until I started to look
+into keyboards last year. And then the memories all came back, and nostalgia
+took over my heart. I wanted to learn Steno, because of nostalgia, because I
+find it interesting, and because I plan to go back to university at some point,
+and being able to not only take notes, but write down **everything** (or close
+to it, anyway), would me a terrific asset.
+
+So I installed [Plover][plover], and created a layer to use it with. I could
+have configured the software to work with my normal Dvorak layout too, but it
+felt better to have a dedicated layer. That also allowed me to have the layer
+toggle key also toggle Plover.
+
+I've only been playing with this for a day or two, but it is a lot of fun, and
+the Plover guide is incredible. Even if you do not intend to learn Steno, I
+highly recommend reading and following it, because you can learn a lot about the
+language, and your typing habits too. And it is incredibly entertaining too! I
+could practice Steno all day, and not get bored.
+
+What I already see, is that the learning curve is steep. And when I say steep,
+imagine a huge, thick concrete wall, which you have to carve your way through
+using nothing else than a tiny screwdriver. Yet, it is fascinating. But it will
+take many months, or even years, before I will feel fluent with Plover - I can
+only afford an hour at best daily for practice, and I'm a very slow learner when
+it comes to memorising things.
+
+During my experiments with Plover, it turned out that my keyboard was not in
+NKRO mode, and could handle only six keys pressed at the same time. Fortunately,
+this was easy to fix with a single line, that forced NKRO to be on by default.
+
+## ErgoDox vs the TypeMatrix
+
+I got my first non-traditonal keyboard in 2010, I think. I was through a tough
+period at work, during which I typed a lot more than I usually do - I prefer to
+think more, and type less. Needless to say, with bad posture, terrible
+keyboards, and years of abuse, I developed all kinds of pains in both of my
+hands. Wrists, fingers, and even my forearm was throbbing with pain. Wasn't fun.
+
+To combat this, I started looking into possible solutions, and one of the
+easiest ones seemed to be switching away from QWERTY to Dvorak. At the time I
+thought I could make this gradually, so I searched for a keyboard that had a
+hardware Dvorak switch, and had replaceable legends. You see, I was not properly
+touch-typing at the time: I could type without looking at the keyboard, but from
+time to time - especially after making a mistake - I had to look at the legends
+to reorient myself.
+
+ ![TypeMatrix 2030](/assets/asylum/images/posts/looking-for-a-keyboard/typematrix-2030.jpg)
+
+With these requirements, I found the [TypeMatrix 2030][typematrix], which had
+other nice, ergonomic properties, that immediately spiked my interest: matrix
+layout, big `Enter` and `Backspace` keys in the middle, and skinnability!
+Awesome stuff.
+
+ [typematrix]: http://www.typematrix.com/2030/features.php
+
+Getting used to the layout wasn't too bad, took a couple of days maybe, and then
+it felt so natural, that going back to a traditional keyboard was like torture.
+So I ended up buying one for home use too.
+
+Compared to this, my ErgoDox layout is very different.
+
+ ![Base layout](/assets/asylum/images/posts/ergodox-day-34/base-layer.png)
+
+While I wanted to learn Dvorak, I never really did until very recently. I
+switched to Dvorak full-time in January this year, roughly, and I learned
+proper-ish touch typing (it's still in progress) on the ErgoDox. Comparing the
+two keyboards is hard, because I also switched layouts, and the way I type too.
+
+### Comfort
+
+The ErgoDox is undoubtedly more comfortable: the thumb keys are incredible, I
+got used to them so much, that at home, where I still use the TypeMatrix, I
+sometimes end up tapping the table, trying to hit a thumb key. Must look very
+funny!
+
+Switching from having `Enter` and `Backspace` in the middle to having them on
+the thumb clusters, on the different sides took some time to get used to, but
+was not as big a problem as I expected.
+
+Modifiers on the thumb cluster was even less an issue, surprisingly! And I must
+say, I find it very convenient that I don't have to use my pinkies for them.
+Pinkies are not made to press and hold keys, thumbs are a much better fit to
+hammer these.
+
+One thing the TypeMatrix is better at, is the dedicated cursor keys. I miss
+those on the ErgoDox sometimes, finding alternative ways of navigation is
+neither the most comfortable, nor the easiest thing to learn.
+
+Apart from the difference in layout, the ErgoDox has other properties that
+contribute to it feeling more comfortable: being split, and being easier to tent
+and tilt, I can position it in such a way that feels much more comfortable than
+a traditional keyboard. Let me illustrate this with a picture!
+
+ ![Desktop @ Work](/assets/asylum/images/posts/ergodox-day-40/desk.jpg)
+ 
+As is immediately obvious, the ErgoDox halves are much farther apart than the
+TypeMatrix. This position feels more comfortable to me, by a lot. The two sides
+are also tented a bit differently, something that is harder to achieve on a
+traditional keyboard. Yet, my right hand seems to need and want a different
+tilt.
+
+### Speed
+
+I can't properly compare speeds, because by the time I started to measure my
+speed, I was halfway down the Dvorak path, and my former QWERTY speed has seen a
+significant drop. Based on the 85-90 WPM I did manage to achieve in the early
+days of my switch, I estimate that my QWERTY speed was around 95-100. On Dvorak,
+I am past that now, in a way: on known text, my top speed to this date is 119
+WPM, on the ErgoDox. On the TypeMatrix, I'm much slower, because I struggle
+without the thumb keys. When I got the ErgoDox, I made a few runs on the
+TypeMatrix, and I was around 60 WPM on both known and unknown text. For known, I
+surpassed that already. For unknown text, my highest on the ErgoDox is 61 WPM,
+and I average around 55.
+
+In conclusion, speed-wise the ErgoDox is ahead by now. Well ahead, because I
+usually type known text: stuff I just made up in my head.
+
+### Other observations
+
+Another obvious observation is the feel of the keys. The ErgoDox is mechanical,
+and with my Gateron Browns, typing is an enjoyable experience, even though I
+mash the keys usually, and bottom out. It is, as as consequence, louder,
+noticeably, but well within acceptable limits, and I received no complaints in
+the office yet.
+
+The other obvious, but important factor is size and ease of transport. In this
+regard, the TypeMatrix wins hands down. The ErgoDox is hard to carry into a
+meeting room. I plan to get something like the [Planck][planck] or the
+[Preonic][preonic] for this purpose, but I'm not sure. I may just stick with the
+old keyboard for those rare times that I need to carry my laptop somewhere.
+
+ [planck]: http://olkb.com/planck/
+ [preonic]: http://olkb.com/preonic/
+ 
+The last observation, which may not be as important - or even desirable - for
+the average user, is the programmability of the ErgoDox. Without that, it would
+be a useless piece of electronics, because I would not have been able to tame it
+to my needs. Any keyboard I buy in the future will need to have open source
+firmware I can hack on, otherwise the [sweet stuff][blog:day-34] I could do with
+this board would be missing, and once spoiled, I'm not giving up my comfort.
+
+ [blog:day-34]: /blog/2016/05/26/ergodox-day-34/
+
+## The future
+
+In the distant future, there are a couple of things I want to try: contoured
+keyboards (but a split one, like [Dactyl][dactyl], I am not interested in
+non-split ones, except for travel purposes), and foot pedals. It would be an
+interesting experiment to put the `Space` on a foot pedal, and drum with my foot
+all day long.
+
+ [dactyl]: https://github.com/adereth/dactyl-keyboard
+
+Using a piano, or a midi keyboard would also be an interesting experiment, one
+that I will almost certainly try, because I wanted to learn to play the piano
+anyway.
+
+But these things are in the far future. More short-term, I need a new way to
+mouse. While mousekeys are nice and all, they are not the most comfortable
+things to use. So I need something better, and I've been researching trackballs
+to replace my mouse with. Will see how that goes in the next couple of months -
+no budget for such experiments right now.
+
