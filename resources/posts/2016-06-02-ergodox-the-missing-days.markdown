@@ -4,7 +4,7 @@ date: 2016-06-02 15:30
 tags: [Hacking, Keyboard, ErgoDox]
 ---
 
-Since I have my [ErgoDox EZ][ed:ez], I have worked not only on
+Since I had my [ErgoDox EZ][ed:ez], I have worked not only on
 [my own layout][gh:ergodox-layout],
 [documenting the larger steps][blog:ergodox], but I have also created other
 layouts, for the amusement of myself or others.
