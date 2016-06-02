@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 0"
 date: 2016-04-22 21:30
-tags: [Hacking, ErgoDox, .planet.debian]
+tags: [Hacking, ErgoDox, Keyboard, .planet.debian]
 ---
 
 Today my ErgoDox EZ arrived, I flashed a [Dvorak firmware][fw] a couple of times,

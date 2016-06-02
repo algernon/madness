@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 34"
 date: 2016-05-26 11:45
-tags: [Hacking, ErgoDox]
+tags: [Hacking, Keyboard, ErgoDox]
 ---
 
 It has been over a month of receiving the [ErgoDox EZ][ez], and it has been my

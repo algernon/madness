@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 1"
 date: 2016-04-24 21:30
-tags: [Hacking, ErgoDox]
+tags: [Hacking, Keyboard, ErgoDox]
 ---
 
 So I have been playing with the ErgoDox some more, and things are getting
