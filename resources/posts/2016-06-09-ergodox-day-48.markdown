@@ -1,0 +1,175 @@
+---
+title: "ErgoDox: Day 48"
+date: 2016-06-09 16:30
+tags: [Hacking, Keyboard, ErgoDox]
+---
+
+In the past week and a bit, [my layout][layout] did not change much at all,
+neither behaviour, nor key location. It appears I reached a state where I feel
+sufficiently comfortable. Therefore I will be talking less about the keyboard
+now, or how I am taming it, and instead focus on something I am experimenting
+with: creating my own alphanumeric layout.
+
+ [layout]: https://github.com/algernon/ergodox-layout#algernons-layout
+ 
+Having reached a reasonable proficiency in typing Dvorak, and having used it
+full-time for some time made me realise that while the layout itself is
+infinitely more comfortable than QWERTY, and has some desirable - at least,
+desirable for me - properties like hand alteration, it is not without problems.
+I will try to explore what I experienced, and how I am trying to solve those
+shortcomings.
+
+<!-- more -->
+
+## The defaul layout
+
+![Base layer](/assets/asylum/images/posts/ergodox-day-48/base-layer.png)
+
+My default layout, your average Dvorak, with only very minor changes: the `-`
+key is both on the left side in pinky position, and on the right side,
+accessible by both the index finger and a thumb. On standard Dvorak, it wound be
+to the right of the `S` key. I found the button by the `Z` key to be awkward to
+tap with the pinky, and `-` is a key I use often, so I moved it to a more
+accessible place.
+
+For similar reasons, `:` appears twice too, but with a twist: the one close to
+the thumb and index finger is always shifted, `;` is only available on the pinky
+position.
+
+But these are only two symbols, and if we want to be strict, only the `-` moved,
+the thumb/index positioned keys are not part of the standard Dvorak layout.
+
+## Problems with Dvorak
+
+The more I worked with Dvorak, the more issues I found with it, some smaller,
+some bigger. By far the most annoying part is the `L` key, banished to the right
+half into a pinky position, despite it being a reasonably frequent letter.
+
+Another key I happen to tap often is `Q` - again, in a not ideal position on
+standard Dvorak. At least it is not under the pinky, but the ring finger is not
+the most dexterous finger I have, and bending it downwards to reach `Q` is not
+the most comfortable thing in the world.
+
+Then there are a set of keys which are in reasonable positions, when considered
+in isolation, but throughout the day, I tap them in combination with other
+nearby keys, which results in less alteration and more rolls than what I'd
+prefer. For example `G` and `H` are under each other, and tapping them in this
+order wasn't feeling right. Similarly, `S` and `Z`, a common combination in
+Hungarian was even worse: both on the pinky, on the same side! Argh!
+
+Once these issues were identified, I paid a little more attention to what I do
+not feel comfortable with, and it turned out that `W` and `V` being beside each
+other was challenging to remember. One of my most frequent mistakes in the past
+couple of days was mixing these two up.
+
+## Looking for existing solutions
+
+I looked into a few Dvorak variants, and one of them stood out:
+[Capewell-Dvorak][cpdv], pictured below, on a normal keyboard.
+
+ [cpdv]: http://www.michaelcapewell.com/projects/keyboard/layout_capewell-dvorak.htm
+
+![Capewell-Dvorak](/assets/asylum/images/posts/ergodox-day-48/capewell-dvorak.png)
+
+This layout addresses a number of my issues with Dvorak, by moving `L`, `V` and
+`Z` to better positions. I tried the layout for a short while, but decided
+against it, because it introduced more new issues than what it fixed:
+rearranging the vowels interfered with my **Emacs** layer, and I felt no need to
+mix these up. Even though the reasoning to do so is solid, I am used to the
+Dvorak layout now, feel comfortable with the order of the vowels, and have no
+desire to retrain my muscles for some very minor advantage. It also did not
+address my problem with `G` and `H`, and blew up the whole bottom row on the
+left side, to maintain QWERTY-compatible `ZXCV`. I do not care about
+QWERTY-compatibility, and with one-shot modifiers, `CTRL-C` is as convenient -
+or even more so! - on Dvorak than on QWERTY. Remember, my `Control` is on the
+thumb cluster!
+
+So, sadly, Capewell-Dvorak did not work out as well as I had hoped. But the
+layout - and the post describing and introducing it - gave me enough hints to
+start experimenting with my own layout, taylored to my needs, and based on my
+use-cases, desires and whims.
+
+## The experiment
+
+Observing which keys I use, and what combinations feel bad, I came up with the following layout:
+
+![Experimental layer](/assets/asylum/images/posts/ergodox-day-48/experimental-layer.png)
+
+There is no sound research behind this, and some of the choices are likely not
+the best if you are aiming to optimise the layout for maximum efficiency, but my
+goal wasn't that anyway. My goal was to find something I find comfortable.
+
+So what did I change and why?
+
+I moved `L` to the index position on the right side, where `B` used to be. As
+this is a frequent key, it deserves a stronger finger. On the other hand, `B` is
+much less frequent, so I moved that to the old position of `V`, just below `N`.
+This meant that `W` and `V` are no longer neighbours, yay! The next issue to
+solve was `Z`, it had to move from under `S`, so I switched it with `;`. This
+way, typing `sz` or `zs` (not unheard of in Hungarian!) means hand alteration,
+which I find comfortable.
+
+The keys these replaced had to move elsewhere: `V` moved to the other half, to
+the position `J` was at, just below `E`, and `J` moved to the right half, top
+pinky position after `R`, to where `L` used to be.
+
+Now, I needed `Q` in a better position, so I borrowed another idea from
+Capewell-Dvorak, and moved it to the old `F` position, while `F` shifted one to
+the right, replacing `G`, and thus breaking the `gh` combo up into a more
+convenient alteration. But since `G` moved, to the old position of `K`, we
+needed to move that key too, and there was an empty spot at the old `Q`
+position, it moved there.
+
+And this pretty much covers all the changes. This layout addresses all the
+complaints I have had against Dvorak or Capewell-Dvorak, and by the looks of it,
+will work fine. However, I am not using this layout yet, because I do not have
+the time to retrain my fingers just yet. So I play with it for about ten minutes
+each day to see if anything needs improving. I do not aim for any speeds, nor do
+I try to memorize the layout, I just look at a printed sheet and try a few
+things, both typing and key sequences I use to control Emacs.
+
+Once I have a split keyboard at home, I will devote more time to fully switch to
+this layout - or whatever I turn it into until such time. For the time being, it
+remains as an extra layer on the keyboard, for a few minutes of playtime each
+day.
+
+## A note on other layouts
+
+Since my [day 40](/blog/2016/06/01/ergodox-day-40/) post, I have been approached
+by a similar question by a number of people: *why Dvorak, and not something
+else? Something that is more efficient?*
+
+The answer is very simple: when I first started looking into alternative
+layouts, I was not touch typing properly, I needed legends to reorient myself,
+and I wanted a keyboard with a layout that wasn't QWERTY, and had appropriate
+legends. I only found Dvorak, so that was it. Replacing keycaps was out of the
+question at the time.
+
+Since then, I never felt the urge to learn other layouts such as Norman, Colemak
+or Workman. I just don't see the appeal. They may be closer to QWERTY, but for
+me, that is a huge disadvantage, because my muscle-memory already rewired itself
+for Dvorak. They may be more efficient, and spread the load better between the
+hands, but they all lack the hand alteration I have with Dvorak, and focus on
+rolls instead, which I found less convenient.
+
+I do not look for the most efficient layout, nor the most ergonomic. I look for
+one I find comfortable, one I can type at an acceptable speed. This includes a
+focus on hand alteration, and possibly inefficient choices to cater to my own
+whims. For example, the `C` key could easily be moved elsewhere - like, swap it
+with `L` -, but I like it where it is.
+
+As long as I feel ok with the layout, I am not interested in learning a new one
+for some small improvement. Let alone learning layouts very different to what I
+use now! I did that once, changing from QWERTY to Dvorak, not keen on doing so
+again, unless there is no other option.
+
+## Next up
+
+I am nearing a stage where the layout and the behavior of the keyboard is
+perfect, and when I stop tweaking it even further. As such, the focus of these
+posts will shift towards my next project in transforming my environment: mice
+and trackballs, which in turn will likely be followed by standing desks. With
+some intermission once my [keyboardio M01](https://shop.keyboard.io/) arrives.
+
+And during that time, I will be working on improving my Steno too. But that's
+going to be a long process, one I will not be reporting on all that frequently.
