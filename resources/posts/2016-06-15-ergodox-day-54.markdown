@@ -1,0 +1,245 @@
+---
+title: "ErgoDox: Day 54 - It's never done"
+date: 2016-06-15 11:00
+tags: [Hacking, Keyboard, ErgoDox]
+---
+
+Although just [six days ago][blog:ed:48] it seemed I am done doing major changes
+to my [layout][layout] for a while, and the base layer will not be touched, I
+was wrong. It's never done. There is always something to tweak, to make things
+even more comfortable, and fit for my hands and usage patterns. Nevertheless,
+while there were a number of updates to the keyboard, the path I started on with
+the ErgoDox continues, and I'm at a stage where it's no more just a keyboard.
+It's something bigger: as I started paying more attention to ergonomics, I am
+slowly transforming my environment both at work, and at home.
+
+As a consequence of the above, this will be the last post titled *ErgoDox: Day
+N*, but worry not! Next ones will have similar content, but a different title,
+to reflect what I will be talking about.
+
+ [blog:ed:48]: /blog/2016/06/09/ergodox-day-48/
+ [layout]: https://github.com/algernon/ergodox-layout#algernons-layout
+
+<!-- more -->
+
+Lets begin with the layout changes, to keep the tradition!
+
+## Layout changes
+
+While my previous layout (pictured below) was very nice, when I was using it for
+coding in C, or just coding in general, some things felt... off.
+
+![Base layer, day 48](/assets/asylum/images/posts/ergodox-day-48/base-layer.png)
+
+First, there are some duplicate symbols: `-` appears twice, and so does `:`.
+Ever since putting `-` on the right half, into a thumb-accessible position, I
+have not used the other one, and the only reason I ever hit the `;` under the
+left pinky was to get that symbol instead of its shifted variant, the `:`. These
+felt like a waste, especially the `-`, so I looked around to see what keys may
+benefit from moving to either of these positions. I noticed that I keep typing
+`/` and `?` often when coding, and having to stretch my right pinky up to reach
+them was not ideal. You see, while some fingers like stretching up more than
+bending downwards, the pinky rather bends down, than reaches up. So it was a
+no-brainer to move the `/?` key to the left side, replacing `;`. I then taught
+my firmware to input a `;` when tapping `:` with the `Shift` on. After these, I
+moved the `=+` key one row down (since the `/?` that was there was moved), so
+that's easier to tap too!
+
+With that done, it was time to do something about the `-` on the left half. I
+found no other key that I wanted to move there, at least not immediately, so I
+turned that into a `Media Prev/Next` key. This worked okay, but looked a tad
+awkward, having two pinky keys above it, when the pinky does not like to
+stretch... Wait a moment! If the pinky does not like to stretch, why on earth do
+I have `Tab` so high? Why not on the home row? Good question. I don't know. So I
+swapped these keys, and put `Tab` on the home row.
+
+With these changes, the layout now looks like this:
+
+![Base layer](/assets/asylum/images/posts/ergodox-day-54/base-layer.png)
+
+Been typing with this layout for the past few days, and it's a definite
+improvement over the former. Here's hoping that this will stick for a while.
+
+## Improving the working environment
+
+One major reason for choosing a new keyboard was to improve the ergonomics of my
+tools. But the keyboard is only one such tool, there are a number of others in
+my environment that could use an update. Replacing my mouse was high on the
+list, but that's a longer process (more about that in a bit!), and something
+else came up suddenly. You see, over the past few years, I gained a bit more
+weight than it would be healthy, let alone ideal, so it's been a desire for some
+time to go and exercise. This past weekend, we finally got our acts together
+with my lovely wife, and went for some cycling and running. It was awesome, and
+tough, and a lot in one afternoon, but I felt energised, proud. In a fit of
+enthusiasm, sparkled by the weekend's events, we transformed my working desk at
+home into a standing desk, using some cheap IKEA furniture and some boxes.
+(Picture coming later, not at home to take one.)
+
+At first, I was worried a bit that this may be too sudden a change, or hard to
+get used to, but boy, was I wrong! It's incredible. I have much more freedom and
+space, I can wander around with my headphones on, shuffle up and down while
+thinking (which is most of what I do), and stop at the keyboard to burst out
+some code once I figure out what to write. I can place my weight on one leg or
+the other, I can lean on the IKEA furniture if I want to rest my legs a tiny
+bit. I can just walk away, into the kitchen, or to kiss my wife, without first
+having to stand up, push the chair back. I found myself doing all these a lot
+more often since. I feel better, and am enjoying the setup a lot, it's a blazing
+success.
+
+It does feel a bit weird, too, because I expected that a standing desk will put
+much more burden on my legs, and that it will take a while and some strong will
+to get used to - which is why I have not tried it before - but my experience so
+far is the exact opposite! Standing up was liberating. While I do not know how
+it will feel standing there eight hours a day, I know I can easily do four.
+Therefore, we are exploring our options back at work too, to see how we could
+achieve something similar there too.
+
+There is one issue with my standing desk at home, however: the mouse.
+
+## Of mice and men
+
+The little furniture thingy we put on top of my table to lift the keyboard, the
+mouse, and the monitor (the latter with the help of an additional box)... that
+thing is narrow. It can hold my keyboard just fine, but I can't place the mouse
+beside it. Only in front of it, or behind it, and there's little room to move
+it. This is awkward, inconvenient, and downright silly. A trackball would be a
+much better fit. While I'd still have to reach it behind the keyboard, moving
+the cursor would become a lot easier. This setup is obviously temporary, as I
+can't fit a split keyboard here - but we'll worry about that later, once I have
+one at home too.
+
+For now, we need to sort out the mouse situation, both at home, and at work,
+because at work, I do have a split keyboard, and I really, really want to place
+my mouse between the two halves. Can't do that with a traditional one, so I need
+a trackball.
+
+But which one do I choose? The last time I tried trackballs (a
+[Logitech Trackman Marble][ltm]), I found them awful, but that was almost a
+decade ago, if not more. May have been some other trackball too, but it was a
+Logitech, index-operated one. If I invest into an expensive trackball, and I
+won't like it, that would not be fun. I already invested a lot in keyboards, and
+that was a huge gamble itself, I'd rather not do the same again, not going to
+risk my good luck.
+
+ [ltm]: http://www.logitech.com/en-us/product/trackman-marble
+
+Looking around in stores, the most common trackball - which is also affordble! -
+is the [Logitech M570][lm570], a thumb-operated trackball with scroll wheel, a
+good number of buttons, and a lot of reviews praise it. Even have a colleague in
+the office who uses one, and likes it.
+
+ [lm570]: http://www.logitech.com/en-us/product/wireless-trackball-m570
+ 
+My problem is, I don't want a thumb-operated one. Placed between the keyboard
+halves, an index-operated one feels much more natural.
+
+At this point, I sat down, and stated looking at my options, and my requirements:
+
+* I want something affordable, below $50, preferably.
+* I'm only interested in trackballs: trackpads, trackpoints and traditional mice
+  (even vertical or ergonomic ones) are out. The latter due to space reasons,
+  the former two because I hate them still. I want to move my hands as little as
+  possible, so fondling a ball is preferable over caressing some surface, or
+  poking a tiny button-like thing.
+* Due to being placed between keyboard halves, I want a finger-operated
+  trackball, as opposed to a thumb-operated one.
+* I have normal hands, maybe even slightly larger than average. Small gadgets
+  are not my thing.
+* I use the scroll wheel often, so I need that, or an equivalent.
+* I prefer wired over wireless. I can hide the cables nicely, and I feel more
+  confident about wired things.
+* Large balls are nice.
+* Must not require special drivers, or pre-configuring under Windows. I use
+  Linux, it must work out of the box without special software.
+* Preferably not mouse-shaped, it won't be on the side of the keyboard, and I
+  don't want to hold it like I would hold a traditional mouse.
+* Programmable buttons are a great plus, but not required.
+* At least two buttns, but three are best. I don't need more than that. Four, I
+  could perhaps make use of, but not more.
+  
+With these requirements, the list is rather short, but to keep the suspense,
+lets go over some of the options I explored!
+
+### [Logitech Trackman Marble][ltm]
+
+Affordable, finger-operated wired trackball, that does not require special
+software, and has a nice ball. But it does not have a scroll wheel, nor an
+equivalent, and the shape of it is like that of a mouse. The button placement is
+also not to my liking, and having two small buttons pretty much embedded into
+the two large ones is terrible. No way I can make use of those, so they'd just
+be an annoyance.
+
+While it works out of the box under Linux, it does have special, windows-only
+software that can be used to tweak its behaviour, but the device has no memory
+of its own, so this is pretty much useless.
+
+All of these together rule out this trackball.
+
+### [Logitech M570][lm570]
+
+Affordable, but thumb-operated and wireless, and looks like a traditional mouse.
+This is obviously meant to be placed by the right of the keyboard, not in the
+middle.
+
+On the plus side, it has a scroll wheel, better button placement than the
+Trackman Marble, but that's not enough to offset the other deficiencies.
+
+### [L-Trac Glow](http://clearlysuperiortech.com/cst2545wglproductpage.html)
+
+Finger-operated, nice large ball, scroll wheel, well placed buttons, and looks
+fit to be used between the keyboard halves, and works out of the box under
+Linux, at least according to the vendor.
+
+However, the scroll wheel does not look convenient, and the price is a bit
+steep, almost three times my budget. And while it looks more fit to be placed in
+the middle, it still retains some of the traditional mouse-shape.
+
+### [Kensington Expert Mouse](http://www.kensington.com/us/us/4493/k64325/expert-mousespan-classregsymspan-wired-trackball)
+
+Nice, large ball, scroll ring, four buttons, no resemblance to a traditional
+mouse, finger-operated, and from what I could gather, works under Linux out of
+the box, or at least with minimal configuration.
+
+Looks good, and would be an option, but the price is twice my budget. Not
+entirely sold on the large buttons either, it seems the idea is to have my hand
+put on it, and roll the ball with the palm, so I have access to all buttons...
+not sure I'd like that.
+
+But an option nevertheless!
+
+### [Kensington Slimblade](http://www.kensington.com/en/no/4493/k72327eu/slimblade-trackball)
+
+Large ball, four buttons, finger-operated, no resemblance to traditional mice,
+should work on Linux out of the box. The scrolling solution is not something I'd
+like (twisting the ball), even though the shape and the buttons are something I
+like more than the one on the Expert Mouse.
+
+The price is still over my budget too, but less so.
+
+### [Elecom Deft](http://www2.elecom.co.jp.e.gj.hp.transer.com/products/M-DT1URBK.html)
+
+Scroll wheel, buttons, finger-operated, and affordable. But it looks like a
+traditional mouse, and is rather small. As such, not an option sadly, even
+though reviews are good.
+
+### [Kensington Orbit with Scroll Ring](http://www.kensington.com/us/us/4493/k72337us/orbitspan-classregsymspan-trackball-with-scroll-ring)
+
+Largeish ball, scroll ring, finger-operated, does not resemble a traditional
+mouse, works under Linux and is affordable and wired.
+
+I like the button placements, and the scroll ring is something I believe I could
+get used to, fast. The downside is that it only has two buttons, no middle
+button - but I can do without that.
+
+### The verdict
+
+It looks like my two reasonable options are the
+[Kensington Expert Mouse](#kensington-expert-mouse) and the
+[Kensington Orbit with Scroll ring](#kensington-orbit-with-scroll-ring). Of the
+two, I think I prefer the Orbit, even though the ball is larger in the Expert
+Mouse. For now, due to my budget being low, I am going with the Orbit, and will
+see how it fares.
+
+I'm hoping that I will be able to report back on my experience using a trackball
+at work in a few weeks. Until then, I'll likely post an update or two about the
+standing desk experience.
