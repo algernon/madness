@@ -1,0 +1,110 @@
+---
+title: "ErgoDox: Day 66 - Tap dance"
+date: 2016-06-27 15:15
+tags: [Hacking, Keyboard, ErgoDox]
+---
+
+In the past, I usually updated every week, but this last one took longer, almost
+two weeks. Not because things finally settled down, no.
+[It's never over][blog:ed:54]. Lots of things are happening on the keyboard
+front, a good amount of experimenting was and is being made. The changes this
+time are less radical, perhaps, at least as far as the base layer is concerned.
+Other layers... well, they did see some bigger updates.
+
+The changes are mostly fueled by my need for comfort, and were usually committed
+after a reasonable time of being used. The other source for continued tweaking
+is simplification. There is a behaviour that I really, really wanted to do, but
+the QMK firmware did not provide the necessary functionality out of the box, so
+a big chunk of this post will be about this feature: a way to allow keys to
+perform different functions based on the number of taps they receive, keeping
+the order of keypresses.
+
+ [blog:ed:54]: /blog/2016/06/09/ergodox-day-54/
+ 
+I will also briefly update on my experiment with a standing table.
+
+<!-- more -->
+
+## Keyboard layout changes
+
+Lets recall how the layout looked on day 54:
+
+![Base layer, day 54](/assets/asylum/images/posts/ergodox-day-54/base-layer.png)
+
+I didn't like how the cursor movement and navigation keys were laid out, so that
+part was completely reimagined. I now have four buttons total for them, and a
+fifth key to toggle between cursor movement and navigation keys.
+
+Furthermore, I moved the `=+` symbols onto the home row, because they see
+considerably more use than any of `\|`, thus, they had to be swapped. I'm slowly
+getting used to this.
+
+With these, the new layout looks as follows:
+
+![Base layer](/assets/asylum/images/posts/ergodox-day-66/base-layer.png)
+
+The most interesting change, however, happened under the hood, and is
+[slowly making its way towards QMK][qmk:pr:449]. It all started with the `;`
+symbol, which used to live under `A`, but was moved to the same key as `:`, so
+when shifted, that key would input a `;` instead of a `:`. But the problem was,
+that the key is either tapped by the thumb, which also taps the `Shift` key, or
+my fingers have to do an uncomfortable dance, and I don't like those. So I
+revisited an old idea, one I've been intrigued about for a while, but also one
+where my experiments did not succeed: having the key input `:` on single tap,
+but `;` on double, preserving the order of keys pressed if the tap sequence is
+ignored.
+
+ [qmk:pr:449]: https://github.com/jackhumbert/qmk_firmware/pull/449
+ 
+There is a similar implementation in QMK already, but that suffers from a number
+of issues:
+
+* It does not preserve keypress order when a tap sequence is interrupted. So if
+  I tap `;a` quickly, I may end up with `a;`, and that is not something I want.
+* It requires a lot of code to implement even a single key with this behaviour.
+
+My solution addresses both issues, and makes it trivial to have different
+actions for the different number of key presses. If you want to be able to tap a
+key a hundred times, and then do some funny action, you can do that, easily.
+
+I will not go into the details of how this works exactly, the
+[pull request][qmk:pr:449] above goes into sufficient detail.
+
+### Next steps
+
+Once the pull request is accepted, I will migrate my layout to use the feature
+(right now, only an experimental branc of mine does this). And then, I will
+probably start playing with my experimental layout more seriously. I have
+collected a lot of data about my typing habits: which keys I press, how often,
+and in what combinations?
+
+Armed with this knowledge, I will try to evaluate the layout I came up with.
+
+As for the next update... that will be a while, because I will not be able to
+play with a keyboard in early july, and I am unsure whether there will be
+interesting news to share.
+
+## Standing desk experience
+
+At work, I am still sitting, but not for long. The plan is to transition to a
+standing desk this week. At home, I stand, or rather, walk. I found that
+standing still is both boring, and not good for my feet. So I walk around when
+I'm thinking, or do squats, or something. I also sit down from time to time: to
+eat, to relax and immerse into music for a few minutes. And no, there is still
+no picture of the setup. I'd have to clean my desk and the surrounding area
+first, to make it presentable... nah. I'll snap a picture of the setup at work,
+once ready instead. A much better environment for photo purposes.
+
+My productivity is through the roof. I feel energised, passionate. I also lost
+almost five kilogramms in the past three weeks (partly because we've been
+exercising with my wife, changed my diet, and I'm sure standing also
+contributes).
+
+My mother, who has been working in a pharmacy for decades, on her feet eight
+hours and more a day, has some reservations about this standing desk idea. It
+will be interesting to compare our experiences, and figure out how to combat the
+issues she has been experiencing. My stance is that the two are not really
+comparable, the load on one's feet is much different when one works at a
+standing desk voluntarily, with the option to walk when he sees fit, sit down
+when he wants; and between someone who has no choice, and far less options to
+ease the burden placed on her feet.
