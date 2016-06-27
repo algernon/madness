@@ -19,7 +19,7 @@ a big chunk of this post will be about this feature: a way to allow keys to
 perform different functions based on the number of taps they receive, keeping
 the order of keypresses.
 
- [blog:ed:54]: /blog/2016/06/09/ergodox-day-54/
+ [blog:ed:54]: /blog/2016/06/15/ergodox-day-54/
  
 I will also briefly update on my experiment with a standing table.
 
