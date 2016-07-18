@@ -1,0 +1,120 @@
+---
+title: "ErgoDox: Day 87 - Heat & ADORE"
+date: 2016-07-18 14:00
+tags: [Hacking, Keyboard, ErgoDox]
+---
+
+It's been a while I posted an update about my ErgoDox journey, and there's a lot
+to talk about, now that I'm back from vacation. Today, we have two main topics:
+trackballs and heatmaps. The two are not connected, it just happens that I write
+about both at the same time.
+
+Lets start with a bit of history, to perhaps shed some light on why I did what I
+will explain just a few paragraphs below! I have been using the Dvorak layout
+for a while now, and while it is a definite improvement over QWERTY, it does
+have its shortcomings, so I was looking into ways to improve on it, while
+keeping some of its most desirable properties, like the hand alteration. I
+played a bit with various layout generators, but I found most - if not all - of
+them hard to use. Besides, when typing, I'm not just looking for raw efficiency,
+but comfort and feeling too. There are things that I **feel** are right as they
+are, but I find it hard to express that to a generator. Yet, I do not want to
+blindly design a new layout, based on feelings alone, that would be equally bad.
+So, I need some data: I want to know which keys I press, and how often. I want
+to be able to limit which rows, or which set of keys to limit the research to
+(for example, to see how to rearrange the number row, I want to see the use of
+the keys there in their isolation).
+
+In short, I need a heatmap.
+
+<!-- more -->
+
+With a heatmap, I can easily see which keys are most frequently used, and which
+are in bad position. All I need is a program that monitors the keys I press, and
+puts the results on a keyboard! Sounds easy, doesn't it? Well, I have found no
+program that could display the heatmap over an ErgoDox, and they all suffer from
+one huge drawback: they only see what the OS sees, and that is sometimes
+misleading. For example, to get the `:` key, I do not press `Shift`. For the
+heatmap to be really usefol for what I want to use it for, I need to collect
+what positions the pressed keys are in, on the physical keyboard, and lay that
+out on an ErgoDox, as a heatmap.
+
+This is why I ended up adding a keylogger to my firmware: it logs all the key
+positions, whenever a key is pressed, and when it is released. It has no
+knowledge of layout, and it doesn't need it, either. I have a separate tool that
+parses that output, and creates a heatmap from it, and that has some knowledge
+of the layout.
+
+![Heatmap](/assets/asylum/images/posts/ergodox-day-87/heatmap-1.png)
+
+The map above is what I gathered by using the keyboard for about three days,
+before I went on vacation. Some problems of the layout are immediately obvious:
+
+* The right pinky is way overloaded.
+* The right hand is overloaded too.
+* There are keys on the home row that are used less than keys above or beyond
+  the row.
+* There are keys on the row below the home row, that see more use than some of
+  the keys on the row above.
+  
+Why are these bad? Because hand alteration is best when both hands do nearly
+equal amounts of work. The balance does not need to be perfect, but what this
+map shows is certainly bad. Especially on the right pinky, poor finger. As for
+keys an the rows above- or below the home row, the row below is less comfortable
+to reach than the row above, so key priority is home row first, above, and then
+below. Pinky needs some work too, but it's the weakest finger. Ring-finger can
+do a lot more, but mine is not the most accurate, or dexterous, so it should see
+limited use, too. Middle and index - those are the main workers, along with the
+thumbs. But they must not be overloaded, either.
+
+Hard stuff. I have been staring at this map for hours, and came up with a
+layout, that I think will work well, and keep all the good properties of Dvorak,
+and improve on it:
+
+![ADORE](/assets/asylum/images/posts/ergodox-day-87/adore.png)
+
+At the time of this writing, this layout is still a work in progress, and I have
+not used it all that much yet, either. There will be further tweaks, I am sure.
+The number row will be rearranged, for one. But it is too early to tell how good
+this one may be.
+
+Nevertheless, one thing appears to be crystal clear: I use the `R` key more
+often than `H`, so the former goes on the home row. And this gave the name of
+the layout: if you start with `A`, and alternate between the sides, it spells
+out `ADORE`, which I found to be a cool name for the layout. I'll be keeping the
+`R` where it is!
+
+### Orbital experiences
+
+Shortly before leaving for vacation, work ordered me a
+[Kensington Orbit][orbit], and I started playing with it this morning. I must
+say I'm surprised! The last time I tried a trackball, I hated it. Now, I took a
+leap of faith, figuring that my old gripes are gone. I spent days imagining how
+a trackball would feel, and concluded I'll like it. Nevertheless, I chose one of
+the cheapest ones - but not a thumb-operated one, because I eventually plan to
+put it between the two keyboard halves -, in case I'm wrong. I wasn't.
+
+ [orbit]: http://www.kensington.com/us/us/4493/k72337us/orbitspan-classregsymspan-trackball-with-scroll-ring
+
+It was surprisingly easy to switch to a trackball, took maybe a minute to get
+accurate enough for most tasks. I still can't click on small icons, but that's
+not a big deal, because I don't want to do that anyway. Mousing around feels
+significantly more comfortable now: I don't have to move my hands around and
+wave on the table like an idiot - I can just caress a nice blue ball. The
+buttons are well placed, and I don't miss the middle button, either. I used that
+primarily to open links in a new tab, but I can do that with tapping `Control`
+before clicking, which is good enough.
+
+But by far the best thing about the mouse is the scroll ring. Smooth, precise,
+and very easy to control. This is the kind of thing you instantly fall in love
+with, and don't want to ever use something without it again. It's that good. I
+was not expecting this to be the most useful feature of the trackball, but it
+certainly left the biggest impression on me so far!
+
+I don't think I'll have any issues using it long term.
+
+### Next up
+
+In the next part of my journey, due sometime next week, if all goes well, I'll
+talk a bit more about my experience with a standing desk, and will hopefully
+have a better idea about the **ADORE** layout. I plan to play with it a few
+minutes each morning.
