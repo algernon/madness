@@ -1,0 +1,95 @@
+---
+title: "ErgoDox: Day 97 - Progressing slowly"
+date: 2016-07-28 10:15
+tags: [Hacking, Keyboard, ErgoDox]
+---
+
+Since the [last update][blog:ergodox:87] not much has happened with the layout.
+There were some minor changes, but nothing spectacular. Instead, I've been doing
+a lot of research, or at least, trying to. The focus is now on the ADORE layer,
+and I'm collecting data, analyzing the layout, and similar things. For example,
+here is an updated heatmap of my current, Dvorak layout:
+
+ ![Heatmap](/assets/asylum/images/posts/ergodox-day-97/heatmap-1.png)
+ 
+ [blog:ergodox:87]: /blog/2016/07/18/ergodox-day-87/
+ 
+This heatmap is based on pretty much all my keypresses between the 4th of July
+and today.
+ 
+<!-- more -->
+
+I have been tweaking the [Carpalx][carpalx] tools to analyze - and perhaps
+optimize - my layouts, and so far, it agrees with me that ADORE is in at least
+some ways, an improvement over Dvorak: the hand usage is better balanced, and
+there's less work for the pinkies. But the layout does not feel good yet - it
+feels worse than Dvorak sometimes, the `L` is in a terrible position for
+example, and so is `Y`. Oh, as a reminder, the ADORE layout is this:
+
+ ![ADORE](/assets/asylum/images/posts/ergodox-day-87/adore.png)
+
+ [carpalx]: http://mkweb.bcgsc.ca/carpalx/
+ 
+I am working on a solution that would translate the keylogged data I collect on
+Dvorak, to the ADORE layout, so I can compare how the heatmap of typing the same
+thing on Dvorak and ADORE would look. Not quite there yet, but eventually...
+
+In the meantime, as I said above, I'm playing with Carpalx. There are a lot of
+knobs to configure to make it measure and optimize in a way I prefer it, so no
+real useful output from here yet. The only thing I could reliably use it for so
+far, is analyzing the layout, for hand and finger distribution. That gave me a
+bit of confidence that I'm on the right track, but there's still some way to go.
+
+Maybe by the time I write the next update, I will have more useful things to report on.
+
+## Orbital experiences
+
+I've been using the trackball for more than a week now, and I'm still loving it.
+The scroll ring is incredible, and I don't thing I'll ever be able to use a
+mouse or a trackball without one: it's so much more convenient than a scroll
+wheel, and more precise too! Highly recommended.
+
+Not much else to say about the trackball: it just works. It's not programmable,
+though that would be a very nice thing. A real time sink too... I spend enough
+time tweaking my keyboard, if I could tweak the behaviour of my mouse similarly,
+I'd never get any work done, heh.
+
+## Standing desk
+
+At work, I'm still sitting, and will continue to do so, for some time. At home,
+standing is still good, but I found that the solution I use now, is far from
+perfect. I have a small table (pictured below, without the feet) on top of my
+table, with the hole inside facing sideways. On top of this, I have another box
+to raise my monitor, and the space in front of that box is used for my mouse and
+the keyboard.
+
+ ![Small table](/assets/asylum/images/posts/ergodox-day-97/small-table.jpg)
+ 
+This setup allows me to use the small table as a kind of podium: lean on its
+sides, and grab around the edges. This is very convenient. However, all this has
+downsides too! There is very little space for the keyboard and the mouse, which
+is an issue, because at home, I still use a regular mouse (my trackball for home
+use has not arrived yet), and once my [ErgoDox EZ](https://ergodox-ez.com/)
+arrives, there will not be enough space for the keyboard, if I want to use a
+distance between the two halves similar to what I have at work.
+
+Thus, I will need to turn the table, and lose the podium-like property, and find
+a few more boxes to stack under the monitor. Some of my cables will be more
+exposed this way too, but that's not that big a deal.
+
+Nevertheless, standing is still convenient, I love being able to walk around
+whenever I feel like it. I can also go and sit down, if I'm reading a longer
+article, or if I'm thinking, and do not need access to my peripherals. I do that
+a few times a day. Standing long hours is just as bad as sitting all day, so I'm
+trying to keep a reasonable balance.
+
+It's still very early to form a definitive opinion, though. But so far, so good!
+
+## Next up
+
+By the time of the next update, I should have a second ErgoDox EZ for home use,
+a trackball at home, new keycaps, a keycap puller, and a slightly modified
+standing desk. Not to mention, more data for the heatmap, and more experience
+with Carpalx.
+
+The next update looks promising, can't wait to write about all these things!
