@@ -1,0 +1,138 @@
+---
+title: "ErgoDox: Day 117 - Unicode rainbow poop, times two"
+date: 2016-08-17 21:10
+tags: [Hacking, Keyboard, ErgoDox]
+---
+
+I'm writing this on ADORE, to collect enough data for a new, ADORE-based
+heatmap, and to practice the layout. Most likely, this post will take the
+longest time to write. Nevertheless, I will persevere, for science!
+
+A lot has happened since the last entry in the journal: I have a second
+[ErgoDox EZ][ez] at home, with [NPKC rainbow][npkc] keycaps; I experimented
+quite a bit with tenting; did major changes to the ADORE layout; implemented a
+symbolic Unicode input system; and fixed some long-standing bugs in the
+tap-dance code. In this post, I will talk about all these and more.
+
+ [ez]: https://ergodox-ez.com/
+ [npkc]: https://www.massdrop.com/buy/npkc-rainbow-keycaps?mode=guest_open
+
+<!-- more -->
+
+# The setup at home
+
+ ![Setup at home](/assets/asylum/images/posts/ergodox-day-117/ez-npkc-rainbow.jpg)
+
+I was briefly considering to ask for Blacks in the second EZ I got for home use,
+but then the better part of me won, and the second one has Browns too, blanks,
+of course. The keyboard arrived a week after the keycaps, but I had to wait
+another week for the puller to get here too. That was a long week: having both
+the keyboard and the caps, but no puller! Once all equipment arrived, I spent a
+night replacing the keycaps. Why did I do that? Because I could, and because I
+wanted to try the OEM profile, not to mention that the pastel rainbow colors
+look lovely. Visually, I love how it turned out.
+
+# OEM vs DCS
+
+The biggest difference between the stock keycaps and the new ones - apart from
+the color, of course - is the profile. The stock ones are DCS, while the new
+ones are OEM. The difference is not all that much, but it is noticeable. I have
+not decided which one I like better yet, both are suitable for daily use. If I
+could choose, I'd mix the two: the height of OEM, and the sculpting of DCS would
+be closer to my dream profile.
+
+# Tenting
+
+When I set up the second EZ at home, I just set the tenting randomly, and
+experimented until it felt comfortable. During these experiments, I tried to pay
+attention to how each angle feels.
+
+### Flat
+
+Having the keyboard flat did not feel good: not only did I have trouble finding
+a comfortable way to rest my wrists, no matter what else I tried, after about
+fifteen minutes on the keyboard, I started to feel pain in my hands. Not a good
+sign.
+
+### Raising the top
+
+Awkward, quickly discarded, because of wrist-twisting.
+
+### Tenting the outside downwards
+
+In the end the setup that worked, was to tent the keyboard, so that it has a
+downward slope towards the outer side. I had to adjust the angle a number of
+times, because in certain angles of the thumb cluster, my thumbs started to hurt
+after a day of typing. With the current setup, when the top point of the board
+is the topmost, inner corner, and the lowest is the bottommost outer one, there
+is no more pain.
+
+# Trackball progress
+
+Not much to report here, except that at home, I'm playing with having the
+trackball in the middle of the two keyboard halves. My gut feeling is that this
+will be fantastic once I get used to it, and find the right height for it. As it
+stands right now, it is not all that convenient to use it: I have to stand a bit
+to the left, and reach down. Yuck. A quick experiment suggests that just raising
+it would help a lot. How that works out is for the next update.
+
+One other thing to note here is that configuring the mouse cursor speed is
+essential for reasonable precision. Took me a lot of trial and error to get this
+right.
+
+# Standing desk
+
+Still going strong, and reading more and more about the dos and don'ts of using
+a standing desk. I walk around a lot, and sit down when not typing for longer
+periods of time. At some point, I will likely invest into a high bar chair, for
+the shorter sitting sessions.
+
+# QMK work
+
+## Symbolic Unicode input system
+
+One day, casually browsing Twitter, I had a sudden urge to type in the Unicode
+`pile of poop` symbol. I immediately forgot why I wanted to do that, but it sent
+my thoughts down this track: if I want to input poop, I just need to remember
+its code. But I have a terrible memory, especially when it comes to remembering
+random stuff like phone numbers or codepoints. So why not let my keyboard type
+it for me? I can add any number of leader keys after all! But then I have to
+remember keys, which is only just slightly better than numbers. What if I could
+program my keyboard to translate Unicode symbol names? That would allow me to
+hit a trigger key, enter the symbol name, finish the sequence, and have the
+symbol appear on my screen.
+
+What if, indeed! I went ahead and implemented just this, and it is available on
+QMK master! See [this pull request][pr:ucis] for some documentation and
+examples.
+
+ [pr:ucis]: https://github.com/jackhumbert/qmk_firmware/pull/635#issue-171145190
+
+## Fixing the tap-dance bugs
+
+The tap-dance feature had a [number][td:bug-1] of [very][td:bug-2] annoying
+[bugs][td:bug-3], which I wanted to iron out for some time now. I had a go at it
+before, but ran into a dead-end, so I have let it rest, and settle down.
+Yesterday night, I had an epiphany, and this morning, I fixed them all in one
+fell swoop. Also made the feature more reliable and flexible too!
+
+ [td:bug-1]: https://github.com/jackhumbert/qmk_firmware/issues/527
+ [td:bug-2]: https://github.com/jackhumbert/qmk_firmware/issues/563
+ [td:bug-3]: https://github.com/jackhumbert/qmk_firmware/issues/574
+
+# ADORE
+
+Having typed all this in on ADORE, I noticed some shortcomings: `h` and `g` are
+on the same finger, and so are `s` and `y`. These are reasonably frequent
+combinations, especially the `gh` pair. On Dvorak this is less of a problem,
+because they are under each other, so the index finger can roll down. On ADORE,
+it has the `r` inbetween. This needs to be fixed.
+
+And this concludes this update, so lets see the heatmap!
+
+ ![Heatmap](/assets/asylum/images/posts/ergodox-day-117/heatmap-1.png)
+
+# Next up...
+
+In the next update, I plan to have some more ADORE, including the analysis of
+the heatmap, and the changes implemented as a result.
