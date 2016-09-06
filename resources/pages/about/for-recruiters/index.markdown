@@ -28,6 +28,9 @@ you'll just get pointed to this page.
   run anything else, except in a virtual machine or a chroot.
 * With that said, the only packaging work I am willing to do is Debian
   packaging. No RPM .spec files, thank you very much.
+* I will not work for **Google**, **Microsoft**, **Apple**, **Oracle**,
+  **Amazon**, or any bank or financial institute. If you are trying to recruit
+  me for any of these, stop right now.
 
 I do not think these are all that strange conditions, but most
 companies where recruiters found me from, failed on one or more of the
