@@ -1,0 +1,198 @@
+---
+title: "ErgoDox: Day 141 - ADORE, other things"
+date: 2016-09-10 13:00
+tags: [Hacking, Keyboard, ErgoDox, keyboardio, Ergonomics]
+---
+
+As with the [last blog post][blog:ergodox-117], I'm writing this on ADORE, to
+collect another heatmap worth of data. It is still awfully slow, but the changes
+I made since the last time feel better so far. Nevertheless, this post will be
+as much about other things, as about ADORE. This marks the day I start tagging
+these posts with the new [Ergonomics][tag:ergo] tag.
+
+ [blog:ergodox-117]: /blog/2016/08/17/ergodox-day-117/
+ [tag:ergo]: /blog/tags/ergonomics/
+ 
+Today, after I dive into how ADORE has changed since the last time, I will try
+my hands at explaining the layout I came up with for the
+[keyboard.io Model 01][m01]. We will briefly touch tmux and terminal emulators
+aswell.
+
+ [m01]: https://shop.keyboard.io/
+
+<!-- more -->
+
+## ADORE
+
+As a reminder, ADORE looked like this last time:
+
+ ![ADORE last time](/assets/asylum/images/posts/ergodox-day-117/heatmap-1.png)
+ 
+The updated layout on the other hand can be seen below:
+
+ ![ADORE now](/assets/asylum/images/posts/ergodox-day-141/adore.png)
+ 
+Let us compare what changed, and why!
+
+As I concluded back then, one of the major issues was the `gh` pair. This has
+been fixed by moving the `g` to the left half. The right half did more work too,
+so other keys had to be rearranged as well. Among other things, `x` and `y`
+swapped places, because `sy` and `py` were not comfortable to tap. Then, `k`
+swapped with `g`, to be able to move the latter to the left side. Finally, I
+brought back the `:` and `-` thumb keys on the bottom row: they just felt
+terrible on the index finger, that had to stretch quite a bit to reach them.
+
+Small-ish changes, but the effect can be felt already.
+
+We will see how the newest revision fares, but so far it looks like I will need
+to do some minor adjustments: the left hand sees considerably (ovep 5%) more
+work, and I'd like to keep that below 3%. However, this post is lacking a few
+symbols that I normally use more often, like `=`, `/`, and `+`. And it
+over-utilizes the `Backspace` key. Before doing any updates, I will look at a
+heatmap that ignores these keys.
+
+One thing that bothers me a lot is the `i`/`u` swap, compared to Dvorak: I can't
+get used to it. If I concentrate, and look at my hints, I usually find the rest,
+but not these two. I'm seriously considering swapping them back...
+
+## Terminals
+
+While keyboards are an important part of an ergonomic environment, they are not
+the only part of it, as we are all fully aware. The tools one uses, the
+shortcuts, program behaviour are just as important. Recently, I was migrating my
+config to a new laptop, and had to change terminal emulators, because the one I
+used before was abandoned. I ended up with GNOME Terminal, but that lacked
+features my old one had, so to compensate, I set up [tmux][tmux] to help me.
+
+ [tmux]: https://tmux.github.io/
+
+A side effect of this is that a lot of things I had in my prompt became
+redundant:
+
+ [![Old prompt](/assets/asylum/images/posts/ergodox-day-141/old-prompt.png)](/assets/asylum/images/posts/ergodox-day-140/old-prompt-full.png)
+ 
+That's a lot of redundant information, and the clock in the prompt doesn't even
+update until a new prompt is displayed. So I went searching for a prompt that is
+simple, yet has all the bits and pieces I need. It was a fast search: my first
+hit yielded the [pure][zsh:pure] prompt, and also a color scheme.
+
+ [zsh:pure]: https://github.com/sindresorhus/pure#readme
+
+ [![New prompt](/assets/asylum/images/posts/ergodox-day-141/new-prompt.png)](/assets/asylum/images/posts/ergodox-day-140/new-prompt-full.png)
+ 
+The new one is more compact, more copy & paste friendly, a lot simpler and nicer
+too. Loving it, so much better to look at! I have to spend less effort on
+copying, and tmux conveniently stays out of my way, yet, is there when I need
+it. I was able to script it to do things I did manually before, because my tools
+were not up to the task.
+
+Now why is this important, or ergonomic? I am staring at the screen many hours a
+day, the easier it is to see what's on the screen, the better.
+
+## keyboard.io
+
+By far the most thought went into designing a layout for the
+[keyboardio M01][m01] Model 01, and figuring out how the behaviour I have on the
+ErgoDox would translate to it. At first, it seemed like I would have to
+implement a lot of features, but after studying the firmware, and rethinking how
+I use the keyboard, it seems like I will have a much simper time! Lets look at
+the layout I came up with, and I'll explain the details!
+
+ [![ADORE on the M01](/assets/asylum/images/posts/ergodox-day-141/m01-adore.png)](#)
+
+ [m01]: https://shop.keyboard.io/
+
+This is pretty much all of it, save for the *application select* layer. There
+are only a few special keys, namely:
+
+* The top two keys on the inner sides:
+  - The topmost ones are the [tmux][tmux] control keys: left one sends `M-Space`
+    (or `C-a` when double-tapped); right one sends `M-Space p` (or `M-Space z`
+    on double-tap) - this does pane switching magic for me.
+  - The middle ones input `[`/`{` or `]`/`}` respectively, when tapped once, but
+    they turn into `(`/`)` when tapped twice.
+* The `:`/`;` key on the left thumb-cluster inputs `:` on single-tap, `;` on
+  double.
+* The main modifiers, `Alt`, `Ctrl`, and `Shift` (the latter being the third key
+  from the left on the left thumb cluster): they are all one-shot, yet
+  toggleable. This means that if I tap them once, they will register
+  immediately, and stay active until another (non-modifier) key is hit, or they
+  are canceled. If I tap them again, they stay on until toggled off. As a
+  consequence, they are also active when held.
+* The two palm keys:
+  - The left one, with the arrows controls the arrow/media/f-key layer, and
+    behaves exactly like the modifiers. When active, all keys that have a small
+    blue label on the front will have that functionality. The rest will be
+    turned into no-ops, save a few: the modifiers will stay the same.
+  - The right one, `LEAD` is similar, but can't be toggled: it is always
+    one-shot, at least for now. Later on, I plan to make it into a real leader
+    key, but that is not in scope yet.
+* `ESC` will cancel any and all one-shot state if there is one active, otherwise
+  it will register itself.
+    
+Since the [M01][m01] will have per-key LEDs, I can do a lot more to display the
+keyboard status than I could with only three:
+
+* When a modifier is in a one-shot state, it will light up with a distinct
+  color. If they are toggled, then the whole keyboard - those keys that have
+  functionality - will shine. The modifier colors are `red`, `green`, and `blue`
+  for `Shift`, `Alt`, and `Ctrl`, respectively. The colors add up when multiple
+  modifiers are active, but the modifiers themselves will only use their own
+  colors.
+* Palm keys will light up all affected keys while they are active, regardless of
+  one-shot or toggled state. Their color will have a lower priority than
+  modifiers, and these two will not compose.
+  
+### Implementation notes
+
+The firmware for the M01 is very different than the QMK firmware I got to know
+over the past few months, and it is a lot simpler too. My initial idea was to
+port over features from QMK, and build a very similar keymap. This was
+scratched, because it would be too much work up-front, and besides, why try to
+make the firmware similar? Why not accept the differences, and see where I can
+go from there?
+
+So I did that, and spent a few nights thinking.
+
+The roadmap at the moment looks like this:
+
+1. Get the most basic things working: no one-shot keys or macros, no layers,
+   just the bare layout.
+2. Add the macros (the tmux keys), but without the tap-dancing functionality.
+3. Implement one-shot keys - not just modifiers (more on this below).
+4. Make it possible to toggle one-shot keys.
+5. Add layers.
+6. Implement tap-dance.
+7. Add the LED effects.
+
+#### One-shot keys
+
+For one-shot keys one normally needs a timer, so they can time out. In my case,
+I'm okay with no timeout, if I can cancel a one-shot key, and I use `ESC` for
+that. This makes the code a lot simpler, I hope. All I need to do, is remember
+the active one-shot keys and cancel them whenever any other non-modifier is
+pressed.
+
+#### Toggling one-shot keys
+
+Double-tapping them is easy to notice, and in this case we clear the one-shot
+flag, and set the toggled one. Next time it is hit, we unregister on keydown,
+and clear the flag on keyup.
+
+In the long run this will need a timer, because of tap-dance, that will be built
+upon the very same foundation.
+
+# Parting thoughts
+
+This concludes the update, and like last time, we finish with a heatmap of the
+layout, collected while writing this post:
+
+ ![ADORE heatmap](/assets/asylum/images/posts/ergodox-day-141/adore-heatmap.png)
+
+Next time, we will continue with analyzing the heatmap, and - hopefully - with
+some progress to report on the firmware.
+
+I didn't talk about the changes that went into my current keymap, because those
+were far less interesting, and I have a [changelog][ed:changelog] for it anyway.
+
+ [ed:changelog]: https://github.com/algernon/ergodox-layout#v17
