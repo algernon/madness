@@ -1,7 +1,7 @@
 ---
 title: "Looking for a keyboard"
 date: 2015-11-20 18:45
-tags: [Hacking, Keyboard, .planet.debian]
+tags: [Hacking, Keyboard, .planet.debian, Ergonomics]
 ---
 
 Even though I spend more time staring at the screen than typing, there are times

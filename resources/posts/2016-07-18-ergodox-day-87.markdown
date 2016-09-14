@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 87 - Heat & ADORE"
 date: 2016-07-18 14:00
-tags: [Hacking, Keyboard, ErgoDox]
+tags: [Hacking, Keyboard, ErgoDox, Ergonomics]
 ---
 
 It's been a while I posted an update about my ErgoDox journey, and there's a lot

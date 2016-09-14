@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 22"
 date: 2016-05-14 15:00
-tags: [Hacking, Keyboard, ErgoDox, Video]
+tags: [Hacking, Keyboard, ErgoDox, Video, Ergonomics]
 ---
 
 I am now using the ErgoDox EZ as my main keyboard at work, and am

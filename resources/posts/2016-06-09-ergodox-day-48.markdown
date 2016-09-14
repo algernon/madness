@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 48"
 date: 2016-06-09 16:30
-tags: [Hacking, Keyboard, ErgoDox]
+tags: [Hacking, Keyboard, ErgoDox, Ergonomics]
 ---
 
 In the past week and a bit, [my layout][layout] did not change much at all,

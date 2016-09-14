@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: The Missing Days"
 date: 2016-06-02 15:30
-tags: [Hacking, Keyboard, ErgoDox]
+tags: [Hacking, Keyboard, ErgoDox, Ergonomics]
 ---
 
 Since I had my [ErgoDox EZ][ed:ez], I have worked not only on

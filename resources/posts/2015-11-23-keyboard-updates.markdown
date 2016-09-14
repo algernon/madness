@@ -1,7 +1,7 @@
 ---
 title: "Keyboard updates"
 date: 2015-11-23 12:00
-tags: [Hacking, Keyboard, .planet.debian]
+tags: [Hacking, Keyboard, .planet.debian, Ergonomics]
 ---
 
 Last Friday, I [compiled a list of keyboards][blog:looking-for-keyboard] I'm

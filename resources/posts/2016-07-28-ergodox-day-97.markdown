@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 97 - Progressing slowly"
 date: 2016-07-28 10:15
-tags: [Hacking, Keyboard, ErgoDox]
+tags: [Hacking, Keyboard, ErgoDox, Ergonomics]
 ---
 
 Since the [last update][blog:ergodox:87] not much has happened with the layout.

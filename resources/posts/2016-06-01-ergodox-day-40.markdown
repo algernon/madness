@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 40"
 date: 2016-06-01 15:00
-tags: [Hacking, Keyboard, ErgoDox]
+tags: [Hacking, Keyboard, ErgoDox, Ergonomics]
 ---
 
 For the past week, I have only applied tiny tweaks and bugfixes to my

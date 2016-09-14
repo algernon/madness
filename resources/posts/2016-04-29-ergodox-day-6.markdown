@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 6"
 date: 2016-04-29 9:00
-tags: [Hacking, Keyboard, ErgoDox]
+tags: [Hacking, Keyboard, ErgoDox, Ergonomics]
 ---
 
 Been using the ErgoDox for almost a week now, and it is starting to get better!
