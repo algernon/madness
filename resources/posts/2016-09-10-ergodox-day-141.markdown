@@ -89,6 +89,7 @@ were not up to the task.
 Now why is this important, or ergonomic? I am staring at the screen many hours a
 day, the easier it is to see what's on the screen, the better.
 
+<a id="keyboard.io"></a>
 ## keyboard.io
 
 By far the most thought went into designing a layout for the
