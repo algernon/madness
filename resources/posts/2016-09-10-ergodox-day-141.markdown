@@ -45,7 +45,7 @@ terrible on the index finger, that had to stretch quite a bit to reach them.
 Small-ish changes, but the effect can be felt already.
 
 We will see how the newest revision fares, but so far it looks like I will need
-to do some minor adjustments: the left hand sees considerably (ovep 5%) more
+to do some minor adjustments: the left hand sees considerably (over 5%) more
 work, and I'd like to keep that below 3%. However, this post is lacking a few
 symbols that I normally use more often, like `=`, `/`, and `+`. And it
 over-utilizes the `Backspace` key. Before doing any updates, I will look at a
