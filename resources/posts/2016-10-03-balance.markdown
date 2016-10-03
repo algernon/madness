@@ -1,0 +1,65 @@
+---
+title: "Balance"
+date: 2016-10-03 19:10
+tags: [Hacking, Keyboard, ErgoDox, keyboardio, Ergonomics]
+---
+
+Just like last time, the focus of this post is [keyboard.io][kbdio] and ADORE.
+There are plenty of news to report on both sides! A lot of progress has been
+made on the arduino front, to make it possible to have the behaviour I desire on
+the Model 01 - only the Leader key is missing, and I have a good idea about its
+implementation, too. On the other front, ADORE has seen a huge update again,
+aimed at reducing pinky use, and balancing the hands out. We'll see after this
+post how that worked in practice.
+
+ [kbdio]: https://shop.keyboard.io/
+
+<!-- more -->
+
+<a id="keyboard.io"></a>
+## keyboard.io
+
+Lets start with the easier topic: my [multi-key library][gh:atd]. Last time it
+only had a tap-dance implementation, now it also has one-shot keys (and
+modifiers).
+
+ [gh:atd]: https://github.com/algernon/arduino-kbd-tap-dance
+
+What's the difference between the two? Easy: when interrupted, one-shot keys
+deactivate after the interrupting key, while tap-dance deactivates after. They
+ended up being two separate implementations due to this difference in behaviour.
+
+An implementation of a Leader key is also in the works, along with much more
+documentation.
+
+<a id="adore"></a>
+## ADORE
+
+There are much bigger changes on ADORE: analysing the heatmap from last time
+(see below), it turned out that hand balance was far off, pinky use was too
+high, and the other fingers weren't all that good, either. I also found a bug in
+the heatmap generator, so my former stats weren't entirely correct.
+
+ ![ADORE last time](/assets/asylum/images/posts/a-tale-about-numbers/adore.png)
+
+Nevertheless, a long night spent on testing various changes, I think I have
+something that may stick:
+
+ ![ADORE now](/assets/asylum/images/posts/balance/adore.png)
+
+Typing is strange, as this is yet another big rearrangement, and some keys feel
+off, like `y`, `~`, and `f`. But strangely, `m` feels fine. I suppose more
+testing is needed, but this is about as much as I wanted to write for now.
+Perhaps I will do some typing tests...
+
+# Parting thoughts
+
+This concludes the update, and like last time, we finish with a heatmap of the
+layout, collected while writing this post:
+
+ ![ADORE heatmap](/assets/asylum/images/posts/balance/adore-heatmap.png)
+ 
+I ran my text-to-keylog tool on this post, and if I entered it as-is, without
+corrections or editor assistance, the heatmap would have looked like this:
+
+ ![ADORE heatmap](/assets/asylum/images/posts/balance/adore-heatmap-2.png)
