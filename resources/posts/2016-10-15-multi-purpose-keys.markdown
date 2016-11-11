@@ -120,6 +120,13 @@ more so.
   one would need to hold both `Alt` and the layer key. With one-shot combos, one
   can have a key that presses `Alt`, and switches layers - until after the next
   keypress!
+  
+### One-shot FAQ
+
+* **How do you know which one-shot modifier or layer is active?** Easily: I use
+  the LEDs on the keyboard, to signal which modifier is active. For layers, I
+  use two LEDs, and set them to a brighter color, so I can see whether it is
+  indicating a layer or a modifier.
 
 ## The less obvious: tap-dance keys
 
