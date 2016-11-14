@@ -15,14 +15,17 @@ you'll just get pointed to this page.
   doing that, keep all my current roles, and perhaps even find other
   ways I can volunteer my free time to Debian. I'm not willing to
   sacrifice this.
-* I live in Hungary, and I am not willing to relocate. Periodic visits
-  to HQ and remote work is, of course, acceptable. The reasons why I
-  am unwilling to move are, in no particular order:
+* I live in Hungary, and I am not willing to relocate. Periodic visits to HQ
+  (assuming it is in Europe) and remote work is, of course, acceptable. The
+  reasons why I am unwilling to move are, in no particular order:
     * My wife lives and works here.
     * My studies bind me to Hungary, I cannot get a degree in
       Hungarian Human Arts anywhere else.
     * I like the country, and unless I have no other option,
       I'm not moving.
+* While I'm willing to travel within Europe, I prefer to do that rarely.
+  Traveling outside of it is something I'd rather avoid. I will not set foot in
+  the US, no matter what.
 * I run Debian on my computers, all of them (except phone and tablet,
   which run Android until I can run Debian on them). I am not going to
   run anything else, except in a virtual machine or a chroot.
@@ -44,6 +47,7 @@ satisfied by my current employer, with whom I am very happy with.
 
 * I prefer working on and with Free Software.
 * I don't like long commutes.
+* I don't like travel, so if HQ is outside of Europe, that's a problem.
 * I like reasonably flexible work hours, though.
 * I like attending and speaking at conferences.
 * My heart lies with functional programming languages, Clojure, in
