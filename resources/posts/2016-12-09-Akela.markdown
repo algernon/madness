@@ -142,7 +142,7 @@ The more interesting part is the implementation, in `Borealis.cpp`:
 We need the header, so the compiler knows about the class we are about to
 implement.
 
-<div class="pygmentize" data-language="c++">Borealis::Borealis (void) {
+<div class="pygmentize" data-language="c++">BorealisEffect::BorealisEffect (void) {
   LEDControl.mode_add (this);
 }</div>
 
@@ -169,7 +169,7 @@ arcs and palm keys.
 
 Lets get started!
 
-<div class="pygmentize" data-language="c++">void Borealis::update (void) {</div>
+<div class="pygmentize" data-language="c++">void BorealisEffect::update (void) {</div>
 
 ...wait a minute. We will need some colors first. We have four rows, the thumb
 arcs, and the palm keys, so we will need six colors. Thankfully,
