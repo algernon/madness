@@ -1,0 +1,349 @@
+---
+title: "Akela"
+date: 2016-12-09 11:00
+tags: [Hacking, Keyboard, keyboardio, UHK]
+---
+
+For the first time, I will be talking about the [keyboard.io][kbdio] only. No
+ADORE or ErgoDox news to report this time, and I'm typing this on Dvorak too (a
+tad tired and short on time to write on ADORE). And gosh, there is so much to
+talk about! Remember the [last time][blog:balance]? So much has changed. Nothing
+is quite the same, really. The old multi-key library is now laying dormant and
+abandoned, but a new one arose, and was claiming attention. It started as a
+full-blown firmware, but I was quickly persuaded to make it an extension library
+for the official [KeyboardioFirmware][kbdio:fw] instead. The topic of this post
+will be the library, `KeyboardioFirmware`, and related things.
+
+For fun, we will also see a full implementation of a LED effect plugin. Because
+it is so easy, that it fits in a blog post.
+
+So, without much further ado, let me introduce [Akela][akela]: the
+<strong>A</strong>nimated <strong>K</strong>eyboardio <strong>E</strong>xtension
+<strong>L</strong>ibrary for <strong>A</strong>nything!
+
+ [kbdio:fw]: https://github.com/keyboardio/KeyboardioFirmware
+ [kbdio]: https://shop.keyboard.io/
+ [blog:balance]: /blog/2016/10/03/balance/
+ [akela]: https://algernon.github.io/Akela/
+
+(I will also touch another subject, briefly for now, at the end of this post.
+Stay tuned!)
+
+<!-- more -->
+
+<a id="Akela"></a>
+## Akela
+
+Originally, the library started out as a separate, independent, full-blown
+firmware, because the official firmware lacked the hooks needed to implement the
+things I want my keyboard to support. I had no idea what I need, or how I want
+those things, so I figured, I'll go and write a firmware, and design it
+extensible from the ground up, and see where that leads. To some extent, this
+worked: it was super extensible, for a seasoned coder. For everyone else, a
+nightmare. It was also considerably bigger and more complex than the official
+firmware, for no real reason.
+
+Because one of the goals was to make it easy to use for the average user, and
+even possible to use for non-coders, the experiment turned out to be a colossal
+failure, and had to be scrapped. But, on the flip side, I learned a lot about
+the limits of the hardware, and the trade-offs that have to be made. I learned a
+lot about designing for ease-of use by non-coders, as opposed to designing *by
+the Book*. The two are very different.
+
+So I went off and rewrote the whole thing, as a set of plugins to extend
+the [official firmware][kbdio:fw]. I ended up submitting
+a [number of patches][kbdio:patches] to `KeyboardioFirmware` and related
+libraries, to make it possible to hook into the places required for the plugins,
+to make it extensible.
+
+ [kbdio:fw]: https://github.com/keyboardio/KeyboardioFirmware
+ [kbdio:patches]: https://goo.gl/OIUxtS
+
+The result? The result is something I'm **very** proud of. We now have a
+firmware that is trivial to extend, and a set of plugins that are also so simple
+to use, that for some of them, all you have to do is include the header in your
+firmware Sketch. Installing the Arduino IDE is harder than activating a new
+plugin, and that's a terrific feat.
+
+Akela is now made up of a number of plugins, including but not limited to
+a [Heatmap][akela:heatmap]; [Dual-use][akela:dualuse], [One-shot][akela:one-shot],
+and [Tap-dance][akela:tap-dance] keys; [Space Cadet Shift][akela:scs], and a
+growing number of other things.
+
+ [akela:heatmap]: https://algernon.github.io/Akela/plugins/Heatmap/
+ [akela:dualuse]: https://algernon.github.io/Akela/plugins/DualUse/
+ [akela:one-shot]: https://algernon.github.io/Akela/plugins/OneShot/
+ [akela:tap-dance]: https://algernon.github.io/Akela/plugins/TapDance/
+ [akela:scs]: https://algernon.github.io/Akela/plugins/SpaceCadet/
+
+There are plenty of [other things][akela:shipping-milestone] I'm working on,
+which I plan to finish before Model 01s start to ship. I'm also open to new
+ideas, and would like to encourage my readers who are also interested in the
+Model 01, to open issues if they have any idea not already implemented, or
+listed.
+
+ [akela:shipping-milestone]: https://github.com/algernon/Akela/milestone/2
+
+<a id="keyboardio"></a>
+## Keyboardio
+
+There has been a lot of brainstorming about the Model 01, with the involvement
+of a good number of people, and the results show. Some of the things in Akela
+were suggested by others, and the forums are quite active too, with incredible
+ideas coming out of them! But for the topic of this blog post, lets concentrate
+on the firmware.
+
+<a id="borealis">
+### Borealis
+
+One of the great things that came from rewriting Akela as a set of plugins is
+that `KeyboardioFirmware` became much easier to work with. So easy, that we will
+now go and implement a simple LED effect, that colors the keyboard wit a scheme
+inspired by the [Borealis keyset][borealis]!
+
+ [borealis]: http://pimpmykeyboard.com/dsa-borealis-keyset/
+
+Ready? We'll be done in a few minutes, I promise!
+
+For the sake of simplicity, we won't be creating a separate library (though
+I [prepared one][borealis:plugin], with the same code included below, plus some
+boilerplate), but start with the example Sketch in `KeyboardioFirmware`. All the
+code below shall go into two new files under `examples/KeyboardioFirmware/`:
+`Borealis.h` and `Borealis.cpp`. We'll start with the first:
+
+ [borealis:plugin]: https://github.com/algernon/Keyboardio-Borealis
+
+<div class="pygmentize" data-language="c++">#include &lt;KeyboardioFirmware.h&gt;
+
+class BorealisEffect : public LEDMode {
+public:
+ BorealisEffect (void);
+
+ virtual void update (void) final;
+};
+
+static BorealisEffect borealisEffect;</div>
+
+This includes the `KeyboardioFirmware` header, that is needed by all plugins,
+and declares a new class that inherits from `LEDMode`. You don't have to know
+what this means, it is not important at his time. All we need to know is that
+two methods need to be implemented: a constructor (`Borealis`), and an `update`
+method. This latter one will be called every time the LEDs on the keyboard need
+to be updated, which happens at the end of each scan cycle, a few times a
+second.
+
+We will include this header in the `KeyboardioFirmware.ino` Sketch - I'll skip
+that part, you can do add it yourself!
+
+The more interesting part is the implementation, in `Borealis.cpp`:
+
+<div class="pygmentize" data-language="c++">#include "Borealis.h"</div>
+
+We need the header, so the compiler knows about the class we are about to
+implement.
+
+<div class="pygmentize" data-language="c++">Borealis::Borealis (void) {
+  LEDControl.mode_add (this);
+}</div>
+
+The constructor is really simple: it simply registers the effect so that it can
+be switched to with the `LEDNext` key. This is a convenience, so that we only
+have to include the header in the Sketch, and not have to add any other code.
+The constructor will be called because in the header, we created an instance of
+this class, and that will call the constructor automatically for us! Very
+convenient.
+
+The effect itself is a bit more code: we want to have a different color for each
+row, including the thumb arc and the palm keys. And herein lies a small problem:
+when updating LEDs, we can give the method a position, but that position will be
+a position in an internal matrix of the LEDs, where the thumb arc and the palm
+keys are mixed in with the rest. For a more visual explanation,
+see [this layout][kbdio:positions], with the coordinates on each key.
+
+ [kbdio:positions]: http://www.keyboard-layout-editor.com/#/gists/208ec9c7f9a08382c101b558f1d983b1
+
+But don't worry, there's a neat trick up our sleeve! You see, LEDs are not
+updated immediately, but in bulk. So we can just color all the rows as if the
+keyboard had a matrix layout, and then, in a separate step, update the thumb
+arcs and palm keys.
+
+Lets get started!
+
+<div class="pygmentize" data-language="c++">void Borealis::update (void) {</div>
+
+...wait a minute. We will need some colors first. We have four rows, the thumb
+arcs, and the palm keys, so we will need six colors. Thankfully,
+the [Borealis][borealis] set has just that many! Lets have an array of colors then:
+
+<div class="pygmentize" data-language="c++">  cRGB colors[] = {
+    {0x67, 0x2d, 0x5f},
+    {0x7e, 0x4b, 0x8e},
+    {0x22, 0x5b, 0x90},
+    {0x35, 0x86, 0xb5},
+    {0x40, 0xad, 0xce},
+    {0x8b, 0xfa, 0xe7},
+  };</div>
+
+Then, we do the first step, and color each row appropriately:
+
+<div class="pygmentize" data-language="c++">  for (byte row = 0; row &lt; ROWS; row++) {
+    for (byte col = 0; col &lt; COLS; col++) {
+      led_set_crgb_at (row, col, colors[row]);
+    }
+  }</div>
+  
+That was easy, wasn't it?
+
+Now we need to set the colors for the thumb arcs. These keys are on column 7 and 8, rows 0 to 3:
+
+<div class="pygmentize" data-language="c++">  for (byte row = 0; row &lt; 4; row++) {
+    for (byte col = 7; col &lt; 9; col++) {
+      led_set_crgb_at (row, col, colors[4]);
+    }
+  }</div>
+  
+We used `colors[4]`, because that's the fifth row, as arrays are 0-indexed.
+
+All that is left are the palm keys, which are on row 3, columns 6 and 9:
+
+<div class="pygmentize" data-language="c++">  led_set_crgb_at (3, 6, colors[5]);
+  led_set_crgb_at (3, 9, colors[5]);</div>
+  
+We finish up our function:
+
+<div class="pygmentize" data-language="c++">}</div>
+
+...and we are done!
+
+Recompiling the firmware, flashing it, and selecting the effect will give us a
+nice Borealis-inspired color scheme! Of course, if we want this to be active
+when the keyboard starts, we can do that too! Just activate it in the `setup`
+method of the Sketch:
+
+<div class="pygmentize" data-language="c++">void setup() {
+  Keyboardio.setup(KEYMAP_SIZE);
+  borealisEffect.activate();
+}</div>
+
+The above example has been turned into a [plugin][borealis:plugin], with very
+minor adjustments to make it more efficient.
+
+All in all, I hope this demonstration shows that working with the
+`KeyboardioFirmware` is easy, and that we can do fun things with little code,
+and little knowledge of how things work underneath.
+
+But want to see something even simpler?
+
+<a id="macros">
+### Macros
+
+Macros are a powerful feature of many keyboards, and the Model 01 is no
+different. Even more, the macros of the Model 01 are even more powerful than
+most others: in addition to being able to perform any custom behaviour on
+keypress or release, it can also perform a function when the key is held, or
+even when the key is not touched at all.
+
+This last part makes them incredibly powerful: we can have a macro that, when
+pressed, registers a key combination, and keeps that held even when released.
+And then, on further presses, until toggled off, registers a third key, which is
+unregistered on key release.
+
+To make it clear what this is good for, imagine we want a key that acts as an
+application switcher: we press it once, and it sends `Alt+Tab` to the host, and
+keeps `Alt` pressed, even when we release the key. This will keep the
+application selector on the screen. Tapping the same key again and again, will
+still keep `Alt` pressed, and also tap `Tab`, but this latter one is released
+when the key is released. So we can cycle through applications with a single key
+press! But we also want to cancel this, to select an application. So we'll have
+another macro, that can cancel this effect if it is active, but act as, say, an
+`Esc` key otherwise.
+
+The implementation for this is very simple: we'll have a boolean variable for
+our state, and two macros. They can be bound to any key on the keymap, we'll not
+care about that for now. So without further ado, the code:
+
+<div class="pygmentize" data-language="c++">enum {
+ M_APPSWITCH,
+ M_ESC,
+};
+
+static bool appSwitchActive = false;
+
+static const macro_t *macroAppSwitch(uint8_t keyState) {
+  // If the key is pressed, hold both Alt and Tab down.
+  // This applies to the initial press, the held state, and subsequent presses too.
+  if (key_is_pressed (keyState)) {
+    appSwitchState = true;
+    return MACRO(D(LAlt), D(Tab), END);
+  }
+  
+  // If the key was released, release Tab, but keep holding Alt.
+  if (key_toggled_off(keyState)) {
+    return MACRO(U(Tab), D(LAlt), END);
+  }
+  
+  // If the appSwitcher is active, then keep holding Alt, even if the key has
+  // not been touched at all.
+  if (appSwitchState) {
+    return MACRO(D(LAlt), END);
+  }
+  
+  // Otherwise do nothing.
+  return MACRO_NONE;
+}
+
+static const macro_t *macroCancelOrEsc(uint8_t keyState) {
+  // if the appSwitcher is active...
+  if (appSwitchState) {
+    // cancel it on key release.
+    if (key_toggled_off (keyState))
+      appSwitchState = false;
+  
+    // and in either case, do nothing else.
+    return MACRO_NONE;
+  }
+  
+  // if the AppSwitcher is not active, act as a normal ESC key
+  if (key_is_pressed (keyState)) {
+    return MACRO(D(Esc), END);
+  } else if (key_toggled_off (keyState)) {
+    return MACRO(U(Esc), END);
+  }
+  
+  return MACRO_NONE;
+}
+
+const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
+  switch (macroIndex) {
+    case M_APPSWITCH:
+      return macroAppSwitch(keyState);
+    case M_ESC:
+      return macroCancelOrEsc(keyState);
+  }
+  return MACRO_NONE;
+}</div>
+
+This was short, too, and see how powerful a feature we made, just with two
+macros!
+
+<a id="side-track">
+## A little side track
+
+Just yesterday, I got a new toy to play with between the holidays:
+
+ ![A prototype](/assets/asylum/images/posts/Akela/prototype.jpg)
+
+That is a prototype of the [Ultimate Hacking Keyboard][uhk], with which I plan
+to fiddle with during the holidays, time permitting. I barely started, and only
+got as far as compiling and flashing the firmware. But expect future posts about
+that keyboard too.
+
+ [uhk]: https://ultimatehackingkeyboard.com/
+ 
+So far, my impression is that the Blue switches it came with are not my thing,
+nor is the layout. On the other hand, since it is closer to a traditional
+keyboard, I asked my wife to try it too, and to my surprise, she liked it! The
+layout was more familiar to her, and she liked the feel **and** the sound of the
+blues more than that of the Browns on my ErgoDox EZ.
+
+A surprising turn of events.
