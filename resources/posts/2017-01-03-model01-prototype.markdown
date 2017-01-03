@@ -88,7 +88,7 @@ to change due to the hook changes. There were a few which required little - but
 all the more embarassing - fixes. For example, the `LEDEffects` plugin had the
 RGB colors mixed up, with R and B swapped. Oops. Or the `Leader` plugin, which
 did an assignment instead of a comparison for inequality, because I forgot an
-`!`, and the compiler did not warn be about it. But this was the only change -
+`!`, and the compiler did not warn me about it. But this was the only change -
 apart from the hook registration stuff - that needed change in the `Leader`
 plugin, which is pretty darn awesome.
 
