@@ -42,9 +42,6 @@ requirements. If you are truly interested in presenting me with an
 opportunity that I should consider, you will find a list of
 preferences below.
 
-Please note that all my conditions **and** all my preferences are
-satisfied by my current employer, with whom I am very happy with.
-
 * I prefer working on and with Free Software.
 * I don't like long commutes.
 * I don't like travel, so if HQ is outside of Europe, that's a problem.
@@ -52,4 +49,5 @@ satisfied by my current employer, with whom I am very happy with.
 * I like attending and speaking at conferences.
 * My heart lies with functional programming languages, Clojure, in
   particular (but Haskell is great too).
-* I like smart collegues and a great company spirit.
+* I prefer if my values, and the values the company holds, align, at least
+  partially. This is something I'll be the judge of.
