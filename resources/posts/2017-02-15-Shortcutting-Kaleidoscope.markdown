@@ -1,6 +1,6 @@
 ---
 title: "Shortcutting Kaleidoscope"
-date: 2017-02-15 22:00
+date: 2017-02-15 19:30
 tags: [Hacking, Keyboard, Shortcut, keyboardio]
 ---
 
