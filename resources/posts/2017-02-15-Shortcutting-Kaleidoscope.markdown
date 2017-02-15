@@ -376,8 +376,9 @@ plugin that gives you 4x4 "pixel" fonts, that you can put on the Model 01 LEDs.
  
 It looks like this:
 
-<video width="660" height="371" controls>
+<video controls>
  <source src="/assets/asylum/images/posts/shortcutting-kaleidoscope/Kaleidoscope-AlphaSquare.webm" type="video/webm">
+ <source src="/assets/asylum/images/posts/shortcutting-kaleidoscope/Kaleidoscope-AlphaSquare.mp4" type="video/mp4">
 Your browser does not appear to support the `video` tag.
 </video>
 
@@ -387,8 +388,9 @@ Armed with the `LED-AlphaSquare` plugin, I had everything I needed to fulfill
 her wishes, for her wish is my command. I ended up doing a bit more than what
 she asked for, there's plenty of animation involved:
 
-<video width="660" height="371" controls>
+<video controls>
  <source src="/assets/asylum/images/posts/shortcutting-kaleidoscope/Valentine.webm" type="video/webm">
+ <source src="/assets/asylum/images/posts/shortcutting-kaleidoscope/Valentine.mp4" type="video/mp4">
 Your browser does not appear to support the `video` tag.
 </video>
 
