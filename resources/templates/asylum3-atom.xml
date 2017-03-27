@@ -11,7 +11,7 @@
     <name><![CDATA[Gergely Nagy]]></name>
     <uri>http://asylum.madhouse-project.org/</uri>
   </author>
-  <rights>Copyright (c) 2010-2013 Gergely Nagy</rights>
+  <rights>Copyright (c) 2010-2017 Gergely Nagy</rights>
   <generator uri="https://github.com/algernon/madness">Madness</generator>
 
   <entry>
@@ -24,7 +24,7 @@
       <name><![CDATA[Gergely Nagy]]></name>
       <uri>http://asylum.madhouse-project.org/</uri>
     </author>
-    <rights>Copyright (c) 2010-2013 Gergely Nagy</rights>
+    <rights>Copyright (c) 2010-2017 Gergely Nagy</rights>
     <category term="tag-name" label="Tag" />
     <content type="html">&lt;p&gt;And these are the contents...&lt;/p&gt;</content>
   </entry>
