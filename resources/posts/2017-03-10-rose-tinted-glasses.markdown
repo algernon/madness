@@ -1,7 +1,7 @@
 ---
 title: "Rose Tinted Glasses"
 date: 2017-03-10 07:30
-tags: [Hacking, Keyboard, keyboardio]
+tags: [Hacking, Keyboard, keyboardio, Patreon]
 ---
 
 You know that feeling when everything seems to fall into place? When you finally
