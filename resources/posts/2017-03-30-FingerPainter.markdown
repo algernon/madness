@@ -1,6 +1,6 @@
 ---
 title: "FingerPainter"
-date: 2017-03-30 23:30
+date: 2017-03-30 22:45
 tags: [Hacking, Keyboard, keyboardio, Patreon]
 ---
 
