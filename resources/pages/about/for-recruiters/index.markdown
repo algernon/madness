@@ -25,7 +25,7 @@ you'll just get pointed to this page.
       I'm not moving.
 * While I'm willing to travel within Europe, I prefer to do that rarely.
   Traveling outside of it is something I'd rather avoid. I will not set foot in
-  the US, no matter what.
+  the neither the US, nor the UK, no matter what.
 * I run Debian on my computers, all of them (except phone and tablet,
   which run Android until I can run Debian on them). I am not going to
   run anything else, except in a virtual machine or a chroot.
