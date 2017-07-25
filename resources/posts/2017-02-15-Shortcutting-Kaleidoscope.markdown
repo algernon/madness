@@ -13,14 +13,14 @@ two weeks were eventful, and easily the busiest and almost the most productive
 part of my firmware work so far.
 
  [blog:horde]: /blog/2017/01/30/Unleashing-the-Horde/
- 
+
 Today, we'll have a look at what happened with [Kaleidoscope][fw:kaleidoscope]
 (née, `KeyboardioFirmware`) since the [Shortcut][sc] prototype arrived at my
 door.
 
  [fw:kaleidoscope]: https://github.com/keyboardio/Kaleidoscope
  [sc]: http://shortcut.gg/
- 
+
 <!-- more -->
 
 # Kaleidoscope
@@ -77,7 +77,7 @@ explicit purpose of porting Kaleidoscope to it, and proving that this is not
 only possible, but beneficial too.
 
  [sc]: http://shortcut.gg/
- 
+
 I'm happy to report that the initial port was a success: in just a few hours, I
 had half the keyboard working, and all that was left is figuring out how to lay
 out some C structures. If I weren't tired, I would have been done with it in a
@@ -155,7 +155,7 @@ million little ants, as they should.
 So the problem is with looking up a key in a layer. The way we did that, was
 that every time we called `Layer.lookup`, it started walking backwards from
 layer 31, checking if the layer is active, and if so, looking up the keycode for
-the give position. If that was transparent, we continued, otherwise we bailed
+the given position. If that was transparent, we continued, otherwise we bailed
 out early. This was done for every key, in every cycle, even if the key has not
 changed state. On the Model01, assuming we are on the default layer, 31 useless
 checks for every single key. That's a non-trivial amount.
@@ -270,7 +270,7 @@ around). Keep in mind that this is a prototype, in no way representative of how
 the final product will look like.
 
  ![Shortcut](/assets/asylum/images/posts/shortcutting-kaleidoscope/shortcut.jpg)
- 
+
 As you can see, it has very few keys, and has two funny sticks on the thumb on
 each half. Those are 4-way switches, not joysticks, or the like. The small
 amount of keys, and their arrangement makes it quite a challenge to translate
@@ -373,7 +373,7 @@ That is how the [Kaleidoscope-LED-AlhpaSquare][fw:alphasquare] was born: it is a
 plugin that gives you 4x4 "pixel" fonts, that you can put on the Model 01 LEDs.
 
  [fw:alphasquare]: https://github.com/keyboardio/Kaleidoscope-LED-AlphaSquare
- 
+
 It looks like this:
 
 <video controls>
