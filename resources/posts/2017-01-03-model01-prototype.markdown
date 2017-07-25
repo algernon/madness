@@ -47,7 +47,7 @@ take that route. That project was a dead-end anyway, why waste time on it now?
 
 It would have been very satisfying if at least some things worked, because then
 I could say I wrote something usable for hardware I have not even seen. But
-alas, this will have to remain on by bucket list for a while longer.
+alas, this will have to remain on my bucket list for a while longer.
 
 ## First steps
 
@@ -200,7 +200,7 @@ Having used an [ErgoDox EZ][ergodox:ez] for almost a year, I thought getting
 used to another split layout would not be all that hard. Boy, was I wrong!
 
  [ergodox:ez]: https://ergodox-ez.com/
- 
+
 The thumb arc is very different from the thumb cluster, with an access pattern
 different from what I imagined based on the pictures and videos I saw. I know
 now that I'll have to rethink how my keys are laid out across the arc.
