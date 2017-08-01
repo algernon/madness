@@ -1,6 +1,6 @@
 ---
 title: "Keyboard Firmware work"
-date: 2017-08-01 21:00
+date: 2017-08-01 17:00
 tags: [Hacking, Keyboard, keyboardio, ErgoDox]
 ---
 
