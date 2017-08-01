@@ -92,6 +92,27 @@ previous setup required a [libinput patch][libinput:patch] on Linux).
 I haven't done much work on Kaleidoscope or plugins, just a few small things,
 bugfixes mostly.
 
+## [Kaleidoscope-Steno][kaleidoscope:steno]
+
+I've been meaning to practice Steno, and have a `Plover` layer on my ErgoDox EZ
+too, but I lacked that on the Model 01. Recently, I saw
+a [pull request against QMK][pull:qmk:steno] that makes it possible to speak the
+`GeminiPR` protocol from `QMK`. I loved that so much that I ended up porting it
+to `Kaleidoscope`, in the form of the [Kaleidoscope-Steno][kaleidoscope:steno]
+plugin.
+
+ [kaleidoscope:steno]: https://github.com/keyboardio/Kaleidoscope-Steno
+ [pull:qmk:steno]: https://github.com/qmk/qmk_firmware/pull/1522
+
+While [Plover][plover] can be used with a normal keyboard too, using a dedicated
+protocol provides at least one huge advantage: it does not take over the normal
+keys. That is, if I have two keyboards, I can put one in Steno mode, and use
+`Plover` with that, while keeping the other around for traditional touch typing.
+
+ [plover]: http://www.openstenoproject.org/plover/
+
+Having done this made me want to start practicing Steno again.
+
 ## Emacs
 
 Based on an idea I received over [twitter][twitter:evil-flash], I ended up
