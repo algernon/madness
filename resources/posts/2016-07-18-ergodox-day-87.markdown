@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 87 - Heat & ADORE"
 date: 2016-07-18 14:00
-tags: [Hacking, Keyboard, ErgoDox, Ergonomics]
+tags: [Hacking, Keyboard, ErgoDox, Ergonomics, ADORE]
 ---
 
 It's been a while I posted an update about my ErgoDox journey, and there's a lot
@@ -55,7 +55,7 @@ before I went on vacation. Some problems of the layout are immediately obvious:
   the row.
 * There are keys on the row below the home row, that see more use than some of
   the keys on the row above.
-  
+
 Why are these bad? Because hand alteration is best when both hands do nearly
 equal amounts of work. The balance does not need to be perfect, but what this
 map shows is certainly bad. Especially on the right pinky, poor finger. As for

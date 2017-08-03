@@ -1,7 +1,7 @@
 ---
 title: "A tale about numbers"
 date: 2016-09-22 19:00
-tags: [Hacking, Keyboard, ErgoDox, keyboardio, Ergonomics]
+tags: [Hacking, Keyboard, ErgoDox, keyboardio, Ergonomics, ADORE]
 ---
 
 Today I will write more about layouts and the [keyboard.io][kbdio] than the
@@ -107,7 +107,7 @@ attempts to simulate the various cases tap-dance needs to function under.
 
  [kbdio:fw]: https://github.com/keyboardio/KeyboardioFirmware
  [atd]: https://github.com/algernon/arduino-kbd-tap-dance
- 
+
 For now, I do not plan to work more on neither the tap-dance library, nor on
 integrating ADORE into the firmware: I read through all of it, and it needs to
 sink in first. Once it did, there will be lots to do! For example, one-shot
@@ -119,7 +119,7 @@ This concludes the update, and like last time, we finish with a heatmap of the
 layout, collected while writing this post:
 
  ![ADORE heatmap](/assets/asylum/images/posts/a-tale-about-numbers/adore-heatmap.png)
- 
+
 I ran my text-to-keylog tool on this post, and if I entered it as-is, without
 corrections or editor assistance, the heatmap would have looked like this:
 

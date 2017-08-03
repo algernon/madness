@@ -1,7 +1,7 @@
 ---
 title: "Balance"
 date: 2016-10-03 19:10
-tags: [Hacking, Keyboard, ErgoDox, keyboardio, Ergonomics]
+tags: [Hacking, Keyboard, ErgoDox, keyboardio, Ergonomics, ADORE]
 ---
 
 Just like last time, the focus of this post is [keyboard.io][kbdio] and ADORE.
@@ -58,7 +58,7 @@ This concludes the update, and like last time, we finish with a heatmap of the
 layout, collected while writing this post:
 
  ![ADORE heatmap](/assets/asylum/images/posts/balance/adore-heatmap.png)
- 
+
 I ran my text-to-keylog tool on this post, and if I entered it as-is, without
 corrections or editor assistance, the heatmap would have looked like this:
 

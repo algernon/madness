@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 117 - Unicode rainbow poop, times two"
 date: 2016-08-17 21:10
-tags: [Hacking, Keyboard, ErgoDox, Ergonomics]
+tags: [Hacking, Keyboard, ErgoDox, Ergonomics, ADORE]
 ---
 
 I'm writing this on ADORE, to collect enough data for a new, ADORE-based

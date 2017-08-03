@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 97 - Progressing slowly"
 date: 2016-07-28 10:15
-tags: [Hacking, Keyboard, ErgoDox, Ergonomics]
+tags: [Hacking, Keyboard, ErgoDox, Ergonomics, ADORE]
 ---
 
 Since the [last update][blog:ergodox:87] not much has happened with the layout.
@@ -11,12 +11,12 @@ and I'm collecting data, analyzing the layout, and similar things. For example,
 here is an updated heatmap of my current, Dvorak layout:
 
  ![Heatmap](/assets/asylum/images/posts/ergodox-day-97/heatmap-1.png)
- 
+
  [blog:ergodox:87]: /blog/2016/07/18/ergodox-day-87/
- 
+
 This heatmap is based on pretty much all my keypresses between the 4th of July
 and today.
- 
+
 <!-- more -->
 
 I have been tweaking the [Carpalx][carpalx] tools to analyze - and perhaps
@@ -29,7 +29,7 @@ example, and so is `Y`. Oh, as a reminder, the ADORE layout is this:
  ![ADORE](/assets/asylum/images/posts/ergodox-day-87/adore.png)
 
  [carpalx]: http://mkweb.bcgsc.ca/carpalx/
- 
+
 I am working on a solution that would translate the keylogged data I collect on
 Dvorak, to the ADORE layout, so I can compare how the heatmap of typing the same
 thing on Dvorak and ADORE would look. Not quite there yet, but eventually...
@@ -64,7 +64,7 @@ to raise my monitor, and the space in front of that box is used for my mouse and
 the keyboard.
 
  ![Small table](/assets/asylum/images/posts/ergodox-day-97/small-table.jpg)
- 
+
 This setup allows me to use the small table as a kind of podium: lean on its
 sides, and grab around the edges. This is very convenient. However, all this has
 downsides too! There is very little space for the keyboard and the mouse, which

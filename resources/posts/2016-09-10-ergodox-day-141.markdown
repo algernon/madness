@@ -1,7 +1,7 @@
 ---
 title: "ErgoDox: Day 141 - ADORE, other things"
 date: 2016-09-10 13:00
-tags: [Hacking, Keyboard, ErgoDox, keyboardio, Ergonomics]
+tags: [Hacking, Keyboard, ErgoDox, keyboardio, Ergonomics, ADORE]
 ---
 
 As with the [last blog post][blog:ergodox-117], I'm writing this on ADORE, to
@@ -12,7 +12,7 @@ these posts with the new [Ergonomics][tag:ergo] tag.
 
  [blog:ergodox-117]: /blog/2016/08/17/ergodox-day-117/
  [tag:ergo]: /blog/tags/ergonomics/
- 
+
 Today, after I dive into how ADORE has changed since the last time, I will try
 my hands at explaining the layout I came up with for the
 [keyboard.io Model 01][m01]. We will briefly touch tmux and terminal emulators
@@ -27,11 +27,11 @@ aswell.
 As a reminder, ADORE looked like this last time:
 
  ![ADORE last time](/assets/asylum/images/posts/ergodox-day-117/heatmap-1.png)
- 
+
 The updated layout on the other hand can be seen below:
 
  ![ADORE now](/assets/asylum/images/posts/ergodox-day-141/adore.png)
- 
+
 Let us compare what changed, and why!
 
 As I concluded back then, one of the major issues was the `gh` pair. This has
@@ -70,7 +70,7 @@ A side effect of this is that a lot of things I had in my prompt became
 redundant:
 
  [![Old prompt](/assets/asylum/images/posts/ergodox-day-141/old-prompt.png)](/assets/asylum/images/posts/ergodox-day-140/old-prompt-full.png)
- 
+
 That's a lot of redundant information, and the clock in the prompt doesn't even
 update until a new prompt is displayed. So I went searching for a prompt that is
 simple, yet has all the bits and pieces I need. It was a fast search: my first
@@ -79,7 +79,7 @@ hit yielded the [pure][zsh:pure] prompt, and also a color scheme.
  [zsh:pure]: https://github.com/sindresorhus/pure#readme
 
  [![New prompt](/assets/asylum/images/posts/ergodox-day-141/new-prompt.png)](/assets/asylum/images/posts/ergodox-day-140/new-prompt-full.png)
- 
+
 The new one is more compact, more copy & paste friendly, a lot simpler and nicer
 too. Loving it, so much better to look at! I have to spend less effort on
 copying, and tmux conveniently stays out of my way, yet, is there when I need
@@ -130,7 +130,7 @@ are only a few special keys, namely:
     key, but that is not in scope yet.
 * `ESC` will cancel any and all one-shot state if there is one active, otherwise
   it will register itself.
-    
+
 Since the [M01][m01] will have per-key LEDs, I can do a lot more to display the
 keyboard status than I could with only three:
 
@@ -143,7 +143,7 @@ keyboard status than I could with only three:
 * Palm keys will light up all affected keys while they are active, regardless of
   one-shot or toggled state. Their color will have a lower priority than
   modifiers, and these two will not compose.
-  
+
 ### Implementation notes
 
 The firmware for the M01 is very different than the QMK firmware I got to know
