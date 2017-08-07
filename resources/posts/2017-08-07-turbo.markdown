@@ -1,0 +1,144 @@
+---
+title: "Turbo"
+date: 2017-08-07 17:00
+tags: [Hacking, Keyboard, keyboardio]
+---
+
+Writing this post is completely unplanned, there was no development I planned to
+write about today, but this morning, I sat down to attempt implementing
+a [request][gh:150:request] made on GitHub, to explore how hard it would be. It
+was meant to be a quick experiment, with only some data and talking points as a
+result. It ended up becoming something a [lot more than that][gh:159], and of
+the whole ordeal the biggest take away for me is that we managed to cut the
+length of a scan cycle in half [again][blog:shortcutting]. We are down from
+about 5.3ms cycles (with LEDs off) to **2.6ms** with LEDs off, or 4.6 with LEDs
+on. It is hard to put it into words how excited and happy I am about this.
+
+ [gh:150:request]: https://github.com/keyboardio/Kaleidoscope/issues/150#issuecomment-320529416
+ [gh:159]: https://github.com/keyboardio/Kaleidoscope/pull/159
+ [blog:shortcutting]: https://asylum.madhouse-project.org/blog/2017/02/15/Shortcutting-Kaleidoscope/
+
+<!-- more -->
+
+## So how did this all happen?
+
+My gut feeling was that implementing the request - namely that if you press a
+key while on a layer, and you turn the layer off, but continue holding the key,
+the symbol on the layer should repeat - would not be all that trivial, that it
+would need considerably more book keeping than what we have now. But then I went
+to sleep, and when I woke up this morning, I had an epiphany: we are already
+caching which layer to look up a key from. What if we changed how we do the
+caching? I mean, we already have a map we need, we just need to change how we
+update it! I can try how this works in a few minutes, so why not?
+
+To understand what I did, lets have a look at how key lookup worked before!
+
+### Looking up keys the old way
+
+After the [last change][blog:shortcutting] in the area, we had an array of layer
+indexes, one index for each key. Whenever we changed layers, we ran through the
+whole keyboard, and looked up each key, and stored the index in this array. When
+we needed to figure out what keycode belongs to a physical location, we picked
+the layer out from the map, and then had a look at the keymap to get to the
+keycode.
+
+ [blog:shortcutting]: https://asylum.madhouse-project.org/blog/2017/02/15/Shortcutting-Kaleidoscope/
+
+The basic idea was to minimize the time spent updating the cache, so we only did
+it for layer keys, and did it in one batch.
+
+### Changing how the cache is updated
+
+The first thing I did is to change the `mergeLayers()` function to only update
+the cache if the key it is updating is not held, and disabling the key masking.
+This sort of worked, but not quite. It was both slow, and had a few issues, and
+I wasn't feeling good about it, either.
+
+So I thought to myself, could we do better?
+
+### Getting rid of `mergeLayers`
+
+What if we did not update all the keys in one sitting? What if we updated them
+when we need to, one by one? When we press or release a key, we update the
+cache. This means less work, and work that is spread out more evenly, so we
+don't have sudden bumps in latency when we switch layers (even if that bump is
+really very small).
+
+I thought this would improve the speed of a scan cycle at least a little bit, so
+I went and measured, and came back diasspointed: we were 0.05ms slower. That
+can't be. It *must* be faster than what we had before. That 5.3ms scan cycle
+wasn't bad, but it was nowhere near competitive. We should not be making it
+worse.
+
+Besides, what made it worse? We were doing less work per cycle! Or so I thought.
+But even if we spread the work better, we still had about two more `if` branches
+per cycle. In other words, while layer switching was faster, the normal flow was
+a tiny bit slower as a result.
+
+Can we do better?
+
+### Array lookups are costy
+
+What if we cached the keycodes instead of the layer we should be looking them up
+from? We already have the key code looked up, we just discard it after we update
+our cache. So what if we stored the key code instead of an index? We'll be doing
+a lot more lookups than updates, we established that back in February. So if we
+can find the code for a key in a given physical position with one lookup instead
+of two, we may potentially save a lot of time!
+
+And so it did! We went from 5.3ms scan cycles to 4.6ms with lights off. Even
+with lights on, we were still on 5.3-5.4ms!
+
+This is good, we saved more cycles than we introduced. I could have been happy
+with this, and consider the mission accomplished. But I tasted success, I could
+not stop with just a tiny bit of improvement.
+
+Can we do even better?
+
+### Turbo
+
+What part of the scan cycle takes up most of the time? How do we find out
+without having profiling tools? With careful thought, of course. What if the
+function that gets called most is what slows us down? What if `Layer.lookup()`
+is costing us precious microseconds? What if the mere call of a function adds
+measurable overhead?
+
+We can easily verify this: let us inline `Layer.lookup()`!
+
+**BOOM**
+
+Slightly over two and a half milliseconds per scan cycle. With inlining a single
+function, we saved two milliseconds.
+
+Now I can rest in the knowledge that I did not only implement a requested
+feature, I also halved the length of the scan cycle in the process. I will now
+sleep good at night.
+
+## Other Kaleidoscope-related progress
+
+But that's not the only thing that changed around Kaleidoscope recently. As
+could be expected, now that the [Keyboardio Model 01][kbdio] PVT units started
+to arrive to their owners, we had a number of bug reports flowing in. In
+particular, it turned out that OneShots had behaviours that didn't feel right.
+Momentary layers had issues too, and so on.
+
+  [kbdio]: https://shop.keyboard.io/
+
+Most - if not all - issues reported so far have been fixed. The reports were
+awesome, clear and full of detail, which made fixing them so much easier. Having
+users is an awesome feeling.
+
+Even more, some even started to create plugins on their own! And an incredible
+one at that too: the [LED-Wavepool][k:led-wavepool] plugin is worth a look. It
+is one of - if not *the* - most visibly spectacular plugin Kaleidoscope has to
+this day.
+
+ [k:led-wavepool]: https://github.com/ToyKeeper/Kaleidoscope-LED-Wavepool
+
+## Thanks
+
+I want to thank all my [patrons][patreon], PVT owners who reported issues,
+shared their ideas, thoughts and expectations on IRC and GitHub. This quick
+morning hack would not have been possible without you.
+
+ [patreon]: https://www.patreon.com/algernon
