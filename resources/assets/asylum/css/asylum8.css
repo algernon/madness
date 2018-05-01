@@ -24,6 +24,15 @@ html {
 body {
     font-family: sans-serif;
     margin-bottom: 5em;
+    color: #333;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    color: rgb(0,0,238);
 }
 
 #container, footer {
