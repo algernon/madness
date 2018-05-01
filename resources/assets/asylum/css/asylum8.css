@@ -1,0 +1,171 @@
+@media (min-width: 1000px){
+    #container, footer {
+        width: 70vw;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1000px){
+    #container, footer {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 800px){
+    #container, footer {
+        width: 95vw;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    margin-bottom: 5em;
+}
+
+#container, footer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    border-style: none;
+    border: 1px none #333333;
+    border-bottom-style: solid;
+}
+
+.button {
+    text-decoration: none;
+    color: #333333;
+    border: 1px solid #333333;
+    padding: 0.5em;
+    margin-top: 0.25em;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.button:hover {
+    border: 1px solid #3333ff;
+    color: #3333ff;
+}
+
+.madness-article-meta {
+    font-size: 75%;
+    opacity: 0.6;
+}
+
+.madness-article-meta span a, #madness-article-date {
+    text-decoration: none;
+}
+.madness-article-meta span a:hover, #madness-article-date:hover {
+    text-decoration: underline;
+}
+
+.madness-post-title a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.madness-post-title a:hover {
+    text-decoration: underline;
+}
+
+.madness-article-title a.madness-post-section-sign,
+.madness-post-title a.madness-post-section-sign {
+    color: #333333;
+    margin-left: -0.75em;
+    visibility: hidden;
+}
+
+.madness-article-title a:nth-child(2), .madness-post-title a:nth-child(2) {
+    color: #333333;
+}
+
+.madness-article-title:hover a.madness-post-section-sign,
+.madness-post-title:hover a.madness-post-section-sign {
+    visibility: visible;
+    color: #808080;
+    text-decoration: none;
+}
+
+#madness-archive {
+    font-size: 80%;
+    margin-top: 2.5em;
+    opacity: 0.9;
+}
+
+#brand {
+    font-family: cursive;
+    font-size: 2em;
+    text-decoration: none;
+
+    color: #999999;
+    text-shadow: 1px 1px #333333;
+}
+
+#brand:hover {
+    color: #158cba;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  height: 4em;
+  font-size: 80%;
+
+  padding-top: 1em;
+  border-top: 1px solid #999999;
+}
+
+footer div {
+    display: inline-block;
+    float: right;
+}
+
+blockquote, pre {
+    color: #555;
+}
+
+pre {
+    margin: 1em;
+}
+
+kbd, code {
+    color: #c7254e;
+}
+
+td {
+    padding: 0.5em;
+    margin: 0;
+}
+
+td, th {
+    border-bottom: 1px solid #333;
+}
+
+/* legacy stuff */
+.thumbnails {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.thumbnails li {
+    padding: 1em;
+    margin: 1em;
+}
+
+.thumbnail {
+    display: inline-block;
+    width: 40vh;
+}
+
+.lightbox {
+    width: 40vh;
+}

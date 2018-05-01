@@ -102,8 +102,3 @@ all, because no mobile user expanded them, ever.
              alt="The (new) Asylum v5 design">
     </div>
 </div>
-
-<link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.5/bootstrap-lightbox.min.css"
-      rel="stylesheet">
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.5/bootstrap-lightbox.js"
-        type="text/javascript"></script>

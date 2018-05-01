@@ -1,9 +1,9 @@
-{:template {:default "asylum7-main.html",
+{:template {:default "asylum8-main.html",
             :atom "asylum3-atom.xml"
             :base-url "https://asylum.madhouse-project.org"},
  :recent-posts {:columns 1
-                :rows 2
-                :total 2}
+                :rows 0
+                :total 0}
  :archive-posts {:columns 1
                  :rows -1}
  :atom {:base-url "https://asylum.madhouse-project.org"
