@@ -15,6 +15,13 @@
                  [fs "1.3.2"]
                  [clj-yaml "0.4.0"]
                  [org.pegdown/pegdown "1.1.0"]
-                 [me.raynes/conch "0.4.0"]]
+                 [me.raynes/conch "0.4.0"]
+                 [garden "1.3.5"]]
+  :plugins [[lein-garden "0.3.0"]]
   :aliases {"madness" ["run" "-m" "madness.core"]
-            "madness-fragment" ["run" "-m" "madness.core/madness-fragments"]})
+            "madness-fragment" ["run" "-m" "madness.core/madness-fragments"]}
+  :garden {:builds [{:id "asylum8"
+                     :source-paths ["src"]
+                     :stylesheet madness.styles/asylum8
+                     :compiler {:output-to "resources/assets/asylum/css/asylum8.min.css"
+                                :pretty-print? false}}]})
