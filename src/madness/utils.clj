@@ -10,7 +10,8 @@
             [clj-time.format :as time-format]
             [net.cgrand.enlive-html :as h]
             [fs.core :as fs]
-            [conch.sh :refer [let-programs]]))
+            [conch.sh :refer [let-programs]]
+            [madness.config :as cfg]))
 
 ;; A &lt;hr> element that is only visible on desktop resolutions.
 (def hr-desktop [{:tag :hr :attrs {:class "visible-desktop"}}])
@@ -208,4 +209,6 @@
 
   (let [language (-> node :attrs :data-language)
         new-content (pygmentize language (:content node))]
-    ((h/html-content new-content) node)))
+    (if (cfg/syntax-highlight)
+      ((h/html-content new-content) node)
+      {:tag :pre :content (:content node)})))

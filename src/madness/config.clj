@@ -47,7 +47,8 @@
   {:template {:default "default.html"
               :atom "atom.xml"
               :empty "empty.html"
-              :base-url "http://localhost"}
+              :base-url "http://localhost"
+              :syntax-highlight true}
    :dirs {:posts "resources/posts"
           :pages "resources/pages"
           :output "public"}
@@ -62,6 +63,12 @@
   "The final configuration for Madness - `settings.clj` merged into
   the `default-config`."
   (merge-with merge default-config (eval (read-string (slurp "settings.clj")))))
+
+(defn syntax-highlight
+  "Get the syntax-highlight setting."
+  []
+
+  (-> config :template :syntax-highlight))
 
 (defn template
   "Get the location of a template. Without arguments, returns the
@@ -109,7 +116,7 @@
   `:rows` and `:columns` setting, this understands `:span` too, which
   is the amount of Bootstrap grid columns a single archived item
   should span"
-  
+
   identity)
 
 ;; By default, whatever setting was asked for, we look that up in
