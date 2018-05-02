@@ -17,7 +17,8 @@
     :license {:name "Creative Commons Attribution-ShareAlike 3.0"
               :url "http://creativecommons.org/licenses/by-sa/3.0/"}}
 
-  (:require [madness.io :as io]
+  (:require [clj-html-compressor.core :as compressor]
+            [madness.io :as io]
             [madness.blog :as blog]
             [madness.blog.index :as blog-index]
             [madness.blog.archive :as blog-archive]
@@ -28,12 +29,18 @@
             [madness.utils :as utils]
             [madness.resources :as res]))
 
+(defn- compress [html]
+  (compressor/compress html {:remove-intertag-spaces true
+                             :remove-quotes true
+                             :simple-boolean-attributes true
+                             :simple-doctype true}))
+
 (defn- render-to-file
   "Render a post or page to a file, using a custom render function."
   [all-posts current-post render-fn file]
 
   (io/write-out-dir (utils/replace-extension file ".html")
-                    (apply str (render-fn current-post all-posts))))
+                    (compress (apply str (render-fn current-post all-posts)))))
 
 (defn- render-to-stdout
   "Render a post or page to stdout, using a custom render function."
