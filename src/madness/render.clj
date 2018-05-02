@@ -30,7 +30,7 @@
             [madness.resources :as res]))
 
 (defn- compress [html]
-  (compressor/compress html {:remove-intertag-spaces true
+  (compressor/compress html {:remove-intertag-spaces false
                              :remove-quotes true
                              :simple-boolean-attributes true
                              :simple-doctype true}))
@@ -118,7 +118,7 @@
 ;; function that can render one.
 (defmethod render :tag-archive
   [_ all-posts tag tagged-posts]
-  
+
   (let [fn (str "." (utils/tag-to-url tag) "index.html")]
     (render-to-file all-posts tagged-posts
                     (partial blog-archive/blog-archive (str "Tag: " tag)
