@@ -80,14 +80,6 @@
     [:.madness-post-title [:a {:color "#333"
                                :text-decoration :none}
                            [:&:hover {:text-decoration :underline}]]]
-    [:.madness-article-title :.madness-post-title
-     [:a.madness-post-section-sign {:color "#333"
-                                    :margin-left (em -0.75)
-                                    :visibility :hidden}]]
-    [:.madness-article-title:hover :.madness-post-title:hover
-     [:a.madness-post-section-sign {:visibility :visible
-                                    :color "#808080"
-                                    :text-decoration :none}]]
     [:#madness-archive {:font-size "80%"
                         :margin-top (em 2.5)
                         :opacity 0.9}]
