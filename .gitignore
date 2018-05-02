@@ -12,3 +12,4 @@ pom.xml
 .lein-plugins
 .lein-repl-history
 *~
+/draft-*
