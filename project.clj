@@ -24,5 +24,5 @@
   :garden {:builds [{:id "asylum8"
                      :source-paths ["src"]
                      :stylesheet madness.styles/asylum8
-                     :compiler {:output-to "resources/assets/asylum/css/asylum8.2.min.css"
+                     :compiler {:output-to "resources/assets/asylum/css/asylum8.3.min.css"
                                 :pretty-print? false}}]})

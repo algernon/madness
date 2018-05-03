@@ -66,8 +66,7 @@
                :color "#333333"
                :border "1px solid #333333"
                :padding (em 0.5)
-               :margin-top (em 0.25)
-               :margin-bottom 0
+               :margin (em 0.25)
                :display :inline-block}
      [:&:hover {:border "1px solid #3333ff"
                 :color "#3333ff"}]]
