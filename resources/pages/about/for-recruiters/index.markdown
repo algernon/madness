@@ -31,6 +31,10 @@ you'll just get pointed to this page.
   run anything else, except in a virtual machine or a chroot.
 * With that said, the only packaging work I am willing to do is Debian
   packaging. No RPM .spec files, thank you very much.
+* If the interview process involves coding at a whiteboard, or brain-teasers, or
+  anything like that, I'm walking out. I'm happy to show my skills in realistic
+  environments, if my public code contributions aren't enough for one reason or
+  another.
 * I will not work for **Google**, **Microsoft**, **Apple**, **Oracle**,
   **Amazon**, or any bank or financial institute. If you are trying to recruit
   me for any of these, stop right now.
