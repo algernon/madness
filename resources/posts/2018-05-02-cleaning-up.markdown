@@ -19,7 +19,7 @@ I had a number of goals with the new design. I didn't want to just refresh the
 looks, tweak a few colors here and there, rearrange the layout a bit - no, I
 wanted to change a few things fundamentally. One of those goals was **better
 privacy for my visitors**, so the first thing I did was to remove my
-[Matomo](https://matomo.org/) (neé Piwik) tracking code. The primary motivation
+[Matomo](https://matomo.org/) (née Piwik) tracking code. The primary motivation
 for the tracker was to observe visitor behaviour, so I could adjust my site
 accordingly. But over the years, I grew tired of trying to write for others,
 tired of trying to cater to an audience I know nearly nothing about, trying to
