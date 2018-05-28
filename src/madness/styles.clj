@@ -37,7 +37,6 @@
 
 (defn syntax-highlight []
   (when (cfg/syntax-highlight)
-    (println "bar")
     syntax))
 
 (defstyles asylum8
