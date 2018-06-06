@@ -109,7 +109,7 @@
                    :margin 0
                    :padding 0
                    :flex-grow 1}]
-    [:.thumnails [:.li {:padding (em 1)
+    [:.thumbnails [:li {:padding (em 1)
                         :margin (em 1)}]]
     [:.thumbnail :.lightbox {:display :inline-block
                              :width (vh 40)}]
