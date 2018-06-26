@@ -81,12 +81,8 @@
     [:#madness-archive {:font-size "80%"
                         :margin-top (em 2.5)
                         :opacity 0.9}]
-    [:#brand {:font-family :cursive
-              :font-size (em 2)
-              :text-decoration :none
-              :color "#999"
-              :text-shadow "1px 1px #333"}
-     [:&:hover {:color "#158cba"}]]
+    [:#brand {:font-family :monospace
+              :text-decoration :none}]
     [:footer {:position :relative
               :bottom 0
               :height (em 4)
