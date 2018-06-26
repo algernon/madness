@@ -69,8 +69,8 @@
                :display :inline-block}
      [:&:hover {:border "1px solid #3333ff"
                 :color "#3333ff"}]]
-    [:.madness-article-meta {:font-size "75%"
-                             :opacity 0.6}]
+    [:.madness-article-title {:margin-bottom 0}]
+    [:.madness-article-meta {:font-size "65%"}]
     [:.madness-article-meta [:span [:a {:text-decoration :none}
                                     [:&:hover {:text-decoration :underline}]]]]
     [:#madness-article-date {:text-decoration :none}
