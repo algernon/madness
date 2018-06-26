@@ -19,7 +19,7 @@
                  [me.raynes/conch "0.4.0"]
                  [garden "1.3.5"]]
   :plugins [[lein-garden "0.3.0"]]
-  :aliases {"madness" ["run" "-m" "madness.core"]
+  :aliases {"madness" ["do" ["garden" "once"] ["run" "-m" "madness.core"]]
             "madness-fragment" ["run" "-m" "madness.core/madness-fragments"]}
   :garden {:builds [{:id "asylum8"
                      :source-paths ["src"]
