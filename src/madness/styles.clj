@@ -42,7 +42,8 @@
 (defstyles asylum8
   (concat
    [[(at-media {:min-width (px 1000)}
-               [:#container :footer {:width (vw 70)}])
+               [:#container :footer {:width (vw 70)}]
+               [:body {:font-size (px 24)}])
      (at-media {:min-width (px 800)
                 :max-width (px 1000)}
                [:#container :footer {:width (vw 70)}])
@@ -52,7 +53,6 @@
     [:html {:position :relative
             :min-height "100%"}]
     [:body {:font-family :sans-serif
-            :font-size (px 24)
             :margin-bottom (em 5)
             :color "#333"}]
     [:a {:color "#333"}
