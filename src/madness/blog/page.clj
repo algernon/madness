@@ -15,7 +15,7 @@
     :copyright "Copyright (C) 2012-2013 Gergely Nagy <algernon@madhouse-project.org>"
     :license {:name "Creative Commons Attribution-ShareAlike 3.0"
               :url "http://creativecommons.org/licenses/by-sa/3.0/"}}
-  
+
   (:require [net.cgrand.enlive-html :as h]
             [madness.blog.nav :as blog-nav]
             [madness.utils :as utils]
@@ -47,7 +47,7 @@
 
   The structure this function generates, should be pretty clear by
   glancing over the code here."
-  
+
   [file]
 
   (let [page (io/read-file file)]
@@ -68,7 +68,7 @@
 ;; the page itself.
 (h/defsnippet blog-page-title (cfg/template) [:#madness-article :h2]
   [title]
-  
+
   [:h2] (h/do->
          (h/content title)
          (h/set-attr :title title))
@@ -124,4 +124,7 @@
   [:#madness-content-area] (h/remove-attr :id)
   [:#madness-article] (h/remove-attr :id)
   [:#main-rss] (h/remove-attr :id)
+  [:#main-css] (h/do->
+                (h/remove-attr :id)
+                (h/replace-vars (cfg/vars)))
   [:#rss-feed] (h/remove-attr :id))

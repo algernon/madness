@@ -83,6 +83,9 @@
   [:#rss-feed] (h/do->
                 (h/set-attr :href feed-url)
                 (h/remove-attr :id))
+  [:#main-css] (h/do->
+                (h/remove-attr :id)
+                (h/replace-vars (cfg/vars)))
   [:#main-rss] (h/do->
                 (h/remove-attr :id)
                 (h/set-attr :href feed-url))

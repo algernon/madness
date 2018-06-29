@@ -15,7 +15,7 @@
     :copyright "Copyright (C) 2012-2013 Gergely Nagy <algernon@madhouse-project.org>"
     :license {:name "Creative Commons Attribution-ShareAlike 3.0"
               :url "http://creativecommons.org/licenses/by-sa/3.0/"}}
-  
+
   (:require [net.cgrand.enlive-html :as h]
             [madness.blog.nav :as blog-nav]
             [madness.utils :as utils]
@@ -152,7 +152,7 @@
   [:#madness-article-next] (if (empty? (first neighbours))
                              nil
                              (h/remove-attr :id))
-  
+
   [:#madness-article-prev :a :span] (h/substitute (:title (last neighbours)))
   [:#madness-article-prev :a] (h/set-attr :href (:url (last neighbours)))
   [:#madness-article-prev] (if (empty? (last neighbours))
@@ -218,7 +218,7 @@
                                (:content post))
   [:.madness-article-meta] (h/substitute
                             (blog-post-meta post
-                                            (remove #(.startsWith % ".") 
+                                            (remove #(.startsWith % ".")
                                                     (:tags post))))
 
   [:#madness-article-read-more] nil
@@ -235,6 +235,9 @@
   [:.pygmentize] utils/pygmentize-node
 
   ; Cleanup
+  [:#main-css] (h/do->
+                (h/remove-attr :id)
+                (h/replace-vars (cfg/vars)))
   [:#main-feed] (h/remove-attr :id)
   [:#rss-feed] (h/remove-attr :id)
   [:#madness-content-area] (h/remove-attr :id)

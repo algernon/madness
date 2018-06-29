@@ -57,7 +57,8 @@
    :archive-posts {:columns 3
                    :rows 0}
    :atom {:base-url "http://localhost"
-          :title nil}})
+          :title nil}
+   :vars {:build-date (str (.getTime (java.util.Date.)))}})
 
 (def config
   "The final configuration for Madness - `settings.clj` merged into
@@ -82,6 +83,10 @@
   []
 
   (-> config :template :base-url))
+
+(defn vars
+  []
+  (-> config :vars))
 
 (defmulti recent-posts
   "Return various settings for recent-posts. Apart from the settable
