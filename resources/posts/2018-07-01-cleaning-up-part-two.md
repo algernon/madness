@@ -17,8 +17,8 @@ the size itself, this will not be a very long post.
 <!-- more -->
 
 To cut to the chase, the end result is that I went from *8.4kb* through three
-requests (of which *7kb* was CSS with long expiration) down to *3.0kb* through
-two requests, of which only *1.8kb* is CSS.
+requests (of which *7kb* was CSS with long expiration) down to *2.1kb* through
+two requests, of which only *0.8kb* is CSS.
 
 The biggest, and most visible change is that I dropped syntax highlighting, that
 saved me *4.2kb* on a fresh visit, but I still had almost *3kb* of CSS for no
@@ -26,7 +26,7 @@ good reason. That no good reason was that I was writing my CSS by hand, and
 didn't have a minify step. Instead of implementing a minification step, I
 converted my CSS rules to [Garden](https://github.com/noprompt/garden), which
 can minify it for me. And I get to write CSS with Clojure, so even better! This
-made my CSS considerably smaller: from *2.8kb* to around *2kb*, slightly less.
+made my CSS considerably smaller: from *2.8kb* to around *1kb*, slightly less.
 
 And if I minify CSS, I might as well minify the HTML too, using
 [clj-html-compressor](https://github.com/Atsman/clj-html-compressor). That had a
