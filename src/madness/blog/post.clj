@@ -183,7 +183,7 @@
   [:h2] (h/set-attr :title (:title post))
   [:h2 :a.madness-post-article-link] (h/do->
                                       (utils/rewrite-link (:url post) (:title post))
-                                      (h/remove-attr :class))
+                                      (h/set-attr :class "u-url"))
   [:h2 :a.madness-post-section-sign] (h/do->
                                       (h/set-attr :href (:url post)))
   [:#madness-article] (h/remove-attr :id))
