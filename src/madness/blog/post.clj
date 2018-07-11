@@ -119,9 +119,10 @@
 
   [post taglist]
 
-  [:#madness-article-date] (h/do->
-                            (h/set-attr :href (utils/date-to-url (:date post)))
-                            (h/content (utils/date-format (:date post))))
+  [:#madness-article-date] (h/set-attr :href (utils/date-to-url (:date post)))
+  [:#madness-article-date :time] (h/do->
+                                  (h/set-attr :datetime (utils/datetime-format (:date post)))
+                                  (h/content (utils/date-format (:date post))))
   [:#madness-article-tags :a] (h/clone-for
                                [tag (butlast taglist)]
                                (h/do->

@@ -7,6 +7,7 @@
               :url "http://creativecommons.org/licenses/by-sa/3.0/"}}
 
   (:require [clojure.string :as s]
+            [clj-time.core :as time-core]
             [clj-time.format :as time-format]
             [net.cgrand.enlive-html :as h]
             [fs.core :as fs]
@@ -36,6 +37,12 @@
   [date]
 
   (time-format/unparse (time-format/formatter "yyyy-MM-dd") date))
+
+(defn datetime-format
+  [date]
+  (time-format/unparse (time-format/with-zone
+                         (time-format/formatter-local "yyyy-MM-dd HH:mm:ssZ")
+                         (time-core/default-time-zone)) date))
 
 (defn date-to-url
   "Given a date, return a relative URL that points to the yearly
