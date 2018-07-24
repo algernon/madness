@@ -1,5 +1,5 @@
 ---
-title: "GitHub vs mailing lists, from another prespective"
+title: "GitHub vs mailing lists, from another perspective"
 date: 2018-07-24 14:45
 tags: [Rants, Technology]
 ---
