@@ -99,7 +99,7 @@ an ancient one.
 
 This is indeed a case where an e-mail based workflow is more flexible. Yet, does
 it matter? In either case, you can just apply the patch, and create diffs in
-whatever format, and was much context as you wish. You'll see not just the
+whatever format, and as much context as you wish. You'll see not just the
 parts, but the whole thing in context. You can do this with GitHub, you can do
 this with email. I've been doing it ever since I started working with patches,
 and it is mighty convenient.
