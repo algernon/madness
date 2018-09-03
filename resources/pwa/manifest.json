@@ -1,0 +1,16 @@
+{
+    "short_name": "Asylum",
+    "name": "Diaries of a Madman",
+    "icons": [
+        {"src": "/assets/asylum/images/mhp-logo.192.png",
+         "type": "image/png",
+         "sizes": "192x192"},
+        {"src": "/assets/asylum/images/mhp-logo.512.png",
+         "type": "image/png",
+         "sizes": "512x512"}
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#333"
+}
