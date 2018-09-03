@@ -23,6 +23,6 @@
             "madness-fragment" ["run" "-m" "madness.core/madness-fragments"]}
   :garden {:builds [{:id "asylum8"
                      :source-paths ["src"]
-                     :stylesheet madness.styles/asylum8
-                     :compiler {:output-to "resources/assets/asylum/css/asylum8.min.css"
+                     :stylesheet madness.styles/asylum9
+                     :compiler {:output-to "resources/assets/asylum/css/asylum9.min.css"
                                 :pretty-print? false}}]})

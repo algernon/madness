@@ -39,7 +39,7 @@
   (when (cfg/syntax-highlight)
     syntax))
 
-(defstyles asylum8
+(defstyles asylum9
   (concat
    [[(at-media {:min-width (px 1000)}
                [:#container :footer {:width (vw 70)}]
