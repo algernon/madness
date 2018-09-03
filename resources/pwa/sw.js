@@ -6,9 +6,7 @@ self.addEventListener('install', e => {
         caches.open(cacheName).then(cache => {
             return cache.addAll([
                 `/`,
-                `/index.html`,
-                `/blog/archives/`,
-                `/assets/asylum/css/asylum8.min.css`
+                `/index.html`
             ]).then(() => self.skipWaiting());
         })
     );
