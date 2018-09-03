@@ -6,7 +6,7 @@
   optionally archived posts."
 
   ^{:author "Gergely Nagy <algernon@madhouse-project.org>"
-    :copyright "Copyright (C) 2012-2013 Gergely Nagy <algernon@madhouse-project.org>"
+    :copyright "Copyright (C) 2012-2018 Gergely Nagy <algernon@madhouse-project.org>"
     :license {:name "Creative Commons Attribution-ShareAlike 3.0"
               :url "http://creativecommons.org/licenses/by-sa/3.0/"}}
 
@@ -28,6 +28,7 @@
   [post]
 
   [:#madness-archive-recent-post] (h/remove-attr :id)
+  [:.madness-post-date] (h/content (utils/date-format (:date post)))
   [:h3 :a.madness-post-section-sign] nil
   [:h3 :a] (h/do->
             (utils/rewrite-link-with-title
@@ -43,6 +44,7 @@
   [posts]
 
   [:#madness-archive-recent-post-row] (h/remove-attr :id)
+
   [:#madness-archive-recent-post]
     (h/clone-for [p posts]
                  (h/do->
@@ -119,4 +121,5 @@
                    (h/substitute (archive-post-row rows))))
   ; Cleanup
   [:#madness-content-area] (h/remove-attr :id)
-  [:#madness-article] (h/remove-attr :id))
+  [:#madness-article] (h/remove-attr :id)
+  [:#madness-index] nil)

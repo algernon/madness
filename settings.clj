@@ -1,4 +1,4 @@
-{:template {:default "asylum8-main.html",
+{:template {:default "asylum9-main.html",
             :atom "asylum3-atom.xml"
             :base-url "https://asylum.madhouse-project.org"
             :syntax-highlight false},

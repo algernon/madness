@@ -12,7 +12,7 @@
   `/foo/bar/index.html`."
 
   ^{:author "Gergely Nagy <algernon@madhouse-project.org>"
-    :copyright "Copyright (C) 2012-2013 Gergely Nagy <algernon@madhouse-project.org>"
+    :copyright "Copyright (C) 2012-2018 Gergely Nagy <algernon@madhouse-project.org>"
     :license {:name "Creative Commons Attribution-ShareAlike 3.0"
               :url "http://creativecommons.org/licenses/by-sa/3.0/"}}
 
@@ -127,4 +127,6 @@
   [:#main-css] (h/do->
                 (h/remove-attr :id)
                 (h/replace-vars (cfg/vars)))
-  [:#rss-feed] (h/remove-attr :id))
+  [:#rss-feed] (h/remove-attr :id)
+
+  [:#madness-index] nil)

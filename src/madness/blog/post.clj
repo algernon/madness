@@ -12,7 +12,7 @@
   URL."
 
   ^{:author "Gergely Nagy <algernon@madhouse-project.org>"
-    :copyright "Copyright (C) 2012-2013 Gergely Nagy <algernon@madhouse-project.org>"
+    :copyright "Copyright (C) 2012-2018 Gergely Nagy <algernon@madhouse-project.org>"
     :license {:name "Creative Commons Attribution-ShareAlike 3.0"
               :url "http://creativecommons.org/licenses/by-sa/3.0/"}}
 
@@ -242,7 +242,8 @@
   [:#main-feed] (h/remove-attr :id)
   [:#rss-feed] (h/remove-attr :id)
   [:#madness-content-area] (h/remove-attr :id)
-  [:#madness-article] (h/remove-attr :id))
+  [:#madness-article] (h/remove-attr :id)
+  [:#madness-index] nil)
 
 ;; To help cross posting to other engines, lets have a template that
 ;; only contains the rendered summary and content of the post, and
