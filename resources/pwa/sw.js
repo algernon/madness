@@ -17,6 +17,16 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+    if (event.request.method !== 'GET') {
+        return;
+    }
+
+    // This prevents some weird issue with Chrome DevTools and 'only-if-cached'
+    // - https://bugs.chromium.org/p/chromium/issues/detail?id=823392
+    if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
+        return;
+    }
+
     event.respondWith(
         caches.open(cacheName)
             .then(cache => cache.match(event.request, {ignoreSearch: true}))
