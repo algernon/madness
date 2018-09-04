@@ -243,7 +243,8 @@
   [:#rss-feed] (h/remove-attr :id)
   [:#madness-content-area] (h/remove-attr :id)
   [:#madness-article] (h/remove-attr :id)
-  [:#madness-index] nil)
+  [:#madness-index] nil
+  [:.no-index] (h/remove-class "no-index"))
 
 ;; To help cross posting to other engines, lets have a template that
 ;; only contains the rendered summary and content of the post, and

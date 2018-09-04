@@ -138,7 +138,8 @@
   ; Cleanup
   [:#madness-content-area] (h/remove-attr :id)
   [:#madness-article] (h/remove-attr :id)
-  [:#madness-index] nil)
+  [:#madness-index] nil
+  [:.no-index] (h/remove-class "no-index"))
 
 (h/deftemplate blog-archive-grouped (cfg/template)
   [title feed-url archive-url blog-posts all-posts]
@@ -185,4 +186,5 @@
   [:.madness-recent-posts] nil
   [:#madness-content-area] (h/remove-attr :id)
   [:#madness-article] (h/remove-attr :id)
-  [:#madness-index] nil)
+  [:#madness-index] nil
+  [:.no-index] (h/remove-class "no-index"))

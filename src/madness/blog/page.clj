@@ -129,4 +129,5 @@
                 (h/replace-vars (cfg/vars)))
   [:#rss-feed] (h/remove-attr :id)
 
-  [:#madness-index] nil)
+  [:#madness-index] nil
+  [:.no-index] (h/remove-class "no-index"))
