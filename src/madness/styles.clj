@@ -78,6 +78,7 @@
      [:&:hover {:text-decoration :underline}]]
     [:.madness-post-date {:color "#888"
                           :margin-right (em 0.5)}]
+    [:.madness-post-title {:margin-left (em 1)}]
     [:.madness-post-title [:a {:color "#333"
                                :text-decoration :none}
                            [:&:hover {:text-decoration :underline}]]]
