@@ -122,9 +122,11 @@
 (defmethod render :tag-archive
   [_ all-posts tag tagged-posts]
 
-  (let [fn (str "." (utils/tag-to-url tag) "index.html")]
-    (render-to-file all-posts tagged-posts
-                    (partial blog-archive/blog-archive (str "Tag: " tag)
+  (let [fn (str "." (utils/tag-to-url tag) "index.html")
+        dated-archive (utils/group-blog-by-date tagged-posts utils/posts-by-year)
+        sorted-archive (sort #(compare (first %2) (first %1)) dated-archive)]
+    (render-to-file all-posts sorted-archive
+                    (partial blog-archive/blog-archive-grouped (str "Tag: " tag)
                              (str "" (utils/tag-to-url tag) "atom.xml")
                              (str "" (utils/tag-to-url tag))) fn)))
 
