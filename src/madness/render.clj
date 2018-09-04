@@ -105,7 +105,11 @@
     (render-to-file sorted-archive sorted-archive
                     (partial blog-archive/blog-archive-grouped "Archive"
                              "/blog/atom.xml" "/blog/archives/")
-                    "blog/archives/index.html")))
+                    "blog/archives/index.html")
+    (render-to-file sorted-archive sorted-archive
+                    (partial blog-archive/blog-archive-grouped "Archive"
+                             "/blog/atom.xml" "/blog/")
+                    "blog/index.html")))
 
 ;; ### The tag archives
 ;;
