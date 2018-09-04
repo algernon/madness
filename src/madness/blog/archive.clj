@@ -123,6 +123,7 @@
                   (h/before utils/hr-desktop)))
 
   [:#madness-archive-archived-posts] (h/remove-attr :id)
+  [:#madness-archive :h2] nil
   [:#madness-archive-archived-post-row]
      (h/clone-for [rows (utils/blog->table
                          (cfg/archive-posts :columns)
