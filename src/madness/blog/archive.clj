@@ -56,6 +56,22 @@
                     (h/remove-attr :id)
                     (h/remove-class "visible-desktop")))
 
+(h/defsnippet archive-post-year (cfg/template) [:#madness-archive-archived-posts]
+  [[year posts]]
+
+  [:h2 :a] (h/do->
+            (h/content year)
+            (h/set-attr :href (str "#" year)))
+  [:h2] (h/set-attr :id (str year))
+  [:#madness-archive-archived-post-row]
+  (h/clone-for [rows (utils/blog->table
+                      (cfg/archive-posts :columns)
+                      (cfg/archive-posts :rows)
+                      (drop (* (cfg/recent-posts :columns)
+                               (cfg/recent-posts :rows)) posts))]
+               (h/do->
+                (h/substitute (archive-post-row rows)))))
+
 ;; Renders the whole archive page, be that the main one, or the
 ;; per-tag archives. The page will include the title, a list of recent
 ;; posts, followed by archived ones, and of course any other wrapping
@@ -120,6 +136,53 @@
                   (h/do->
                    (h/substitute (archive-post-row rows))))
   ; Cleanup
+  [:#madness-content-area] (h/remove-attr :id)
+  [:#madness-article] (h/remove-attr :id)
+  [:#madness-index] nil)
+
+(h/deftemplate blog-archive-grouped (cfg/template)
+  [title feed-url archive-url blog-posts all-posts]
+
+  [:#madness-og-title] (h/set-attr :content title)
+  [:#madness-og-url] (h/set-attr
+                      :content
+                      (str (cfg/base-url) archive-url))
+
+  [:#madness-article :h2] (h/do->
+                           (h/content title)
+                           (h/set-attr :title title))
+  [:.madness-article-meta] nil
+  [:#madness-article-content] nil
+  [:#madness-article-read-more] nil
+  [:#madness-article-comments] nil
+  [:#madness-article-neighbours] nil
+  [:#madness-article-share] nil
+  [:#rss-feed] (h/do->
+                (h/set-attr :href feed-url)
+                (h/remove-attr :id))
+  [:#main-css] (h/do->
+                (h/remove-attr :id)
+                (h/replace-vars (cfg/vars)))
+  [:#main-rss] (h/do->
+                (h/remove-attr :id)
+                (h/set-attr :href feed-url))
+
+  ; Navigation bar
+  [:#madness-recent-posts :li] (blog-nav/recent-posts all-posts)
+  [:#madness-recent-posts] (h/remove-attr :id)
+  [:#madness-tags :.madness-tag] (blog-nav/all-tags all-posts)
+  [:#madness-tags] (h/remove-attr :id)
+
+  ; Recents & archived posts
+  [:#madness-archive-archived-posts]
+  (h/do->
+   (h/clone-for [year blog-posts]
+                (h/do->
+                 (h/substitute (archive-post-year year))))
+   (h/remove-attr :id))
+
+  ;; Cleanup
+  [:.madness-recent-posts] nil
   [:#madness-content-area] (h/remove-attr :id)
   [:#madness-article] (h/remove-attr :id)
   [:#madness-index] nil)

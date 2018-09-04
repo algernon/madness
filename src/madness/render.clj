@@ -99,10 +99,13 @@
 ;; [1]: #madness.blog.archive
 ;;
 (defmethod render :archive [_]
-  (render-to-file res/posts res/posts
-                  (partial blog-archive/blog-archive "Archive"
-                           "/blog/atom.xml" "/blog/archives/")
-                  "blog/archives/index.html"))
+
+  (let [dated-archive (utils/group-blog-by-date res/posts utils/posts-by-year)
+        sorted-archive (sort #(compare (first %2) (first %1)) dated-archive)]
+    (render-to-file sorted-archive sorted-archive
+                    (partial blog-archive/blog-archive-grouped "Archive"
+                             "/blog/atom.xml" "/blog/archives/")
+                    "blog/archives/index.html")))
 
 ;; ### The tag archives
 ;;
