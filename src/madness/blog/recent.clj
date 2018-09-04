@@ -15,7 +15,7 @@
     :copyright "Copyright (C) 2012-2013 Gergely Nagy <algernon@madhouse-project.org>"
     :license {:name "Creative Commons Attribution-ShareAlike 3.0"
               :url "http://creativecommons.org/licenses/by-sa/3.0/"}}
-  
+
   (:require [net.cgrand.enlive-html :as h]
             [madness.utils :as utils]
             [madness.blog.post :as blog-post]
@@ -75,7 +75,7 @@
   [:#madness-recent-article-tags] (h/append
                             (blog-post/blog-post-tag (last (:tags post))))
   [:#madness-recent-article-tags] (h/remove-attr :id)
-  
+
   [:#madness-recent-article-meta] (h/remove-attr :id))
 
 (h/defsnippet recent-post-item (cfg/template) [:#madness-archive-recent-post]
@@ -112,6 +112,4 @@
     (h/clone-for [p posts]
                  (h/do->
                   (h/substitute (recent-post-item p))
-                  (h/set-attr :class (str "col-xs-" (cfg/archive-posts :span)
-                                          " span" (cfg/archive-posts :span)))
                   (h/remove-attr :id))))

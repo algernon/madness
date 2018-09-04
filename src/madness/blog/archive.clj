@@ -49,12 +49,9 @@
     (h/clone-for [p posts]
                  (h/do->
                   (h/substitute (archive-post-item p))
-                  (h/set-attr :class (str "col-xs-" (cfg/archive-posts :span)
-                                          " span" (cfg/archive-posts :span)))
                   (h/remove-attr :id)))
   [:#recent-posts] (h/do->
-                    (h/remove-attr :id)
-                    (h/remove-class "visible-desktop")))
+                    (h/remove-attr :id)))
 
 (h/defsnippet archive-post-year (cfg/template) [:#madness-archive-archived-posts]
   [[year posts]]
@@ -116,8 +113,7 @@
 
   ; Recents & archived posts
   [:#madness-archive-recent-posts] (h/do->
-                                    (h/remove-attr :id)
-                                    (h/remove-class "visible-desktop"))
+                                    (h/remove-attr :id))
   [:#madness-archive-recent-post-row]
     (h/clone-for [rows (utils/blog->table
                         (cfg/recent-posts :columns)
