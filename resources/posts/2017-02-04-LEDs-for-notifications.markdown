@@ -1,7 +1,7 @@
 ---
 title: "Want to use per-key LEDs for notification? Think again."
 date: 2017-02-04 22:20
-tags: [Keyboard, rants]
+tags: [Keyboard, Rants]
 ---
 
 A recent [conversation on twitter][twt:leds], and the mention of the Das 5Q

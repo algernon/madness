@@ -1,7 +1,7 @@
 ---
 title: "Leaving Twitter"
 date: 2017-10-13 13:00
-tags: ["rants"]
+tags: ["Rants"]
 ---
 
 Twitter has been an increasingly frustrating experience lately, doing everything
