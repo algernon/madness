@@ -53,7 +53,6 @@
     [:html {:position :relative
             :min-height "100%"}]
     [:body {:font-family :sans-serif
-            :margin-bottom (em 5)
             :color "#333"}]
     [:a {:color "#333"}
      [:&:hover {:color "#00e"}]]
