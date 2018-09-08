@@ -66,9 +66,11 @@
                :border "1px solid #333333"
                :padding (em 0.5)
                :margin (em 0.25)
-               :display :inline-block}
-     [:&:hover {:border "1px solid #3333ff"
-                :color "#3333ff"}]]
+               :display :inline-block
+               :transition "0.3s ease-in-out"}
+     [:&:hover {:border "4px solid #3333ff"
+                :color "#3333ff"
+                :margin "calc(0.25em - 3px)"}]]
     [:.madness-article-title {:margin-bottom 0}]
     [:.madness-article-meta {:font-size "65%"}]
     [:.madness-article-meta [:span [:a {:text-decoration :none}
