@@ -53,6 +53,15 @@
   [:#recent-posts] (h/do->
                     (h/remove-attr :id)))
 
+(h/defsnippet tag-link (cfg/template) [:#madness-archive-archived-posts]
+  [tag]
+
+  [:h2 :a] (h/do->
+            (h/content tag)
+            (h/set-attr :href (str "/blog/tags/" (.toLowerCase tag))))
+  [:h2] (h/remove-attr :id)
+  [:#madness-archive-archived-post-row] nil)
+
 (h/defsnippet archive-post-year (cfg/template) [:#madness-archive-archived-posts]
   [[year posts]]
 
@@ -133,6 +142,48 @@
                   (h/do->
                    (h/substitute (archive-post-row rows))))
   ; Cleanup
+  [:#madness-content-area] (h/remove-attr :id)
+  [:#madness-article] (h/remove-attr :id)
+  [:#madness-index] nil
+  [:.no-index] (h/remove-class "no-index"))
+
+(h/deftemplate tag-list (cfg/template)
+  [feed-url tags _ _]
+
+  [:#madness-og-title] (h/set-attr :content "Tags")
+  [:#madness-og-url] (h/set-attr
+                      :content
+                      (str (cfg/base-url) "/blog/tags/"))
+
+  [:#madness-article :h2] (h/do->
+                           (h/content "Tags")
+                           (h/set-attr :title "Tags"))
+  [:.madness-article-meta] nil
+  [:#madness-article-content] nil
+  [:#madness-article-read-more] nil
+  [:#madness-article-comments] nil
+  [:#madness-article-neighbours] nil
+  [:#madness-article-share] nil
+  [:#rss-feed] (h/do->
+                (h/set-attr :href feed-url)
+                (h/remove-attr :id))
+  [:#main-css] (h/do->
+                (h/remove-attr :id)
+                (h/replace-vars (cfg/vars)))
+  [:#main-rss] (h/do->
+                (h/remove-attr :id)
+                (h/set-attr :href feed-url))
+
+  ; Recents & archived posts
+  [:#madness-archive-archived-posts]
+  (h/do->
+   (h/clone-for [tag tags]
+                (h/do->
+                 (h/substitute (tag-link tag))))
+   (h/remove-attr :id))
+
+  ;; Cleanup
+  [:.madness-recent-posts] nil
   [:#madness-content-area] (h/remove-attr :id)
   [:#madness-article] (h/remove-attr :id)
   [:#madness-index] nil

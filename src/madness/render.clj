@@ -137,6 +137,16 @@
 ;; And another, that maps through the tags, and using the previous
 ;; method, renders an archive for each of them.
 (defmethod render :tags [_]
+  (let [tag-list (sort (fn [a b]
+                         (compare (.toLowerCase a)
+                                  (.toLowerCase b)))
+                       (remove (fn [s] (.startsWith s "."))
+                               (keys res/posts-tag-grouped)))]
+    (dorun (render-to-file res/posts res/posts-tag-grouped
+                          (partial blog-archive/tag-list
+                             "/blog/atom.xml"
+                             tag-list)
+                          "blog/tags/index.html")))
   (dorun (map #(render :tag-archive res/posts %1
                        (get res/posts-tag-grouped %1))
               (keys res/posts-tag-grouped))))
