@@ -54,13 +54,20 @@
                     (h/remove-attr :id)))
 
 (h/defsnippet tag-link (cfg/template) [:#madness-archive-archived-posts]
-  [tag]
+  [[tag posts]]
 
   [:h2 :a] (h/do->
             (h/content tag)
             (h/set-attr :href (str "/blog/tags/" (.toLowerCase tag))))
   [:h2] (h/remove-attr :id)
-  [:#madness-archive-archived-post-row] nil)
+  [:#madness-archive-archived-post-row]
+  (h/clone-for [rows (utils/blog->table
+                      (cfg/archive-posts :columns)
+                      (cfg/archive-posts :rows)
+                      (drop (* (cfg/recent-posts :columns)
+                               (cfg/recent-posts :rows)) posts))]
+               (h/do->
+                (h/substitute (archive-post-row rows)))))
 
 (h/defsnippet archive-post-year (cfg/template) [:#madness-archive-archived-posts]
   [[year posts]]
@@ -148,7 +155,7 @@
   [:.no-index] (h/remove-class "no-index"))
 
 (h/deftemplate tag-list (cfg/template)
-  [feed-url tags _ _]
+  [feed-url blog-posts all-posts _]
 
   [:#madness-og-title] (h/set-attr :content "Tags")
   [:#madness-og-url] (h/set-attr
@@ -177,7 +184,7 @@
   ; Recents & archived posts
   [:#madness-archive-archived-posts]
   (h/do->
-   (h/clone-for [tag tags]
+   (h/clone-for [tag blog-posts]
                 (h/do->
                  (h/substitute (tag-link tag))))
    (h/remove-attr :id))
