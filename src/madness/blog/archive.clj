@@ -59,7 +59,7 @@
   [:h2 :a] (h/do->
             (h/content tag)
             (h/set-attr :href (str "/blog/tags/" (.toLowerCase tag))))
-  [:h2] (h/remove-attr :id)
+  [:h2] (h/set-attr :id (.toLowerCase tag))
   [:#madness-archive-archived-post-row]
   (h/clone-for [rows (utils/blog->table
                       (cfg/archive-posts :columns)
