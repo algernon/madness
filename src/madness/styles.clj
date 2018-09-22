@@ -54,6 +54,7 @@
             :min-height "100%"}]
     [:body {:font-family :sans-serif
             :color "#333"}]
+    [:.h-card {:display :none}]
     [:a {:color "#333"}
      [:&:hover {:color "#00e"}]]
     [:#container :footer {:margin-left :auto
