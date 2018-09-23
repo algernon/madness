@@ -8,6 +8,7 @@
   :license {:name "Creative Commons Attribution-ShareAlike 3.0"
             :url "http://creativecommons.org/licenses/by-sa/3.0/"
             :distribution :repo}
+  :local-repo "local-m2"
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [clj-html-compressor "0.1.1"]

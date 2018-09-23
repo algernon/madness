@@ -11,6 +11,7 @@ pom.xml
 .lein-failures
 .lein-plugins
 .lein-repl-history
+/local-m2/
 *~
 /draft-*
 *.min.css
