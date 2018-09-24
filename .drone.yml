@@ -10,6 +10,14 @@ pipeline:
     when:
       event: tag
 
+  cache-restore:
+    image: drillster/drone-volume-cache
+    restore: true
+    mount:
+      - local-m2
+    volumes:
+      - /tmp/cache/madness:/cache
+
   dependencies:
     image: clojure:lein
     commands:
@@ -21,6 +29,14 @@ pipeline:
       - apt-get update -qq
       - apt-get -qq -y install python-pygments
       - lein madness
+
+  cache-rebuild:
+    image: drillster/drone-volume-cache
+    rebuild: true
+    mount:
+      - local-m2
+    volumes:
+      - /tmp/cache/madness:/cache
 
   deploy-public:
     group: deploy
