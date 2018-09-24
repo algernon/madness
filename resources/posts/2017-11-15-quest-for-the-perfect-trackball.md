@@ -1,7 +1,7 @@
 ---
 title: "The quest for the perfect trackball"
 date: 2017-11-15 23:45
-tags: [Hacking, Trackball, Ergonomics]
+tags: [Hacking, Ommatidia, Ergonomics]
 ---
 
 For the past year and a little more, I have been consciously building a better
