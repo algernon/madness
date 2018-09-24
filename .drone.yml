@@ -1,0 +1,59 @@
+pipeline:
+  dco:
+    group: meta
+    image: algernon/drone-plugin-dco
+
+  signature-check:
+    group: meta
+    image: algernon/drone-plugin-signature-check
+    keys: [ 10E65DC045EABEFCC5193A26AC1E90BAC433F68F ]
+    when:
+      event: tag
+
+  dependencies:
+    image: clojure:lein
+    commands:
+      - lein deps
+
+  build:
+    image: clojure:lein
+    commands:
+      - apt-get update -qq
+      - apt-get -qq -y install python-pygments
+      - lein madness
+
+  deploy-public:
+    group: deploy
+    image: appleboy/drone-scp
+    host: bedlam.madhouse-project.org
+    username: drone-bedlam
+    port: 242
+    source: public/
+    target: public/
+    strip_components: 1
+    rm: true
+    secrets: [ ssh_key ]
+
+  deploy-assets:
+    group: deploy-assets
+    image: appleboy/drone-scp
+    host: bedlam.madhouse-project.org
+    username: drone-bedlam
+    port: 242
+    source: resources/assets
+    target: public/assets/
+    strip_components: 2
+    rm: true
+    secrets: [ ssh_key ]
+
+  deploy-pwa:
+    group: deploy-assets
+    image: appleboy/drone-scp
+    host: bedlam.madhouse-project.org
+    username: drone-bedlam
+    port: 242
+    source: resources/pwa
+    target: public/pwa/
+    strip_components: 2
+    rm: true
+    secrets: [ ssh_key ]
