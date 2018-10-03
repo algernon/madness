@@ -6,7 +6,7 @@ Every once in a while recruiters find me with all kinds of offers and opportunit
 
 * I work remotely. If you want me to commute to an office, stop right now: I'm not interested.
 * I am OK with occasional visits to HQ (assuming it is in Europe, and not in a country listed below), but those visits better be rare.
-* While I'm willing to travel within Europe, I prefer to do that rarely. Traveling outside of it is something I'd rather avoid. I will not set foot in neither the US, nor the UK, no matter what.
+* While I'm willing to travel within Europe, I prefer to do that rarely. Traveling outside of it is something I'd rather avoid. I will not set foot in neither the US, the UK, nor New Zealand, no matter what.
 * I run Debian as the primary operating system, that's my work environment. If I can't do my job with it, it isn't a job I'm willing to do. I am willing to run other operating systems in VMs and  the like for testing purposes, but they will never be my main development environment.
 * I am not doing any packaging work, except for Debian.
 * If the interview process involves coding at a whiteboard, or brain-teasers, or anything like that, I'm walking out. I'm happy to show my skills in realistic environments, if my public code contributions aren't enough for one reason or another.
