@@ -1,7 +1,7 @@
 ---
 title:  "Rethinking"
 date: 2017-12-18 22:40
-tags: [Ommatidia]
+tags: [Ommatidia, Hardware]
 ---
 
 Today [this thread][gh:gaming-keypad] happened to come my way, and it gave me so many ideas to ponder about!

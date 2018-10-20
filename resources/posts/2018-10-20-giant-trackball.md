@@ -1,7 +1,7 @@
 ---
 title: "Giant trackball"
 date: 2018-10-20 07:30
-tags: [Ommatidia]
+tags: [Ommatidia, Hardware]
 ---
 
 Just saw a [video of a giant trackball])(https://vimeo.com/68424161), and I started to wonder if it would make sense for me to build one. Clicking would be a problem, but 99% of the time when I'm trackballing around, I have my other hand on the keyboard, and could click there. Most things handle two mice doing coordinated gymnastics...

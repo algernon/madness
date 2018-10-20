@@ -1,7 +1,7 @@
 ---
 title: "Of LEDs and buttons"
 date: 2017-12-23 21:30
-tags: [Ommatidia]
+tags: [Ommatidia, Hardware]
 ---
 
 I've been thinking about LEDs. I definitely do not want a LED under the ball, but perhaps they could be useful under the buttons? And while there, what about underglow? Between the two, I think underglow would make the more sense, and it would be the least disturbing too.

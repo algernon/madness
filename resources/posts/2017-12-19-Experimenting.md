@@ -1,7 +1,7 @@
 ---
 title: "Experimenting"
 date: 2017-12-19 17:00
-tags: [Ommatidia]
+tags: [Ommatidia, Hardware]
 ---
 
 Started experimenting with the idea of a thumb-operated trackball, in a more serious manner. As in, I took my Kensington Orbit, tilted it, and tried how it feels to roll the ball with my thumb. It wasn't terribly bad. This opens up the possibility of more experiments, and more designs.

@@ -1,7 +1,7 @@
 ---
 title: "Thumb-operated ball"
 date: 2018-01-23 03:00
-tags: [Ommatidia]
+tags: [Ommatidia, Hardware]
 ---
 
 So back in December, I was conducting a thought-experiment of building a trackball that is not finger-operated like my Orbit, but thumb-operated. I wasn't originally a big fan of thumb-balls, back when I was evaluating trackballs. But then, I used to hate trackballs too, and now I can't imagine using anything else as a pointing device. So, thumb-operated ones deserve a second chance, and a more thorough evaluation.

@@ -1,7 +1,7 @@
 ---
 title: "ScrollBall"
 date: 2018-02-26 16:30
-tags: [Ommatidia]
+tags: [Ommatidia, Hardware]
 ---
 
 In [my first post about trackballs][blog:quest], I wrote that I wish to use the ball to scroll, while holding a button. Today, Lenz Grimmer on the `#keyboardio` IRC channel pointed me to the right direction, his short [HOWTO][lenz:scrollball] on how do accomplish this under linux, with any trackball or mouse.

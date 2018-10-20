@@ -1,7 +1,7 @@
 ---
 title:  "Thinking about mounting..."
 date: 2017-12-08 21:50
-tags: [Ommatidia]
+tags: [Ommatidia, Hardware]
 ---
 
 For the past couple of days, I've been pondering about how I would mount the ball, and this may very well end up being the hardest part. I do not have a 3D printer, nor do I have easy access to one, so prototyping will be a bit hard.
