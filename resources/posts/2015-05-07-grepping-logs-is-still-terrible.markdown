@@ -165,7 +165,7 @@ that understands logs to search in them. Why? Because computers are
 there to help you. They serve you, not you them. If there are tools
 and solutions that make my life easier, and the trade offs are
 acceptable, I will use them. There used to be log colorizers out
-there, that help you make sens of the logs, highlight important
+there, that help you make sense of the logs, highlight important
 parts. People loved them, likely still do. I still receive occasional
 feedback for [ccze](https://github.com/madhouse/ccze), even though I
 have not touched it in years. Now tools have evolved, and there are
