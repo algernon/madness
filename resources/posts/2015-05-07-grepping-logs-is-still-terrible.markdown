@@ -295,7 +295,7 @@ And then add `source(s_apache)` to the logpath.
 
 To query:
 
-`es search -u "http://localhost:19200/_logs" "PROGRAM:postfix*"`
+`es search -u "http://localhost:19200/_logs" "PROGRAM:apache*"`
 
 With this setup, I have all my logs at a central place, unless I'm
 offline, in which case it automatically falls back to localhost. There
