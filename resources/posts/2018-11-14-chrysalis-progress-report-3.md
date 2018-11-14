@@ -1,10 +1,8 @@
 ---
 title: "Chrysalis Progress Report #3"
-date: 2018-11-13 11:15
+date: 2018-11-14 13:30
 tags: [Hacking, Keyboard, keyboardio, Chrysalis]
 ---
-
-(This is a *draft*!)
 
 It's [been a while][blog:chrysalis-2] I wrote a progress report, yet, there's so
 much to share! Many, many things happened in the 18 months since the last
@@ -12,6 +10,12 @@ update, some good, some bad. This report will not be a completely accurate and
 through account of those months, but rather a summary. Lets start with the most
 glaring fact: Chrysalis is still not ready for a beta. But it is closer than
 ever was before.
+
+For this reason, I recently tagged a [new release][chrysalis:0.0.5], feel free
+to take it for a spin, but do expect bugs. If you are on OSX, please read the
+release notes. Actually, just read it anyway.
+
+ [chrysalis:0.0.5]: https://github.com/keyboardio/chrysalis-bundle-keyboardio/releases/tag/chrysalis-bundle-keyboardio-0.0.5
 
 Before you continue, be aware that I'm still not a front-end guy, a grumpy one
 at that. There is some mild dissatisfaction and complaining involved in the
