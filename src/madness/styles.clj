@@ -1,6 +1,6 @@
 (ns madness.styles
   (:require [garden.def :refer [defstylesheet defstyles]]
-            [garden.stylesheet :refer [at-media]]
+            [garden.stylesheet :refer [at-media at-font-face]]
             [garden.units :refer [px vw em vh]]
             [madness.config :as cfg]))
 
@@ -39,6 +39,9 @@
   (when (cfg/syntax-highlight)
     syntax))
 
+(defn font-src [font]
+  (str "url(\"/assets/asylum/fonts/" font ".woff\") format(\"woff\")"))
+
 (defstyles asylum9
   (concat
    [[(at-media {:min-width (px 1000)}
@@ -50,9 +53,22 @@
      (at-media {:max-width (px 800)}
                [:#container :footer {:width (vw 95)}])]
 
+    [(at-font-face {:font-family :et-book
+                    :src (font-src "et-book-roman-line-figures")
+                    :font-weight :normal
+                    :font-style :normal})
+     (at-font-face {:font-family :et-book
+                    :src (font-src "et-book-display-italic-old-style-figures")
+                    :font-weight :normal
+                    :font-style :italic})
+     (at-font-face {:font-family :et-book
+                    :src (font-src "et-book-bold-line-figures")
+                    :font-weight :bold
+                    :font-style :normal})]
+
     [:html {:position :relative
             :min-height "100%"}]
-    [:body {:font-family :sans-serif
+    [:body {:font-family :et-book
             :color "#333"}]
     [:.h-card {:display :none}]
     [:a {:color "#333"}
