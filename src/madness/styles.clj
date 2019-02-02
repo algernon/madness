@@ -64,13 +64,15 @@
           :borderd-bottom-style :solid}]
     [:.button {:text-decoration :none
                :color "#333333"
-               :border "1px solid #333333"
+               :border-bottom "2px solid #333333"
+               :border-top "2px solid #333333"
+               :border-left "2px solid transparent"
+               :border-right "2px solid transparent"
                :padding (em 0.5)
                :margin (em 0.25)
-               :display :inline-block
-               :transition "0.3s ease-in-out"}
-     [:&:hover {:border "1px solid #3333ff"
-                :border-radius "10px"
+               :transition "0.3s ease-in-out"
+               :display :inline-block}
+     [:&:hover {:border "2px solid #3333ff"
                 :color "#3333ff"}]]
     [:.madness-article-title {:margin-bottom 0}]
     [:.madness-article-meta {:font-size "65%"}]
