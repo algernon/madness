@@ -80,15 +80,10 @@
                                     [:&:hover {:text-decoration :underline}]]]]
     [:#madness-article-date {:text-decoration :none}
      [:&:hover {:text-decoration :underline}]]
-    [:.madness-post-date {:color "#888"
-                          :margin-right (em 0.5)}]
+    [:.madness-post-date {:margin-right (em 0.5)}]
     [:.madness-post-title {:margin-left (em 1)}]
-    [:.madness-post-title [:a {:color "#333"
-                               :text-decoration :none}
-                           [:&:hover {:text-decoration :underline}]]]
     [:#madness-archive {:font-size "80%"
-                        :margin-top (em 2.5)
-                        :opacity 0.9}]
+                        :margin-top (em 2.5)}]
     [:#brand {:font-family :monospace
               :text-decoration :none}]
     [:footer {:position :relative
