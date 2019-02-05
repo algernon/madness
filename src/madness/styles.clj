@@ -111,8 +111,10 @@
     [:footer [:div {:display :inline-block
                     :float :right}]]
     [:blockquote :pre {:color "#555"}]
-    [:pre {:margin (em 1)}]
-    [:kbd :code {:color "#c7254e"}]
+    [:pre {:margin (em 1)
+           :font-size (px 20)}]
+    [:kbd :code {:color "#c7254e"
+                 :font-size (px 20)}]
     [:td {:padding (em 0.5)
           :margin 0}]
     [:td :th {:border-bottom "1px solid #333"}]
