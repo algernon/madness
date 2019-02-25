@@ -48,6 +48,12 @@ touch][mail:porting].
 
  [mail:porting]: mailto:firmware-porting@gergo.csillger.hu
 
+Alternatively, I have a [Liberapay][liberapay] account, and any donations I
+receive from there will be used towards getting one of the boards listed below,
+and porting Kaleidoscope & Chrysalis to it.
+
+ [liberapay]: https://liberapay.com/algernon/
+
 <a name="why"></a>
 ## How is porting Kaleidoscope beneifcial?
 
