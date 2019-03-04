@@ -55,7 +55,7 @@ and porting Kaleidoscope & Chrysalis to it.
  [liberapay]: https://liberapay.com/algernon/
 
 <a name="why"></a>
-## How is porting Kaleidoscope beneifcial?
+## How is porting Kaleidoscope beneficial?
 
 At some point, I should explain this, I suppose. For now, lets say that the
 biggest benefit is that porting also includes porting [Chrysalis][chrysalis] to
