@@ -42,3 +42,7 @@ prepared just to make your life easier.
    rel="me"
    class="button"
    title="GitHub">GitHub</a>
+<a href="xmpp:algernon@chat.csillger.hu"
+  rel="me"
+  class="button"
+  title="Jabber/XMPP">XMPP</a>
