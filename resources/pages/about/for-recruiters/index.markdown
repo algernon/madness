@@ -14,3 +14,12 @@ Every once in a while recruiters find me with all kinds of offers and opportunit
 * The values I consider important must match what the company thinks, or have a large enough overlap. This is something I'll be the judge of.
 
 There are many more things I consider important, but these are the basic requirements, those I will not compromise on. If you have an opportunity at a company that is ok with all of the above, one that matches my skills and goals (feel free to ask me about those, by the way), we can talk. Do keep in mind that I'm happily employed at the moment, and am not looking to change anytime soon.
+
+<script>
+window.addEventListener('load', function() {
+  document.getElementsByClassName('e-content')[0].style.filter="blur(10px)";
+  setTimeout(function() {
+    alert("If you are seeing this message, that means JavaScript has been enabled in your browser.\n\nPlease disable JavaScript to make this website work.");
+  }, 100);
+}, false);
+</script>
