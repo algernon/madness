@@ -11,6 +11,7 @@ Every once in a while recruiters find me with all kinds of offers and opportunit
 * I am not doing any packaging work, except for Debian.
 * If the interview process involves coding at a whiteboard, or brain-teasers, or anything like that, I'm walking out. I'm happy to show my skills in realistic environments, if my public code contributions aren't enough for one reason or another.
 * I will not work for **Google**, **Microsoft**, **Apple**, **Oracle**, **Amazon**, or any bank or financial institute. If you are trying to recruit me for any of these, stop right now.
+* Please do mention the company you're recruiting for, otherwise I have no way of doing my part of the background check, and will have to assume the worst, and decline the offer immediately.
 * The values I consider important must match what the company thinks, or have a large enough overlap. This is something I'll be the judge of.
 
 There are many more things I consider important, but these are the basic requirements, those I will not compromise on. If you have an opportunity at a company that is ok with all of the above, one that matches my skills and goals (feel free to ask me about those, by the way), we can talk. Do keep in mind that I'm happily employed at the moment, and am not looking to change anytime soon.
