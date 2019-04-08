@@ -1,6 +1,6 @@
 ---
 title: "On Git workflows"
-date: 2019-04-08 10:00
+date: 2019-04-08 08:45
 tags: [Hacking, Rants, Technology]
 ---
 
@@ -8,7 +8,7 @@ To make things clear, I'll start this post with a strongly held opinion: E-mail 
 
  [blog:ml-vs-gh]: /blog/2018/07/24/on-git-github-and-email/
 
-I originally wanted to write a long explanation comparing various workflows: GitHub web UI vs GitHub with loose IDE integration vs GitHub with tight IDE integration vs E-mail-based variations. However, during this process I realised I don't need to go that far, I can just highlight the shortcomings of e-mail with a few examples, and then show a glimpse into the power a Forge can give us.
+I originally wanted to write a long explanation comparing various workflows: A Forge's web UI vs Forge with loose IDE integration vs Forge with tight IDE integration vs E-mail-based variations. However, during this process I realised I don't need to go that far, I can just highlight the shortcomings of e-mail with a few examples, and then show a glimpse into the power a Forge can give us.
 
 <!-- more -->
 
@@ -20,7 +20,7 @@ Git is also incredibly opinionated about *how* you should work with e-mail: one 
 
 So what's the problem with e-mail? First of all, in this day and age, delivery is not reliable. This might come as a surprise to proponents of the method, but despite the SMTP protocol being *resilient*, it is not *reliable*. It will keep retrying if it gets a temporary failure, yes. But that's about the only thing it guarantees, that it keeps trying. Once we add spam filters, greylisting, and a whole lot of other checks one needs in 2019 to not drown in junk, there's a reasonable chance that something will, at some point, go horribly wrong. Let me describe a few examples from personal experience!
 
-At one time, I sent a 10-commit patch series to a mailing list. I wasn't subscribed at the time, and the mailing list software silently dropped every mail: on the SMTP level, it appeared delivered, but it never made to the list. I had no insight into why, and had to contact a list admin to figure it out. Was it a badly configured server? Perhaps, or perhaps not. Silently dropping junk makes sense if you don't want to let the sender know that you know they're sending junk. Sometimes there are false positives, which sucks, but the administrators made this trade-off, who am I to disagree? Subscribing and resending worked flawlessly, but this introduced days of delay and plenty of extra work for both me and the list admins. Not a great experience.
+At one time, I sent a 10-commit patch series to a mailing list. I wasn't subscribed at the time, and the mailing list software silently dropped every mail: on the SMTP level, it appeared accepted, but it never made to the list. I had no insight into why, and had to contact a list admin to figure it out. Was it a badly configured server? Perhaps, or perhaps not. Silently dropping junk makes sense if you don't want to let the sender know that you know they're sending junk. Sometimes there are false positives, which sucks, but the administrators made this trade-off, who am I to disagree? Subscribing and resending worked flawlessly, but this introduced days of delay and plenty of extra work for both me and the list admins. Not a great experience. I could have read more about the contribution process and subscribe in advance, but as this was a one-off contribution, subscribing to the list (a relatively high-volume one) felt like inviting a whole lot of noise for no good reason. Having to subscribe to a list to meaningfully contribute is also a big barrier: not everyone's versed in efficiently handling higher volumes of e-mail (nor do people need to be).
 
 Another time, back when greylisting was new, I had some of my patches delayed for hours. This isn't a particularly big deal, as I'm in no rush. It becomes a big deal when patches start arriving out of order, sometimes with hours between them because I didn't involve enough sacrificial lambs to please the SMTP gods. When the first feedback you get is "where's the first patch?", even though you sent it, that's not a great experience. I've even had a case where a part of the commit thread was rejected by the list, another part went through. What do you do in this case? You can't just resend the rejected parts unchanged. If you change them to please the list software, that pretty much invalidates the parts that did get through - and nothing guarantees that they'll all get through this time, either.
 
@@ -30,9 +30,9 @@ From another point of view, as a reviewer, receiving dozens of mail in a thread 
 
 With these in mind, I'm sorry to say, but e-mail is not reliable. E-mail delivery is not reliable. It is resilient, but not reliable (see above). The contents of an e-mail are fragile, change the subject, and `git am` becomes unhappy. You want to avoid bad MUAs screwing up patches? Attach them! Except the default git tooling can't deal with that. There are so many things that can go wrong, it's not even funny. Many of those things, you won't know until hours, or days later. That's not a reliable way to work.
 
-Sending patches as attachments, in a single mail, solves most of these problems: if it gets rejected, all gets rejected. If it gets delayed, the whole thing gets delayed. Patches never arrive out of order and with delays. Reviewing multiple commits becomes easier too, because all of them are available at hand, without having to build tooling to make them available. But patches as attachments aren't supported by core git tools. Even in this case, there's plenty more you can't easily do, that patches lack: plenty of meta-information.
+Sending patches as attachments, in a single mail, solves most of these problems: if it gets rejected, all gets rejected. If it gets delayed, the whole thing gets delayed. Patches never arrive out of order and with delays. Reviewing multiple commits becomes easier too, because all of them are available at hand, without having to build tooling to make them available. But patches as attachments aren't supported by core git tools. Even in this case, there's plenty more you can't easily do, becaise there's something that patches lack: plenty of meta-information.
 
-You can't easily see more context than what the patch file provides. You can, if you apply the patchset and look at the tree, but that's not something the default tools provide out of the box. It's not hard to do that, not hard to automate it, but it doesn't come out of the box. To navigate the source code at a given time, you have to apply the patches too. There are plenty of other things where one wants more information than what is available in a patch.
+You can't easily see more context than what the patch file provides. You can, if you apply the patchset and look at the tree, but that's not something the default tools provide out of the box. It's not hard to do that, not hard to automate it, but it doesn't come out of the box. To navigate the source code at any given time of its history, you have to apply the patches too. There are plenty of other things where one wants more information than what is available in a patch.
 
 But I said in the opening paragraph that:
 
