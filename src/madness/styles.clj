@@ -46,7 +46,6 @@
   (concat
    [[(at-media {:min-width (px 1000)}
                [:#container :footer {:width (vw 60)}]
-               [:body {:font-size (px 24)}])
      (at-media {:min-width (px 800)
                 :max-width (px 1000)}
                [:#container :footer {:width (vw 60)}])
@@ -69,6 +68,7 @@
     [:html {:position :relative
             :min-height "100%"}]
     [:body {:font-family :et-book
+            :font-size (px 24)
             :color "#333"}]
     [:.h-card {:display :none}]
     [:a {:color "#333"}
