@@ -1,7 +1,7 @@
 (ns madness.styles
   (:require [garden.def :refer [defstylesheet defstyles]]
             [garden.stylesheet :refer [at-media at-font-face]]
-            [garden.units :refer [px vw em vh]]
+            [garden.units :refer [px vw em vh rem]]
             [madness.config :as cfg]))
 
 (def syntax
@@ -46,11 +46,18 @@
   (concat
    [[(at-media {:min-width (px 1000)}
                [:#container :footer {:width (vw 60)}]
+               [:#brand {:position :absolute
+                         :margin-left (rem 1)}
+                [:a [:span {:display :none}]]])
      (at-media {:min-width (px 800)
                 :max-width (px 1000)}
-               [:#container :footer {:width (vw 60)}])
+               [:#container :footer {:width (vw 60)}]
+               [:#brand {:position :absolute
+                         :margin-left (rem 1)}
+                [:a [:span {:display :none}]]])
      (at-media {:max-width (px 800)}
-               [:#container :footer {:width (vw 95)}])]
+               [:#container :footer {:width (vw 95)}]
+               [:#brand [:a [:img {:display :none}]]])]
 
     [(at-font-face {:font-family :et-book
                     :src (font-src "et-book-roman-line-figures")
@@ -100,8 +107,8 @@
     [:.madness-post-title {:margin-left (em 1)}]
     [:#madness-archive {:font-size "80%"
                         :margin-top (em 2.5)}]
-    [:#brand {:font-family :monospace
-              :text-decoration :none}]
+    [:#brand {:font-family :monospace}
+     [:a {:text-decoration :none}]]
     [:footer {:position :relative
               :bottom 0
               :height (em 4)
