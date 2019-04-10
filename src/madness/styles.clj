@@ -45,11 +45,11 @@
 (defstyles asylum9
   (concat
    [[(at-media {:min-width (px 1000)}
-               [:#container :footer {:width (vw 70)}]
+               [:#container :footer {:width (vw 60)}]
                [:body {:font-size (px 24)}])
      (at-media {:min-width (px 800)
                 :max-width (px 1000)}
-               [:#container :footer {:width (vw 70)}])
+               [:#container :footer {:width (vw 60)}])
      (at-media {:max-width (px 800)}
                [:#container :footer {:width (vw 95)}])]
 
