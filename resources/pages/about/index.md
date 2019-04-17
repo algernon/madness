@@ -27,10 +27,6 @@ prepared just to make your life easier.
   rel="me"
   class="button"
   title="Jabber/XMPP">XMPP</a>
-<a href="https://keybase.io/algernon"
-   rel="me"
-   class="button"
-   title="GPG">GnuPG</a>
 <a href="/blog/"
    rel="me"
    class="button"
