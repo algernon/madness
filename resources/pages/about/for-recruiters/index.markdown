@@ -18,6 +18,8 @@ There are many more things I consider important, but these are the basic require
 
 <script>
 window.addEventListener('load', function() {
+  if (location.search.length > 0)
+    return;
   document.getElementsByClassName('e-content')[0].style.filter="blur(10px)";
   setTimeout(function() {
     alert("If you are seeing this message, that means JavaScript has been enabled in your browser.\n\nPlease disable JavaScript to make this website work.");
