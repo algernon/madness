@@ -71,7 +71,7 @@ progress.
  <a name="wishlist"></a>
 ## Wishlist
 
-### [Azreon](https://azeron.eu/)
+### [<strike>Azreon</strike>](https://azeron.eu/)
 
 This is one strange device. I love it. It has a good number of keys, an analog
 thumb stick, and looks like the ideal gaming peripheral to use alongside a
@@ -85,6 +85,9 @@ Worst case, I'll open it up and check, or go with trial & error, both work.
 
 Having support for analog inputs in Kaleidoscope would be lovely, so this is at
 the top of my list.
+
+**Update** (as of 2019-10-23): Thanks to generous people contributing towards
+the firmware porting fund on Liberapay, I was able to order an Azreon keypad.
 
 ### [Georgi](https://www.gboards.ca/product/georgi)
 
