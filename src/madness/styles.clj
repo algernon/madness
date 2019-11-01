@@ -76,7 +76,9 @@
             :min-height "100%"}]
     [:body {:font-family :et-book
             :font-size (px 24)
-            :color "#333"}]
+            :color "#333"
+            :line-height "1.6"}]
+    [:h1 :h2 :h3 {:line-height "1.2"}]
     [:.h-card {:display :none}]
     [:a {:color "#333"}
      [:&:hover {:color "#00e"}]]
