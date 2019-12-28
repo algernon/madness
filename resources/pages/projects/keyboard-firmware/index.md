@@ -101,12 +101,12 @@ there's one thing that makes it interesting: low profile switches. I don't have
 any boards with low-profile switches, and this seemed like a small and
 affordable one.
 
-### [Planck](https://olkb.com/planck)
+### [<strike>Planck</strike>](https://olkb.com/planck)
 
 A basic port is already present in Kaleidoscope, for the older AVR variants. The
 current port doesn't support audio, nor does it support LEDs. I'd love to fix both.
 
-A [Planck Light](https://www.massdrop.com/buy/massdrop-x-olkb-planck-light-mechanical-keyboard?mode=guest_open) would also be interesting to try my hands on.
+A [Planck Light](https://www.massdrop.com/buy/massdrop-x-olkb-planck-light-mechanical-keyboard?mode=guest_open** would also be interesting to try my hands on.
 
 Since its firmware is open source, I can always look at QMK for hints if I get
 stuck, which makes porting reasonably easy. The hard parts would be making sure
@@ -117,6 +117,12 @@ Oh, and recent versions of the Planck also support rotary encoders, so another
 input source to add to Kaleidoscope!
 
 The Planck keeps on giving.
+
+**Update** (as of 2019-12-28): A good while ago, I was gifted a [Planck
+EZ](https://ergodox-ez.com/pages/planck), sporting LEDs, a buzzer, and the newer
+ARM-based MCU. It lacks the rotary encoder, but porting Kaleidoscope to it will
+be a huge benefit anyway. Just supporting the particular ARM variant in the
+Planck EZ will open the door to other boards with the same MCU.
 
 ### [Comet46](https://github.com/satt99/comet46-hardware)
 
