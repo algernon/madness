@@ -106,7 +106,7 @@ affordable one.
 A basic port is already present in Kaleidoscope, for the older AVR variants. The
 current port doesn't support audio, nor does it support LEDs. I'd love to fix both.
 
-A [Planck Light](https://www.massdrop.com/buy/massdrop-x-olkb-planck-light-mechanical-keyboard?mode=guest_open** would also be interesting to try my hands on.
+A [Planck Light](https://www.massdrop.com/buy/massdrop-x-olkb-planck-light-mechanical-keyboard?mode=guest_open) would also be interesting to try my hands on.
 
 Since its firmware is open source, I can always look at QMK for hints if I get
 stuck, which makes porting reasonably easy. The hard parts would be making sure
