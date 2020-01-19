@@ -48,7 +48,7 @@ was... [considerably simpler][gh:ph].
 
  [cs:april-13]: https://github.com/algernon/Chrysalis/tree/974cf5a2cf8b0033860ab5758aa4cb54030e567c
  [gh:ph]: https://github.com/algernon/potential-happiness
- 
+
 While I got reasonably far with the JavaScript version of Chrysalis, it was a
 pain to work with. The way I think is radically different than the language. I
 can overcome that when working on firmware, because I spent many years writing
@@ -78,7 +78,7 @@ and is much closer to the way I think than JavaScript.
  [cljs]: https://clojurescript.org/
  [reagent]: http://reagent-project.github.io/
  [react]: http://facebook.github.io/react/
- 
+
 I spent about a week writing the initial JavaScript version of Chrysalis, but on
 the 23rd of April, I [rewrote it][cs:cljs] in ClojureScript. The initial rewrite
 didn't do much, just laid a foundation, and provided me with a test bed to
@@ -142,7 +142,7 @@ of the application, with binaries built for all major platforms (but only tested
 on GNU/Linux).
 
  [cs:alpha]: https://github.com/algernon/Chrysalis/releases/tag/chrysalis-0.0.1
- 
+
 Testing and bug reports would be most appreciated! You don't even need a
 Kaleidoscope-powered device, as there is a virtual device shipped with the
 application, with which one can test a few things.
@@ -172,15 +172,15 @@ a little.
 
 # What's next?
 
-You can follow development on [GitHub][chrysalis], we even have
-a [project set up][gh:cs:project] to track the tasks and issues remaining until
-the first stable release. I'm also posting updates
-on [Mastodon][mastodon:chrysalis] and on [Patreon][patreon] too.
+You can follow development on [GitHub][chrysalis], we even have a [project set
+up][gh:cs:project] to track the tasks and issues remaining until the first
+stable release. I'm also posting updates on [the fediverse][fediverse:chrysalis]
+and on [Patreon][patreon] too.
 
  [gh:cs:project]: https://github.com/algernon/Chrysalis/projects/1?fullscreen=true
- [mastodon:chrysalis]: https://trunk.mad-scientist.club/tags/chrysalis
+ [fediverse:chrysalis]: https://trunk.mad-scientist.club/tags/chrysalis
  [patreon]: https://www.patreon.com/algernon
- 
+
 # Thanks
 
 I want to thank all my [patrons][patreon], and all of the people on Twitter and

@@ -30,8 +30,8 @@ I tried to search for a suitable optical sensor on Adafruit, but found none. Tha
 
  [adns-9800]: https://www.tindie.com/products/jkicklighter/adns-9800-laser-motion-sensor/
 
-This is as far as I got - along with choosing a name, [thanks James][m:ommatidia] for the suggestion!
+This is as far as I got - along with choosing a name, [thanks James][f:ommatidia] for the suggestion!
 
- [m:ommatidia]: https://mastodon.social/@jamesnvc/99107076789456072
+ [f:ommatidia]: https://mastodon.social/@jamesnvc/99107076789456072
 
 Oh, I also ran into a [foot switch](https://www.dafruit.com/product/423). Not sure how that'd go with a trackball, but it is something I want to eventually play with, too.

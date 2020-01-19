@@ -47,7 +47,7 @@ To make this work, I had to design a few things under the hood:
   stuff there that do not need to be saved. So I sketched out a little framework
   that allows parts of Chrysalis to save and load their state, whenever they see
   fit to do so.
-  
+
 ## Wire Traffic Spy
 
 While the `REPL` can display commands we write their, interpret the results and
@@ -78,16 +78,16 @@ mandatory boilerplate.
 
 # What's next?
 
-You can follow development on [GitHub][chrysalis], we even have
-a [project set up][gh:cs:project] to track the tasks and issues remaining until
-the first stable release. I'm also posting updates
-on [Mastodon][mastodon:chrysalis] and on [Patreon][patreon] too.
+You can follow development on [GitHub][chrysalis], we even have a [project set
+up][gh:cs:project] to track the tasks and issues remaining until the first
+stable release. I'm also posting updates on [the fediverse][fediverse:chrysalis]
+and on [Patreon][patreon] too.
 
  [chrysalis]: https://github.com/algernon/Chrysalis
  [gh:cs:project]: https://github.com/algernon/Chrysalis/projects/1?fullscreen=true
- [mastodon:chrysalis]: https://trunk.mad-scientist.club/tags/chrysalis
+ [fediverse:chrysalis]: https://trunk.mad-scientist.club/tags/chrysalis
  [patreon]: https://www.patreon.com/algernon
- 
+
 The next few weeks will be slower than usual, due to still packing out, and
 because the next step is laying down the foundation of the layout editor. That
 is a big task, which requires a lot more thinking than coding. I like to let
@@ -96,7 +96,7 @@ different.
 
 Nevertheless, at the same time, there are many opportunities to polish the
 existing features, fix some known issues, and so on.
- 
+
 # Thanks
 
 I want to thank all my [patrons][patreon], and all of the people on Twitter and

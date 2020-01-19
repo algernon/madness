@@ -6,13 +6,13 @@ title: Gergely Nagy
 
 *A tiny mouse, a hacker.*
 
-Wannabe bachelor of arts pretending to be a software engineer; ex-Debian developer;
-GPL zealot; and a few other boring things. If you want to know more about me,
-read my [blog][blog], follow me [on Mastodon][mastodon], or have a look at the
-projects [I contribute to][github].
+Wannabe bachelor of arts pretending to be a software engineer; ex-Debian
+developer; GPL zealot; and a few other boring things. If you want to know more
+about me, read my [blog][blog], follow me [on the fediverse][fediverse], or have
+a look at the projects [I contribute to][github].
 
  [blog]: /blog/
- [mastodon]: https://trunk.mad-scientist.club/@algernon
+ [fediverse]: https://trunk.mad-scientist.club/@algernon
  [github]: https://github.com/algernon
 
 If you are a recruiter, I strongly recommend reading <a
@@ -33,7 +33,7 @@ prepared just to make your life easier.
    title="Blog">Blog</a>
 <a href="https://trunk.mad-scientist.club/@algernon" class="button"
    rel="me"
-   title="Mastodon">Mastodon</a>
+   title="Fediverse">Fediverse</a>
 <a href="https://git.madhouse-project.org/algernon"
    rel="me"
    class="button"

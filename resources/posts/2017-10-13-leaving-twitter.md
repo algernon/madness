@@ -12,11 +12,11 @@ whom I follow, and who have not left the birdsite yet. But I will not be
 interacting with it in any other way. By the end of the year, I plan to leave
 Twitter behind completely, including deleting my past tweets too.
 
-I've been [micro-blogging on Mastodon][m:a] since April, originally posting both
-there and on twitter, but increasingly more only over there. From today onwards,
-I'll be using it exclusively.
+I've been [micro-blogging on the fediverse][f:a] since April, originally posting
+both there and on twitter, but increasingly more only over there. From today
+onwards, I'll be using it exclusively.
 
- [m:a]: https://trunk.mad-scientist.club/@algernon
+ [f:a]: https://trunk.mad-scientist.club/@algernon
 
 There are many reasons I favor [Mastodon][m:join] over Twitter:
 
@@ -24,7 +24,7 @@ There are many reasons I favor [Mastodon][m:join] over Twitter:
 
 <!-- more -->
 
-Mastodon does not try to control my feed. It does not inject neither
+The fediverse does not try to control my feed. It does not inject neither
 advertisements, nor things "we thought you would like" (such as people liking
 stuff in my notifications). It does not control how I consume my feed, it does
 not restrict me to one officially sanctioned client, but allows me to [write my
@@ -54,16 +54,16 @@ it than what I give up for using it. It's been steadily pushing the scales the
 wrong way, and I no longer feel it is worth pretending that the pros and cons
 are balanced. They aren't anymore, and therefore, as of today, I'm gone.
 
-Find me on [Mastodon][m:join] instead, at
-[@algernon@trunk.mad-scientist.club][m:a]. A far better place. I've had better
+Find me on [the fediverse][m:join] instead, at
+[@algernon@trunk.mad-scientist.club][f:a]. A far better place. I've had better
 conversations on there in the past few months than I ever had on Twitter. I've
 been following a lot of interesting folk, some of whom were never on the
 birdsite. Being able to see the federated timeline is much more powerful than
 Twitter's recommendation system. I can - and I did - discover things Twitter
 would never have let me.
 
-If you are interested in my micro-blogging, I encourage you to [join
-Mastodon][m:join].
+If you are interested in my micro-blogging, I encourage you to [join the
+fediverse][m:join].
 
- [m:a]: https://trunk.mad-scientist.club/@algernon
+ [f:a]: https://trunk.mad-scientist.club/@algernon
  [m:join]: https://joinmastodon.org/
