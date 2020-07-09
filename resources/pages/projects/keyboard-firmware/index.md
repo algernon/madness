@@ -89,7 +89,7 @@ the top of my list.
 **Update** (as of 2019-10-23): Thanks to generous people contributing towards
 the firmware porting fund on Liberapay, I was able to order an Azreon keypad.
 
-### [Georgi](https://www.gboards.ca/product/georgi)
+### [<strike>Georgi</strike>](https://www.gboards.ca/product/georgi)
 
 I bought the [Splitography][splitography] both for porting purposes, and for
 practicing Steno. I have a soft spot for Steno, because my late Grandmother used
@@ -100,6 +100,11 @@ Anyhow, even though porting Kaleidoscope to this board would be very easy,
 there's one thing that makes it interesting: low profile switches. I don't have
 any boards with low-profile switches, and this seemed like a small and
 affordable one.
+
+**Update** (as of 2020-07-08): Thanks to a generous person, I was gifted a
+Georgi, which I picked up from the post office. A blog post related to the
+challenges of porting Kaleidoscope to this (and similar) boards will be coming
+soon.
 
 ### [<strike>Planck</strike>](https://olkb.com/planck)
 
