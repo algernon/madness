@@ -44,20 +44,16 @@
 
 (defstyles asylum9
   (concat
-   [[(at-media {:min-width (px 1000)}
-               [:#container :footer {:width (vw 60)}]
+   [[[:#container {:display :grid
+                   :grid-template-columns "1fr min(80ch, 100%) 1fr"}
+      ["> *" {:grid-column 2}]]]
+
+    [(at-media {:max-width (px 800)}
+               [:#brand [:a [:img {:display :none}]]])
+     (at-media {:min-width (px 800)}
                [:#brand {:position :absolute
-                         :margin-left (rem 1)}
-                [:a [:span {:display :none}]]])
-     (at-media {:min-width (px 800)
-                :max-width (px 1000)}
-               [:#container :footer {:width (vw 60)}]
-               [:#brand {:position :absolute
-                         :margin-left (rem 1)}
-                [:a [:span {:display :none}]]])
-     (at-media {:max-width (px 800)}
-               [:#container :footer {:width (vw 95)}]
-               [:#brand [:a [:img {:display :none}]]])]
+                        :margin-left (rem 1)}
+                [:a [:span {:display :none}]]])]
 
     [(at-font-face {:font-family :et-book
                     :src (font-src "et-book-roman-line-figures")
@@ -82,8 +78,6 @@
     [:.h-card {:display :none}]
     [:a {:color "#333"}
      [:&:hover {:color "#00e"}]]
-    [:#container :footer {:margin-left :auto
-                          :margin-right :auto}]
     [:hr {:border-style :none
           :border "1px none #333333"
           :borderd-bottom-style :solid}]
