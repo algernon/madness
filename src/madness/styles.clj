@@ -58,15 +58,18 @@
     [(at-font-face {:font-family :et-book
                     :src (font-src "et-book-roman-line-figures")
                     :font-weight :normal
-                    :font-style :normal})
+                    :font-style :normal
+                    :font-display :swap})
      (at-font-face {:font-family :et-book
                     :src (font-src "et-book-display-italic-old-style-figures")
                     :font-weight :normal
-                    :font-style :italic})
+                    :font-style :italic
+                    :font-display :swap})
      (at-font-face {:font-family :et-book
                     :src (font-src "et-book-bold-line-figures")
                     :font-weight :bold
-                    :font-style :normal})]
+                    :font-style :normal
+                    :font-display :swap})]
 
     [:html {:position :relative
             :min-height "100%"}]
