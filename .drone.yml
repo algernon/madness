@@ -1,75 +1,104 @@
-pipeline:
-  dco:
-    group: meta
-    image: algernon/drone-plugin-dco
+kind: pipeline
+type: docker
+name: madness
 
-  signature-check:
-    group: meta
+steps:
+  - name: dco
+    image: algernon/drone-plugin-dco
+    depends_on: [ clone ]
+
+  - name: signature-check
     image: algernon/drone-plugin-signature-check
     keys: [ 10E65DC045EABEFCC5193A26AC1E90BAC433F68F ]
     when:
       event: tag
+    depends_on: [ clone ]
 
-  cache-restore:
+  - name: cache-restore
     image: drillster/drone-volume-cache
-    restore: true
-    mount:
-      - local-m2
     volumes:
-      - /tmp/cache/madness:/cache
+      - name: cache
+        path: /cache
+    settings:
+      restore: true
+      mount:
+        - ./local-m2
+    depends_on: [ clone ]
 
-  dependencies:
+  - name: dependencies
     image: clojure:lein
     commands:
       - lein deps
+    depends_on: [ cache-restore ]
 
-  build:
+  - name: build-css
+    image: clojure:lein
+    commands:
+      - lein garden once
+    depends_on: [ dependencies ]
+
+  - name: build-html
     image: clojure:lein
     commands:
       - apt-get update -qq
       - apt-get -qq -y install python-pygments
-      - lein madness
+      - lein run -m madness.core
+    depends_on: [ dependencies ]
 
-  cache-rebuild:
+  - name: cache-rebuild
     image: drillster/drone-volume-cache
-    rebuild: true
-    mount:
-      - local-m2
     volumes:
-      - /tmp/cache/madness:/cache
+      - name: cache
+        path: /cache
+    settings:
+      rebuild: true
+      mount:
+        - ./local-m2
+    depends_on: [ build-html ]
 
-  deploy-public:
-    group: deploy
+  - name: deploy-public
     image: appleboy/drone-scp
-    host: bedlam.madhouse-project.org
-    username: drone-bedlam
-    port: 242
-    source: public/
-    target: public/
-    strip_components: 1
-    rm: true
-    secrets: [ ssh_key ]
+    settings:
+      host: bedlam.madhouse-project.org
+      username: drone-bedlam
+      port: 242
+      source: public/
+      target: public/
+      strip_components: 1
+      rm: true
+      key:
+        from_secret: ssh_key
+    depends_on: [ build-html ]
 
-  deploy-assets:
-    group: deploy-assets
+  - name: deploy-assets
     image: appleboy/drone-scp
-    host: bedlam.madhouse-project.org
-    username: drone-bedlam
-    port: 242
-    source: resources/assets
-    target: public/assets/
-    strip_components: 2
-    rm: true
-    secrets: [ ssh_key ]
+    settings:
+      host: bedlam.madhouse-project.org
+      username: drone-bedlam
+      port: 242
+      source: resources/assets
+      target: public/assets/
+      strip_components: 2
+      rm: true
+      key:
+        from_secret: ssh_key
+    depends_on: [ deploy-public ]
 
-  deploy-pwa:
-    group: deploy-assets
+  - name: deploy-pwa
     image: appleboy/drone-scp
-    host: bedlam.madhouse-project.org
-    username: drone-bedlam
-    port: 242
-    source: resources/pwa
-    target: public/pwa/
-    strip_components: 2
-    rm: true
-    secrets: [ ssh_key ]
+    settings:
+      host: bedlam.madhouse-project.org
+      username: drone-bedlam
+      port: 242
+      source: resources/pwa
+      target: public/pwa/
+      strip_components: 2
+      rm: true
+      key:
+        from_secret: ssh_key
+    depends_on: [ deploy-public ]
+
+volumes:
+  - name: cache
+    host:
+      path: /tmp/cache/madness
