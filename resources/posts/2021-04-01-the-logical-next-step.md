@@ -17,8 +17,8 @@ only will I be working with an incredible team developing the next generation of
 smart, cloud-connected input devices, but we will be bringing [my own][solarium]
 [devices][ommatidia] to the market aswell!
 
- [kaleidoscope]:
- [chrysalis]:
+ [kaleidoscope]: https://github.com/keyboardio/Kaleidoscope
+ [chrysalis]: https://github.com/keyboardio/Chrysalis
  [solarium]: /blog/2019/03/18/Solarium/
  [ommatidia]: /blog/2017/12/03/Ommatidia/
 
